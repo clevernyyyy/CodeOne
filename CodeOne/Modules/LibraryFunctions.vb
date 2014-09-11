@@ -229,7 +229,7 @@ Public Module LibraryFunctions
     Public Function ExecNonQuery(ByRef pCommand As SqlCommand) As Boolean
 
         Dim lSaved As Boolean = False
-        Dim cnnSQL As SqlConnection = (New Connection).cnnStr
+        Dim cnnSQL As SqlConnection = (New Connection).NewCnn
 
         pCommand.CommandType = CommandType.StoredProcedure
         pCommand.Connection = cnnSQL
@@ -285,7 +285,7 @@ Public Module LibraryFunctions
     Public Function ExecScalar(ByRef pCommand As SqlCommand, ByVal pcType As String)
 
         Dim ret
-        Dim cnnSQL As SqlConnection = (New Connection).cnnStr
+        Dim cnnSQL As SqlConnection = (New Connection).NewCnn
 
         pCommand.CommandType = CommandType.StoredProcedure
         pCommand.Connection = cnnSQL
@@ -485,7 +485,7 @@ Public Module LibraryFunctions
     End Sub
     Public Sub CreateDataTable(ByVal pcStoredProcedure As String, ByVal pcParameterID As String, ByRef dt As DataTable)
 
-        Dim proc As New SqlClient.SqlCommand(pcStoredProcedure, (New Connection).cnnStr)
+        Dim proc As New SqlClient.SqlCommand(pcStoredProcedure, (New Connection).NewCnn)
         Dim params As Array = pcParameterID.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
         Dim i As Integer = 0
         For Each j As String In params
