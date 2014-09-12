@@ -6,17 +6,122 @@ CodeOne
 </name>
 </assembly>
 <members>
-<member name="F:CodeOne.ManageLogins.SuccessMessagePlaceholder">
+<member name="F:CodeOne.Confirm.successPanel">
 	<summary>
-SuccessMessagePlaceholder control.
+successPanel control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.RegisterExternalLogin.email">
+</member><member name="F:CodeOne.Confirm.login">
 	<summary>
-email control.
+login control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Confirm.errorPanel">
+	<summary>
+errorPanel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:CodeOne.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:CodeOne.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CodeOne.Manage.SuccessMessagePlaceHolder">
+	<summary>
+ SuccessMessagePlaceHolder control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.ChangePassword">
+	<summary>
+ ChangePassword control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.CreatePassword">
+	<summary>
+ CreatePassword control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.PhoneNumber">
+	<summary>
+ PhoneNumber control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Register.ErrorMessage">
+	<summary>
+ErrorMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Register.Email">
+	<summary>
+Email control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Register.Password">
+	<summary>
+Password control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Register.ConfirmPassword">
+	<summary>
+ConfirmPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ResetPasswordConfirmation.login">
+	<summary>
+login control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -102,6 +207,38 @@ ConfirmNewPassword control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CodeOne.OpenAuthProviders.providerDetails">
+	<summary>
+providerDetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.RegisterExternalLogin.email">
+	<summary>
+email control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AddPhoneNumber.ErrorMessage">
+	<summary>
+ErrorMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AddPhoneNumber.PhoneNumber">
+	<summary>
+PhoneNumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.sendcode">
 	<summary>
 sendcode control.
@@ -182,7 +319,23 @@ CodeSubmit control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AddPhoneNumber.ErrorMessage">
+</member><member name="F:CodeOne.SiteMaster.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ForgotPassword.loginForm">
+	<summary>
+loginForm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ForgotPassword.ErrorMessage">
 	<summary>
 ErrorMessage control.
 </summary>
@@ -190,33 +343,57 @@ ErrorMessage control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AddPhoneNumber.PhoneNumber">
+</member><member name="F:CodeOne.ForgotPassword.FailureText">
 	<summary>
-PhoneNumber control.
+FailureText control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Confirm.successPanel">
+</member><member name="F:CodeOne.ForgotPassword.Email">
 	<summary>
-successPanel control.
+Email control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Confirm.login">
+</member><member name="F:CodeOne.ForgotPassword.DisplayEmail">
 	<summary>
-login control.
+DisplayEmail control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Confirm.errorPanel">
+</member><member name="F:CodeOne.ResetPassword.ErrorMessage">
 	<summary>
-errorPanel control.
+ErrorMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ResetPassword.Email">
+	<summary>
+Email control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ResetPassword.Password">
+	<summary>
+Password control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ResetPassword.ConfirmPassword">
+	<summary>
+ConfirmPassword control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -278,38 +455,14 @@ OpenAuthLogin control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Manage.SuccessMessagePlaceHolder">
+</member><member name="F:CodeOne.ManageLogins.SuccessMessagePlaceholder">
 	<summary>
- SuccessMessagePlaceHolder control.
- </summary>
+SuccessMessagePlaceholder control.
+</summary>
 	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.ChangePassword">
-	<summary>
- ChangePassword control.
- </summary>
-	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.CreatePassword">
-	<summary>
- CreatePassword control.
- </summary>
-	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.PhoneNumber">
-	<summary>
- PhoneNumber control.
- </summary>
-	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeOne.VerifyPhoneNumber.ErrorMessage">
 	<summary>
 ErrorMessage control.
@@ -329,134 +482,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeOne.VerifyPhoneNumber.Code">
 	<summary>
 Code control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.Register.ErrorMessage">
-	<summary>
-ErrorMessage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.Register.Email">
-	<summary>
-Email control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.Register.Password">
-	<summary>
-Password control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.Register.ConfirmPassword">
-	<summary>
-ConfirmPassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ResetPassword.ErrorMessage">
-	<summary>
-ErrorMessage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ResetPassword.Email">
-	<summary>
-Email control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ResetPassword.Password">
-	<summary>
-Password control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ResetPassword.ConfirmPassword">
-	<summary>
-ConfirmPassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.loginForm">
-	<summary>
-loginForm control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.ErrorMessage">
-	<summary>
-ErrorMessage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.FailureText">
-	<summary>
-FailureText control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.Email">
-	<summary>
-Email control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.DisplayEmail">
-	<summary>
-DisplayEmail control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ResetPasswordConfirmation.login">
-	<summary>
-login control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.OpenAuthProviders.providerDetails">
-	<summary>
-providerDetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.SiteMaster.MainContent">
-	<summary>
-MainContent control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -510,31 +535,6 @@ ViewSwitcher1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="P:CodeOne.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="T:CodeOne.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

@@ -435,7 +435,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controls\" />
     <Folder Include="Forms\" />
-    <Folder Include="Styles\" />
+    <Folder Include="Styles\assets\" />
+    <Folder Include="Styles\config\" />
+    <Folder Include="Styles\MarketingWeb\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
