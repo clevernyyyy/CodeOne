@@ -24,6 +24,9 @@
     <!-- favicon -->
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         
+
+    <!-- start of FNBO stuff -->
+
     <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon"/>
     <meta content="" http-equiv="keywords"/>
     <meta content="" name="description"/>
@@ -32,25 +35,25 @@
 
     <meta http-equiv="imagetoolbar" content="no"> <!-- suppress IE image toolbar -->
 
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/reset.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/jquery.megamenu.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/jquery.slideshow.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage-buttons.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/reset.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.megamenu.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.slideshow.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage-buttons.css"/>
     <!--[if IE 7]>
-		    <link href="./MarketingWeb/internet_tip/shared-content-library/config/css/content-ie7.css" rel="stylesheet" type="text/css" media="screen, print" />
+		    <link href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-ie7.css" rel="stylesheet" type="text/css" media="screen, print" />
 	    <![endif]-->
     <!--[if IE 8]>
-		    <link href="./MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage-ie8.css" rel="stylesheet" type="text/css" media="screen, print" />
+		    <link href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage-ie8.css" rel="stylesheet" type="text/css" media="screen, print" />
 	    <![endif]-->
     <!--[if IE 9]>
 	    <![endif]-->
 
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.megamenu.js" type="text/javascript"></script>
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.top_up.min.js?libs=" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.megamenu.js" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.top_up.min.js?libs=" type="text/javascript"></script>
 
     <script type="text/javascript">
 	    jQuery(function(){
@@ -59,35 +62,35 @@
 	    });
     </script>
 
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/global.onload.js" type="text/javascript"></script>
-    <script src="./MarketingWeb/internet_tip/shared-content-library/config/js/functions.js" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/global.onload.js" type="text/javascript"></script>
+    <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/functions.js" type="text/javascript"></script>
 
     <!-- awkward-showcase -->
-    <link rel="stylesheet" href="./MarketingWeb/internet_tip/shared-content-library/config/css/jquery.awkward-showcase-homepage.css" />
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase.min.js"></script>
+    <link rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.awkward-showcase-homepage.css" />
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase.min.js"></script>
 
     <!--[if LTE IE 8]>
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase-init-homepage-ie8.js"></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase-init-homepage-ie8.js"></script>
     <![endif]-->
 
     <!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase-init-homepage.js"></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.aw-showcase-init-homepage.js"></script>
     <!--<![endif]-->
 
 
 
     <!-- Remember Me -->
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.cookie.js" ></script>
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.remember-me.js" ></script>
-    <link href="./MarketingWeb/internet_tip/shared-content-library/config/css/remember-me.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.cookie.js" ></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.remember-me.js" ></script>
+    <link href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/remember-me.css" rel="stylesheet" type="text/css" media="screen" />
 
-    <script type="text/javascript" src="./MarketingWeb/internet_tip/shared-content-library/config/js/jquery/return-to-accounts.js"></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/return-to-accounts.js"></script>
 
     <!-- local css -->
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./config/css/wrapper-homepage-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./config/css/content-homepage-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./config/css/jquery.megamenu-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="./config/css/content-homepage-buttons-sitebrand.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/wrapper-homepage-sitebrand.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-sitebrand.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/jquery.megamenu-sitebrand.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-buttons-sitebrand.css"/>
     <!-- local css -->
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
@@ -146,7 +149,7 @@
         <div class="search">
           <form action="/util/searchresults.fhtml" method="get" name="search">
             <input type="text" id="searchbox" value="" maxlength="256" size="15" name="q"/>
-            <input name="btnG" id="searchbtn" type="image" value="search" src="/config/img/btn-search.png" alt="Search"/>
+            <input name="btnG" id="searchbtn" type="image" value="search" src="/Styles/config/img/btn-search.png" alt="Search"/>
           </form>
         </div>
         <!-- search --> 
