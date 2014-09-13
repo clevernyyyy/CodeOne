@@ -471,6 +471,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Styles\config\" />
     <Folder Include="Styles\MarketingWeb\" />
+    <Folder Include="Styles\site_css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -40,7 +40,10 @@
     <div class="jumbotron">
         <h1>FinanceLogically</h1>
         <p class="lead">FinanceLogically is a web application to demonstrate logical spending, logical savings, and logical budgeting.</p>
-        <p><a href="" class="btn btn-success btn-lg">Login &raquo;</a>
+        <p>
+        <button type="button" class="btn btn-success btn-lg" id="btnLogin" runat="server" onclick="__doPostBack('btnLogin','Login');">Login &raquo;</button>
+
+            
         <a href="https://www.firstnational.com/site/personal/" class="btn btn-success btn-lg">Learn more &raquo;</a></p>
     </div>
 
@@ -62,7 +65,7 @@
         </div>
     </div>
     
-    <div id="divLoginOpen">
+    <div id="divLoginOpen" style="display:none">
         <uctrl:Log ID="ctrlLogin" runat="server" />
         <asp:HiddenField ID="hUser" runat="server" />
         <asp:HiddenField ID="hPass" runat="server" />

@@ -8,11 +8,15 @@
         End If
         If Not IsPostBack() Then
             If Not CheckLogin() And Request.QueryString("Cancel") <> "True" Then
-                OpenLoginDialog()
+                'Option for automatically popping up if we decide that would be best
+                'OpenLoginDialog()
             Else
                 ctrlLogin.Visible = False
                 LoadUserLvlDisplay()    'Access Control
             End If
+        ElseIf Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login" Then
+            'Popup once button is hit
+            OpenLoginDialog()
         Else
             CheckLogin()
         End If
@@ -41,4 +45,5 @@
         'Only show the user things they have access for
 
     End Sub
+
 End Class

@@ -19,7 +19,7 @@
                 Response.Redirect("~/Default.aspx?Cancel=True")
             ElseIf (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login") Then
                 If SignIn(inputUser.Value, inputPassword.Value) Then
-                    Response.Redirect("~/Default.aspx")
+                    Response.Redirect("~/Forms/Dashboard.aspx")
                 End If
             End If
         End If
