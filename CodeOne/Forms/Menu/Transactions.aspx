@@ -70,10 +70,10 @@
     @media (min-width: 992px) {
       .sidebar {
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 138px;
+        right: -200px;
         bottom: 0;
-        z-index: 1000;
+        z-index: 100;
         display: block;
         background-color: #CCCCCC;
       }
