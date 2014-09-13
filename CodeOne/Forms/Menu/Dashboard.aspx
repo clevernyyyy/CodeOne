@@ -57,10 +57,23 @@
 
     <div class="container-fluid">
   <div class="row">
-    
-    
-    <div class="col-md-9 col-md-offset-3 content">
-      Main Content
+    <div class="col-md-9  content">
+        <br />
+        <div class="minitron">            
+            <h1>Welcome!</h1>
+            <p>We're excited to be help you FinanceLogically&copy.</p>
+        </div>
+        <div class="fullHeader">
+            Accounts
+        </div>
+        <div id="Deposit Accounts">
+            <h1>
+                DEPOSIT ACCOUNTS
+            </h1>
+
+        </div>
+
+
     </div>
 
     <div class="col-md-3 sidebar">
