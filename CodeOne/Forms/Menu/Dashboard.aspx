@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Dashboard.aspx.vb" Inherits="CodeOne.Dashboard" %>
+﻿<%@ Page Title="Acct Dashboard" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Dashboard.aspx.vb" Inherits="CodeOne.Dashboard" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeOne Test Site">
-    <meta name="author" content="Adam Schaal">
+    <meta name="author" content="Team A/S/L">
     <link rel="shortcut icon" href="">
-    <title>Question Type Definitionss</title>
+    <title>Acct Dashboard</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/bootstrap.min.css" />

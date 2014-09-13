@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="CodeOne._Default" %>
+﻿<%@ Page Title="Login" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="CodeOne._Default" %>
 
 <%@ Register Src="~/Controls/Login/Login.ascx" TagPrefix="uctrl" TagName="Log" %>
 
@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Login Page">
-    <meta name="author" content="Adam Schaal">
+    <meta name="author" content="Team A/S/L">
     <link rel="shortcut icon" href="">
     <title>Login</title>
 

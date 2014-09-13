@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.vb" Inherits="CodeOne.Transactions" %>
+﻿<%@ Page Title="Transactions" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.vb" Inherits="CodeOne.Transactions" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeOne Test Site">
-    <meta name="author" content="Adam Schaal">
+    <meta name="author" content="Team A/S/L">
     <link rel="shortcut icon" href="">
-    <title>Question Type Definitionss</title>
+    <title>Transactions</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/bootstrap.min.css" />
@@ -98,7 +99,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Team ASL - 2014</p>
+        <p>&copy; Team A/S/L - 2014</p>
       </footer>
     
     </div><!--/.container-->
