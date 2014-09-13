@@ -194,8 +194,10 @@
     <Content Include="Controls\Login\Register.ascx" />
     <Content Include="Controls\Transactions\Category.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\Menu\Budgets.aspx" />
     <Content Include="Forms\Menu\Dashboard.aspx" />
     <Content Include="Forms\Menu\Transactions.aspx" />
+    <Content Include="Forms\Standard.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -473,6 +475,13 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Menu\Budgets.aspx.designer.vb">
+      <DependentUpon>Budgets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu\Budgets.aspx.vb">
+      <DependentUpon>Budgets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Forms\Menu\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
@@ -485,6 +494,13 @@
     </Compile>
     <Compile Include="Forms\Menu\Transactions.aspx.vb">
       <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Standard.aspx.designer.vb">
+      <DependentUpon>Standard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Standard.aspx.vb">
+      <DependentUpon>Standard.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
