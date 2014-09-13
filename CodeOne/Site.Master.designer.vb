@@ -41,13 +41,22 @@ Partial Public Class SiteMaster
     Protected WithEvents mnuRight As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''mnuSurveys control.
+    '''mnuOne control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents mnuSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents mnuOne As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuTwo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuTwo As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''mnuChat control.
@@ -57,33 +66,6 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents mnuChat As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''mnuCreateSurveys control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents mnuCreateSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''mnuTakeSurveys control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents mnuTakeSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''mnuSurveyAnalytics control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents mnuSurveyAnalytics As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''MainContent control.

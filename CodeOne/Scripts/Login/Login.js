@@ -8,8 +8,8 @@ function OpenLoginDialog() {
         appendTo: "form",
         modal: true,
         dialogClass: "no-close",
-        width: 350,
-        height: 230,
+        width: 450,
+        height: 275,
         title: "Login Please",
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },
@@ -18,23 +18,6 @@ function OpenLoginDialog() {
     }).css('z-index', '1005');
     return false;
 }
-
-//function OpenLoginDialogFast() {
-//    $("#divLoginOpen").dialog({
-//        //autoOpen: true,
-//        modal: true,
-//        width: 650,
-//        height: 400,
-//        title: "Login Please",
-//        hide: {
-//            effect: "clip",
-//            duration: 800
-//        },
-//        closeOnEscape: false
-//    }).css('z-index', '1005');
-//    return false;
-//}
-
 
 function OpenRegister() {
     $("#divRegisterControl").dialog({

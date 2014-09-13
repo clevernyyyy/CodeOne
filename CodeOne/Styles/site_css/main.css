@@ -1,0 +1,20 @@
+﻿body {
+}
+
+
+
+.bottomPopupLeft
+{
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+}
+.bottomPopupRight
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}

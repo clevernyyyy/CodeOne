@@ -19,14 +19,8 @@
     <asp:Label ID="lblLogin" runat="server" CssClass="questionText" 
         Text="Please Login!"></asp:Label>
     <br />
-    <%--<asp:Label id="lblUser" runat="server" Text="User Name:">User Name:</asp:Label>--%>
-<%--    <asp:TextBox ID="txtUserName" runat="server" Width="200px" style="text-align:left; 
-        font-size:small;" CssClass="smallBox"></asp:TextBox>--%>
     <input type="text" id="inputUser" placeholder="UserName" runat="server" />
         <br />
-<%--    <asp:Label id="lblPassword" runat="server" Text="Password:">Password:</asp:Label>--%>
-<%--    <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
-        font-size:small;" CssClass="smallBox" TextMode="Password" ></asp:TextBox>--%>
         <input type="password" id="inputPassword" placeholder="Password" runat="server" />
     <br />
 
@@ -46,6 +40,6 @@
 </div>
 
     
-<div class="none border" id="divRegisterControl" title="Help">
+<div class="none border" style="display:none" id="divRegisterControl" title="Help">
     <uctrl:Reg ID="Register" runat="server" />
 </div>

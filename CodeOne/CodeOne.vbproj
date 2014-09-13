@@ -242,6 +242,7 @@
     <Content Include="Styles\assets\site\img\personal\mainstage-rivercity-rodeo.jpg" />
     <Content Include="Styles\assets\site\img\personal\promo-artsarben.jpg" />
     <Content Include="Styles\assets\site\img\personal\promo-huskersdebit.jpg" />
+    <Content Include="Styles\site_css\main.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -471,7 +472,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Styles\config\" />
     <Folder Include="Styles\MarketingWeb\" />
-    <Folder Include="Styles\site_css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
