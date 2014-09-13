@@ -20,13 +20,13 @@
     </span>
     <div>
         <a ID="ancViewTen"  class="greenLink pointer">Last 10 Transactions</a> 
+        <div class="rowClassSpace">
+            &nbsp;</div>
     </div>
       <div id="grid" style="display:none" class="row row-offcanvas row-offcanvas-right">
           <!-- Transactions Gridview -->
         <div id="Retrieve" class="centered">
        
-        <div class="rowClassSpace">
-            &nbsp;</div>
             <div id="Retrieve_GridViewContainer" class="gridViewContainer">
                 <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
                     AutoGenerateColumns="false"
@@ -53,3 +53,4 @@
         </div>
       </div>
 </div>
+      <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
