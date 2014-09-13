@@ -74,10 +74,10 @@
                         DEPOSIT ACCOUNTS
                         <hr style="margin-bottom: 0px; margin-top: 0px;" />
                     </div>
-                        <div id="depControl">
-                            <asp:Repeater ID="depRepeater" runat="server">
+                        <div id="divDeposits">
+                            <asp:Repeater ID="repDeposits" runat="server">
                                 <ItemTemplate>
-                                    <uctrl:Account ID="depAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
+                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
@@ -85,40 +85,39 @@
                         INVESTMENT ACCOUNTS
                         <hr style="margin-bottom: 0px; margin-top: 0px;" />
                     </div>
-                        <div id="invControl">
-<%--                            <asp:Repeater ID="invRepeater" runat="server">
+                        <div id="divInvestments">
+                            <asp:Repeater ID="repInvestments" runat="server">
                                 <ItemTemplate>
-                                    <uctrl:Account ID="invAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false">
-                                    </uctrl>
+                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
                                 </ItemTemplate>
-                            </asp:Repeater>--%>
+                            </asp:Repeater>
                         </div>
 
                     <div id="CreditAccounts" class="acctHeader">
                         CREDIT ACCOUNTS
                         <hr style="margin-bottom: 0px; margin-top: 0px;" />
                     </div>
-<%--                        <div id="creControl">
-                            <asp:Repeater ID="creRepeater" runat="server">
+
+                        <div id="divCredits">
+                            <asp:Repeater ID="repCredits" runat="server">
                                 <ItemTemplate>
-                                    <uctrl:Account ID="creAccount" runat="server" ShowPaymentDue="true" ShowLastPayment="true">
-                                    </uctrl>
+                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="true" ShowLastPayment="true"></uctrl:Account>
                                 </ItemTemplate>
                             </asp:Repeater>
-                        </div>--%>
+                        </div>
 
                     <div id="LoanAccounts" class="acctHeader">
                         LOAN ACCOUNTS
                         <hr style="margin-bottom: 0px; margin-top: 0px;" />
                     </div>
-<%--                        <div id="loanControl">
-                            <asp:Repeater ID="loanRepeater" runat="server">
+                        
+                        <div id="divLoans">
+                            <asp:Repeater ID="repLoans" runat="server">
                                 <ItemTemplate>
-                                    <uctrl:Account ID="loanAccount" runat="server" ShowPaymentDue="true" ShowLastPayment="true">
-                                    </uctrl>
+                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="true"></uctrl:Account>
                                 </ItemTemplate>
                             </asp:Repeater>
-                        </div>--%>
+                        </div>
                 </div>
 
                 <div class="col-md-3 sidebar">
