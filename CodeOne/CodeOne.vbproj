@@ -203,6 +203,8 @@
     <Content Include="Scripts\holder.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-draggable.min.js" />
+    <Content Include="Scripts\jquery-ui-draggable.min.js" />
     <Content Include="Scripts\Login\Login.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
