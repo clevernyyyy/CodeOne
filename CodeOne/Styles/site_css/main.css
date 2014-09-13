@@ -156,7 +156,11 @@
     display:inline-block;
     float:right;
     margin-right:30px;
+    margin-top:5px;
+}
 
+.balHeader {
+    float:right;
 }
 
 .greenLink {

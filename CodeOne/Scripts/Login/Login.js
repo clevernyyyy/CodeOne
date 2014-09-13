@@ -15,7 +15,7 @@ function OpenLoginDialog() {
         hide: { effect: "clip", duration: 800 },
         overlay: { backgroundColor: "white", opacity: 0.5 },
         closeOnEscape: false
-    }).css('z-index', '1005');
+    }).css('z-index', '2005');
     return false;
 }
 

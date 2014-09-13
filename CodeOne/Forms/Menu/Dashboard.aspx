@@ -70,10 +70,14 @@
                     <div class="fullHeader">
                         Accounts
                     </div>
-                    <div id="DepositAccounts" class="acctHeader">
+                    <br />
+                    <span id="DepositAccounts" class="acctHeader">
                         DEPOSIT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
-                    </div>
+                    </span>
+                    <span id="Balance" class="balHeader">
+                        BALANCE
+                    </span>
+                        <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                         <div id="depControl">
                             <asp:Repeater ID="depRepeater" runat="server">
                                 <ItemTemplate>
@@ -81,10 +85,11 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-                    <div id="InvestmentAccounts" class="acctHeader">
+                        <hr style="margin-bottom:0px; margin-top:10px; margin-left:30px; border-color:lightslategray;" />
+                    <span id="InvestmentAccounts" class="acctHeader">
                         INVESTMENT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
-                    </div>
+                    </span>
+                        <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                         <div id="invControl">
 <%--                            <asp:Repeater ID="invRepeater" runat="server">
                                 <ItemTemplate>
@@ -94,10 +99,10 @@
                             </asp:Repeater>--%>
                         </div>
 
-                    <div id="CreditAccounts" class="acctHeader">
+                    <span id="CreditAccounts" class="acctHeader">
                         CREDIT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
-                    </div>
+                    </span>
+                        <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
 <%--                        <div id="creControl">
                             <asp:Repeater ID="creRepeater" runat="server">
                                 <ItemTemplate>
@@ -107,10 +112,10 @@
                             </asp:Repeater>
                         </div>--%>
 
-                    <div id="LoanAccounts" class="acctHeader">
+                    <span id="LoanAccounts" class="acctHeader">
                         LOAN ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
-                    </div>
+                    </span>
+                        <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
 <%--                        <div id="loanControl">
                             <asp:Repeater ID="loanRepeater" runat="server">
                                 <ItemTemplate>

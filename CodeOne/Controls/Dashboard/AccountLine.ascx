@@ -17,5 +17,4 @@
     <div>
         <asp:LinkButton ID="lnkViewTen" runat="server" CssClass="greenLink">Last 10 Transactions</asp:LinkButton>
     </div>
-    <hr style="margin-bottom: 0px; margin-top: 10px;" />
 </div>

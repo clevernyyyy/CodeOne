@@ -30,11 +30,11 @@
     Public Property CurrentBalance As Decimal
         Get
             Dim nBalance As Decimal
-            Decimal.TryParse(lblBalance.Text, nBalance)
+            Decimal.TryParse(Replace(lblBalance.Text, "$", ""), nBalance)
             Return nBalance
         End Get
         Set(value As Decimal)
-            lblBalance.Text = value.ToString
+            lblBalance.Text = "$" + value.ToString
         End Set
     End Property
     Public WriteOnly Property ShowPaymentDue As Boolean
