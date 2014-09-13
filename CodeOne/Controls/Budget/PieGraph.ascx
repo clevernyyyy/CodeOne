@@ -4,11 +4,14 @@
 
 <asp:Repeater ID="rptGraphs" runat="server">
     <ItemTemplate>
-        <asp:hiddenField ID="hfAccountNum" runat="server" />
-        <asp:Label ID="lblAccountNum" runat="server" />
-        <div id="dvChart" runat="server">
-        </div>
-        <div id="dvLegend" runat="server">
+        <div id="divGraph" style="display:inline-block;" runat="server">
+            <asp:hiddenField ID="hfAccountNum" runat="server" />
+            <asp:hiddenField ID="hfGraphCat" runat="server" />
+            <asp:Label ID="lblAccountNum" runat="server" />
+            <div id="dvChart" runat="server">
+            </div>
+            <div id="dvLegend" runat="server">
+            </div>
         </div>
     </ItemTemplate>
 </asp:Repeater>

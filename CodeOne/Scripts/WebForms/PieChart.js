@@ -1,20 +1,24 @@
 ﻿$(function () {
     var hfs = $("[id*='_hfAccountNum']");
+    var types = $("[id*='_hfGraphCat']");
     for (index = 0; index < hfs.length; ++index) {
         var hf = hfs[index];
+        var type = types[index];
         var acn = hf.value;
-        LoadChart(acn, index);
+        var cat = type.value;
+
+        LoadChart(acn, cat, index);
     }
     //LoadChart($("[id$=hfAccountNum]").val());
     //$("[id$=btnDraw]").bind("click", function () {
     //    LoadChart()
     //})
 });
-function LoadChart(accountNum,index) {
+function LoadChart(nID,strType,index) {
     $.ajax({
         type: "POST",
         url: "Pie.aspx/GetChart",
-        data: "{nAccountNum: '" + accountNum + "'}",
+        data: "{nID: '" + nID + "',strType: '" + strType + "'}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
