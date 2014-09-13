@@ -69,16 +69,17 @@
     
     <div class="container">
         <div id="MainContent_Accordion">
-            <h2> Categories <a id="expand" class="noslide" href="#">+</a>
-            </h2>
-            <div id="divRepCategory">
-                <asp:Repeater runat="server" ID="rptCategories">
-                    <ItemTemplate>
-                       <%-- <div id="divrepcategory">--%>
-                            <uctrl:Category id="ctrlCategory" runat="server" styel="block"></uctrl:Category>
-                        <%--</div>--%>
-                    </ItemTemplate>
-                </asp:Repeater>        
+            <div id="divHideCategory" runat="server">
+                <h2> Categories <a id="expand" class="noslide" href="#">+</a>
+                </h2>
+                <div id="divRepCategory" style="display:none" >
+                    <asp:Repeater runat="server" ID="rptCategories">
+                        <ItemTemplate>
+                            <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
+                        </ItemTemplate>
+                    </asp:Repeater>        
+                </div>
+            </div>
         </div>
       <div class="col-md-9 content">
 

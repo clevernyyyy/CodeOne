@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
 
+
     $("[id*='expand']").click(function (e) {
         if ($("[id*='expand']").text() == "+") {
             document.getElementById('divRepCategory').style.display = 'block';

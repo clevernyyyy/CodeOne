@@ -11,6 +11,8 @@ Public Class Transactions
             LoadTransactions(Session("Account"))
             LoadCategories()
 
+            'Init hide display
+            'SetDisplay("none", divHideCategory)
         End If
     End Sub
 
