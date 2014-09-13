@@ -75,7 +75,7 @@
                         <span id="DepositAccounts" class="acctHeader">
                             DEPOSIT ACCOUNTS
                         </span>
-                        <span id="Balance" class="balHeader">
+                        <span id="balDep" class="balHeader">
                             BALANCE
                         </span>
                     </div>
@@ -93,7 +93,7 @@
                         <span id="InvestmentAccounts" class="acctHeader">
                             INVESTMENT ACCOUNTS
                         </span>
-                        <span id="Balance" class="balHeader">
+                        <span id="balInv" class="balHeader">
                             BALANCE
                         </span>
                     </div>
@@ -112,7 +112,7 @@
                         <span id="CreditAccounts" class="acctHeader">
                             CREDIT ACCOUNTS
                         </span>
-                        <span id="Balance" class="balHeader">
+                        <span id="balCred" class="balHeader">
                             BALANCE
                         </span>
                     </div>
@@ -132,7 +132,7 @@
                         <span id="LoanAccounts" class="acctHeader">
                             LOAN ACCOUNTS
                         </span>
-                        <span id="Balance" class="balHeader">
+                        <span id="balLoan" class="balHeader">
                             BALANCE
                         </span>
                     </div>

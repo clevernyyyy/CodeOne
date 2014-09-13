@@ -89,7 +89,7 @@
         End Set
     End Property
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        AddRegJS(lnkViewTen)
     End Sub
 
     Private Sub lnkAccountName_Click(sender As Object, e As EventArgs) Handles lnkAccountName.Click
@@ -159,14 +159,13 @@
     End Sub
 #End Region
 #End Region
+
 #Region "JavaScript"
-    Public Sub AddGetTopTenJavaScript()
-        Dim strJava As String
+    Private Sub AddRegJS(ByVal lb As LinkButton)
+        Dim strJava As String = ""
 
-        'Shows info from SQL if button is pressed
-        strJava = "javascript:ToggleRetrieve();"
-        lblViewTen.Attributes.Add("onclick", strJava)
-
+        strJava = "javascript:showGrid;"
+        'lb.Attributes.Add("onclick", strJava)
     End Sub
 #End Region
 End Class

@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="AccountLine.ascx.vb" Inherits="CodeOne.AccountLine" %>
-<script type="text/javascript" src="~/Scripts/Dashboard/Account.js"></script>
+<script type="text/javascript" src="/Scripts/WebForms/Menu/Dashboard.js"></script>
 <div id="AccountControl" runat="server" class="divAccts">
     <asp:LinkButton id="lnkAccountName" runat="server" CssClass="acctHeadings"></asp:LinkButton>
     <asp:HiddenField ID="hfAccountNum" runat="server" />
@@ -23,9 +23,9 @@
         <asp:Label ID="lblBalance" runat="server" CssClass="acctBalance"/>
     </span>
     <div>
-        <asp:label ID="lblViewTen" runat="server" CssClass="greenLink">Last 10 Transactions</asp:label>
+        <a ID="ancViewTen"  class="greenLink pointer">Last 10 Transactions</a> 
     </div>
-      <div class="row row-offcanvas row-offcanvas-right">
+      <div id="grid" style="display:none" class="row row-offcanvas row-offcanvas-right">
           <!-- Transactions Gridview -->
         <div id="Retrieve" class="centered">
        

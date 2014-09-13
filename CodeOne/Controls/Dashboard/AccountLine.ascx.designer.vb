@@ -50,15 +50,6 @@ Partial Public Class AccountLine
     Protected WithEvents divLast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''lblLastPaymentDate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblLastPaymentDate As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblLastPaymentAmount control.
     '''</summary>
     '''<remarks>
@@ -66,6 +57,15 @@ Partial Public Class AccountLine
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblLastPaymentAmount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblLastPaymentDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblLastPaymentDate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''divDue control.
@@ -77,15 +77,6 @@ Partial Public Class AccountLine
     Protected WithEvents divDue As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''lblDueDate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblDueDate As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblDueAmount control.
     '''</summary>
     '''<remarks>
@@ -93,6 +84,15 @@ Partial Public Class AccountLine
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDueAmount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblDueDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDueDate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblBalance control.
@@ -104,13 +104,13 @@ Partial Public Class AccountLine
     Protected WithEvents lblBalance As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblViewTen control.
+    '''lnkViewTen control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblViewTen As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lnkViewTen As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''dvgPack control.
