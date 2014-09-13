@@ -27,6 +27,8 @@
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
 
 
+    <!-- Controls -->
+    <%@ Register Src="~/Controls/Dashboard/AccountLine.ascx" TagPrefix="uctrl" TagName="Account" %>
 
 
 </asp:Content>
@@ -71,8 +73,34 @@
         </div>
         <div id="DepositAccounts" class="acctHeader">
                 DEPOSIT ACCOUNTS
+            <div id="depContrl">
+                <asp:Repeater ID="depRepeater" runat="server">
+                    <ItemTemplate>
+                        <uctrl:Account id="depAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false">
+
+                        </uctrl:Account>
+
+                    </ItemTemplate>
+
+                </asp:Repeater>
+
+
+            </div>
 
         </div>
+        
+        <div id="CreditAccounts" class="acctHeader">
+                CREDIT ACCOUNTS
+
+        </div>      
+        
+        <div id="LoanAccounts" class="acctHeader">
+                LOAN ACCOUNTS
+
+        </div>
+
+
+
 
 
     </div>
