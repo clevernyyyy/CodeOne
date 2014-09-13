@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class AccountLine
 
     '''<summary>
+    '''AccountControl control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AccountControl As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''lnkAccountName control.
     '''</summary>
     '''<remarks>
@@ -102,4 +111,13 @@ Partial Public Class AccountLine
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lnkViewTen As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvgPack control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvgPack As Global.System.Web.UI.WebControls.GridView
 End Class

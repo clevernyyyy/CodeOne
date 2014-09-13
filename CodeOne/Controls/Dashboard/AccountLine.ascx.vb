@@ -1,16 +1,17 @@
 ﻿Public Class AccountLine
     Inherits System.Web.UI.UserControl
     Private Class TransactionQuickInfo
-        Public TransDesc As String
-        Public TransDate As Date
-        Public TransAmount As Decimal
+        Public Property TransDesc As String
+        Public Property TransDate As Date
+        Public Property TransAmount As Decimal
         Public Sub New(cDesc As String, dDate As Date, nAmt As Decimal)
             TransDesc = cDesc
             TransDate = dDate
             TransAmount = nAmt
         End Sub
     End Class
-    Dim Transactions As System.Collections.ObjectModel.Collection(Of TransactionQuickInfo)
+    Dim Transactions As List(Of TransactionQuickInfo)
+    Dim dtTransactions As DataTable
     Public Property AccountName As String
         Get
             Return lnkAccountName.text
@@ -97,17 +98,71 @@
     End Sub
 
     Public Sub SetUpTransactions(ParamArray drTransactions() As DataRow)
-        Transactions = New System.Collections.ObjectModel.Collection(Of TransactionQuickInfo)
+        Transactions = New List(Of TransactionQuickInfo)
         For Each drTrans As DataRow In drTransactions
             Dim objTrans As New TransactionQuickInfo(drTrans.Item("cTransDesc"), CDate(drTrans.Item("dPostDt")), CDec(drTrans.Item("nTransAmt")))
             Transactions.Add(objTrans)
         Next
+        LoadTransactions()
     End Sub
 
     Private Sub lnkViewTen_Click(sender As Object, e As EventArgs) Handles lnkViewTen.Click
-        ShowTransactions()
+        If IsPostBack Then
+            LoadTransactions()
+        End If
     End Sub
-    Private Sub ShowTransactions()
+
+
+#Region "Last 10 Transactions"
+#Region "Data Retrieval"
+
+    Private Sub LoadTransactions()
+        Dim dt As New DataTable
+        LibraryFunctions.AddColumnsToDataTable(dt, "TransDesc", "TransDate", "TransAmount")
+        LibraryFunctions.ObejctToDataTable(dt, Transactions)
+        dvgPack.DataSource = dt
+        dvgPack.DataBind()
 
     End Sub
+
+    Private Sub LoadCategories()
+        Dim dt As DataTable = Nothing
+
+        Dim cmd = SqlCommand("Data.usp_Get_Categories")
+
+        dt = FillDataTable(cmd)
+
+        'rptCategories.DataSource = dt
+        'rptCategories.DataBind()
+    End Sub
+#End Region
+#Region "Search Grid Stuff"
+    Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound
+        If e.Row.RowType = DataControlRowType.DataRow Then
+            e.Row.Height = 25
+            Dim d As DateTime = e.Row.Cells(0).Text
+            e.Row.Cells(0).Text = d.ToShortDateString
+            ''This code allows the gridview to be selectable
+            e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
+            e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
+            'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
+        End If
+    End Sub
+
+    Protected Sub dgvPack_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs)
+        Dim dv As New DataView(Session("dtSearch"))
+        If Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("ASC") Then
+            dv.Sort = e.SortExpression & " DESC"
+        ElseIf Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("DESC") Then
+            dv.Sort = e.SortExpression & " ASC"
+        Else
+            dv.Sort = e.SortExpression & " ASC"
+        End If
+        HttpContext.Current.Session("strSortedBy") = dv.Sort.ToString
+        dvgPack.DataSource = dv
+        dvgPack.DataBind()
+    End Sub
+#End Region
+#End Region
+
 End Class
