@@ -189,6 +189,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controls\Budget\IncomeExpense.ascx" />
+    <Content Include="Controls\Budget\PieGraph.ascx" />
     <Content Include="Controls\Dashboard\AccountLine.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
@@ -438,6 +439,13 @@
     </Compile>
     <Compile Include="Controls\Budget\IncomeExpense.ascx.vb">
       <DependentUpon>IncomeExpense.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Budget\PieGraph.ascx.designer.vb">
+      <DependentUpon>PieGraph.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Budget\PieGraph.ascx.vb">
+      <DependentUpon>PieGraph.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\Dashboard\AccountLine.ascx.designer.vb">
