@@ -11,23 +11,23 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PieGraph
+Partial Public Class Pie
 
     '''<summary>
-    '''hfAccountNum control.
+    '''ctrlPie1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents hfAccountNum As Global.System.Web.UI.WebControls.HiddenField
+    Protected WithEvents ctrlPie1 As Global.CodeOne.PieGraph
 
     '''<summary>
-    '''btnDraw control.
+    '''ctrlPie2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDraw As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ctrlPie2 As Global.CodeOne.PieGraph
 End Class
