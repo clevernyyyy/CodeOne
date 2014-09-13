@@ -2,15 +2,8 @@
 
 <!-- Custom styles for this control -->
 <link href="/Styles/Login/Login.css" rel="stylesheet" />
-<link href="/Styles/ColorPicker/colorpicker.css" rel="stylesheet" media="screen" type="text/css" />
-<link href="/Styles/ColorPicker/layout.css" rel="stylesheet" media="screen" type="text/css" />
 
 <!-- Scripts -->
-<script type="text/javascript" src="/Scripts/ColorPicker/jquery.js"></script>
-<script type="text/javascript" src="/Scripts/ColorPicker/colorpicker.js"></script>
-<script type="text/javascript" src="/Scripts/ColorPicker/eye.js"></script>
-<script type="text/javascript" src="/Scripts/ColorPicker/utils.js"></script>
-<script type="text/javascript" src="/Scripts/ColorPicker/layout.js"></script>
 
 <h3>
     <font face="Verdana" color="White">Registration Page</font>

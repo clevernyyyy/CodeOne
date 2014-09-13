@@ -33,9 +33,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul runat="server" id="mnuRight" class="nav navbar-nav navbar-right">
+            <li id="mnuDashboard" runat="server"><a href="/Forms/Menu/Dashboard.aspx">Account Dashboard</a></li>
+            <li id="mnuTransactions" runat="server"><a href="/Forms/Menu/Transactions.aspx">Transactions</a></li>
             <li id="mnuOne" runat="server"><a href="">mnuOne</a></li>
             <li id="mnuTwo" runat="server"><a href="">mnuTwo</a></li>
             <li id="mnuChat" runat="server"><a href="/Home">Chat</a></li>
+            <li id="mnuLogout" runat="server"><a href="">LogOut</a></li>
           </ul>
         </div>
       </div>
@@ -51,11 +54,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/bootstrap.min.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     </form>
 </body>
 </html>

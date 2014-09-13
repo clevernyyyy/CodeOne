@@ -495,6 +495,22 @@ mnuRight control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuDashboard">
+	<summary>
+mnuDashboard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuTransactions">
+	<summary>
+mnuTransactions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeOne.SiteMaster.mnuOne">
 	<summary>
 mnuOne control.
@@ -514,6 +530,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeOne.SiteMaster.mnuChat">
 	<summary>
 mnuChat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuLogout">
+	<summary>
+mnuLogout control.
 </summary>
 	<remarks>
 Auto-generated field.

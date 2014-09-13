@@ -24,10 +24,10 @@
     <link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />
 
     <!-- Scripts -->
-    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="/Scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
-    <script type="text/javascript" src="/Scripts/holder.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/holder.js"></script>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />

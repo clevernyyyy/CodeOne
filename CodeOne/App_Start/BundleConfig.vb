@@ -26,15 +26,15 @@ Public Class BundleConfig
         ' Use the Development version of Modernizr to develop with and learn from. Then, when you’re
         ' ready for production, use the build tool at http://modernizr.com to pick only the tests you need
         bundles.Add(New ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"))
+                        "~/Scripts/site_scripts/modernizr-*"))
 
         ' Set EnableOptimizations to false for debugging. For more information,
         ' visit http://go.microsoft.com/fwlink/?LinkId=301862
         BundleTable.EnableOptimizations = True
 
         ScriptManager.ScriptResourceMapping.AddDefinition("respond", New ScriptResourceDefinition() With {
-                .Path = "~/Scripts/respond.min.js",
-                .DebugPath = "~/Scripts/respond.js"})
+                .Path = "~/Scripts/site_scripts/respond.min.js",
+                .DebugPath = "~/Scripts/site_scripts/respond.js"})
 
     End Sub
 End Class

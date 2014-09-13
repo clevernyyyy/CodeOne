@@ -41,6 +41,24 @@ Partial Public Class SiteMaster
     Protected WithEvents mnuRight As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''mnuDashboard control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuDashboard As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuTransactions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuTransactions As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''mnuOne control.
     '''</summary>
     '''<remarks>
@@ -66,6 +84,15 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents mnuChat As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuLogout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuLogout As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''MainContent control.
