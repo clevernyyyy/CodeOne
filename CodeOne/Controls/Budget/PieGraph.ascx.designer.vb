@@ -14,20 +14,11 @@ Option Explicit On
 Partial Public Class PieGraph
 
     '''<summary>
-    '''hfAccountNum control.
+    '''rptGraphs control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents hfAccountNum As Global.System.Web.UI.WebControls.HiddenField
-
-    '''<summary>
-    '''btnDraw control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnDraw As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents rptGraphs As Global.System.Web.UI.WebControls.Repeater
 End Class

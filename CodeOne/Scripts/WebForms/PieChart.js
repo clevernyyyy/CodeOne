@@ -1,11 +1,16 @@
 ﻿$(function () {
-    
+    var hfs = $("[id*='_hfAccountNum']");
+    for (index = 0; index < hfs.length; ++index) {
+        var hf = hfs[index];
+        var acn = hf.value;
+        LoadChart(acn, index);
+    }
     //LoadChart($("[id$=hfAccountNum]").val());
     //$("[id$=btnDraw]").bind("click", function () {
     //    LoadChart()
     //})
 });
-function LoadChart(accountNum) {
+function LoadChart(accountNum,index) {
     $.ajax({
         type: "POST",
         url: "Pie.aspx/GetChart",
@@ -13,24 +18,25 @@ function LoadChart(accountNum) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
-            $("#dvChart").html("");
-            $("#dvLegend").html("");
+            $("[id*='_dvChart_" + index + "']").html("");
+            $("[id*='_dvLegend_" + index + "']").html("");
             var data = eval(r.d);
             var el = document.createElement('canvas');
-            $("#dvChart")[0].appendChild(el);
+            el.setAttribute("id", 'canvas' + index);
+            el.setAttribute("height", '450');
+            el.setAttribute("width", '450');
+            $("[id*='_dvChart']")[index].appendChild(el);
 
-            //Fix for IE 8
-            if ($.browser.msie && $.browser.version == "8.0") {
-                G_vmlCanvasManager.initElement(el);
-            }
             var ctx = el.getContext('2d');
-            var userStrengthsChart = new Chart(ctx).Doughnut(data);
-
+            var userStrengthsChart = new Chart(ctx).Pie(data);
+            //userStrengthsChart.setAttribute("width", "400");
+            //userStrengthsChart.setAttribute("height", "400");
+            //userStrengthsChart.resize();
             for (var i = 0; i < data.length; i++) {
                 var div = $("<div />");
                 div.css("margin-bottom", "10px");
                 div.html("<span style = 'display:inline-block;height:10px;width:10px;background-color:" + data[i].color + "'></span> " + data[i].text);
-                $("#dvLegend").append(div);
+                $("[id*='_dvLegend_" + index + "']").append(div);
             }
         },
         failure: function (response) {

@@ -4,10 +4,8 @@
 <%@ Register Src="~/Controls/Budget/PieGraph.ascx" TagPrefix="uctrl" TagName="Pie" %>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div>
-        <uctrl:Pie ID="ctrlPie1" AccountNum="1" runat="server" style="float:left;"/>
-    </div><div>
-    <uctrl:Pie id="ctrlPie2" AccountNum="2" runat="server" style="float:right"/>
+    <div>
+        <uctrl:Pie ID="ctrlPie" runat="server" style="float:left;"/>
     </div>
 </asp:Content>
 
