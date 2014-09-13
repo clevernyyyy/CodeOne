@@ -3,7 +3,13 @@ Imports System.Data.SqlClient
 Imports CodeOne.Enumerations
 Module MiscFunctions
 #Region "Connection"
-
+    Public Function SqlCommand(commandText As String) As SqlCommand
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = commandText
+        cmd.Connection = (New Connection).NewCnn
+        Return cmd
+    End Function
 #End Region
 #Region "Login"
     Public Function ValidateUser(ByVal userName As String, ByVal passWord As String, ByRef objUser As User) As Boolean

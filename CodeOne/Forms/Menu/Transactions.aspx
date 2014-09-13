@@ -19,82 +19,103 @@
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
-    
+
     <!-- Scripts -->
+    <script type="text/javascript" src="/Scripts/jquery-draggable.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-draggable.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
+
+    <script>
+        $(init);
+
+        function init() {
+            $('#Retrieve_GridViewContainer').draggable({
+                cursor: 'move'
+                
+            });
+        }
+    </script>
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        body
-        {
-            background: white !important;
-        }
-    </style>
-      <body>
+    <style type="text/css">
+     html, body, .container-fluid, .row {
+	height: 100%;
+}
 
+.sidebar {
+  background-color: #CCCCCC;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    background-color: #CCCCCC;
+  }
+}
+
+    </style>
+    <body>
+    
     <div class="container">
+      <div class="col-md-9 col-md-offset-3 content">
 
       <div class="row row-offcanvas row-offcanvas-right">
+          <!-- Transactions Gridview -->
+        <div id="Retrieve" class="centered">
+       
+        <div class="rowClassSpace">
+            &nbsp;</div>
+            <asp:ScriptManager runat="server"></asp:ScriptManager>
+            <div id="Retrieve_GridViewContainer" class="gridViewContainer">
+                <asp:GridView ID="dvgPack" runat="server" CssClass="table table-hover table-striped table-bordered table-condensed" 
+                    AutoGenerateColumns="false"
+                    OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="4"
+                    PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
+                    <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
+                    <Columns>
+                        <%--0--%><asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
+                            ItemStyle-Width="200" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
+                        <%--1--%><asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
+                            ItemStyle-Width="200"  HeaderStyle-CssClass="centered"  />
+                        <%--2--%><asp:BoundField DataField="cDebitCredit" HeaderText="DEBIT/CREDIT" 
+                            SortExpression="cDebitCredit" ItemStyle-Width="60"  HeaderStyle-CssClass="centered" />
+                        <%--3--%><asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
+                            SortExpression="cTransDesc" ItemStyle-Width="120"  HeaderStyle-CssClass="centered" />
+                        <%--4--%><asp:BoundField DataField="cTranDetailDesc" HeaderText="TRANSACTION DESCRIPTION" 
+                            SortExpression="cTranDetailDesc" ItemStyle-Width="120"  HeaderStyle-CssClass="centered" />
+                        <%--5--%><asp:BoundField DataField="nTranAmt" HeaderText="AMOUNT" 
+                            SortExpression="nTranAmt" ItemStyle-Width="60"  HeaderStyle-CssClass="centered" />
+                        <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
+                    </Columns>
+                    <PagerStyle CssClass="pager" />
+                    <PagerTemplate>
+<%--                        <uctrl:CustomButton ID="btnPrev" Text="<<" Width="75px" runat="server" CausesValidation="true"
+                            OnClick="dgvPackPrev_Click" />--%>
+                        <span style="display: inline-block; text-align: center; font-weight: bold;">Page
+                            <asp:DropDownList ID="dgvPackDDL" AutoPostBack="true" OnSelectedIndexChanged="dgvPackDDL_SelectedIndexChanged"
+                                runat="server" />
+                            out of
+                            <asp:Label ID="lblPages" runat="server"></asp:Label>
+                        </span>
+<%--                        <uctrl:CustomButton ID="btnNext" Text=">>" Width="75px" runat="server" CausesValidation="true"
+                            OnClick="dgvPackNext_Click" />--%>
+                    </PagerTemplate>
+                </asp:GridView>
+            </div>
+        </div>
+      </div>
+      </div>
 
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
+       <div class="col-md-3 sidebar">
+          Sidebar
+        </div>
 
       <hr>
 
