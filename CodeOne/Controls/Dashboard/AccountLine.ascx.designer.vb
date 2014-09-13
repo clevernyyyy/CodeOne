@@ -93,4 +93,13 @@ Partial Public Class AccountLine
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBalance As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lnkViewTen control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lnkViewTen As Global.System.Web.UI.WebControls.LinkButton
 End Class

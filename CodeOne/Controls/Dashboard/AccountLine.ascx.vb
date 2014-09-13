@@ -102,4 +102,11 @@
             Transactions.Add(objTrans)
         Next
     End Sub
+
+    Private Sub lnkViewTen_Click(sender As Object, e As EventArgs) Handles lnkViewTen.Click
+        ShowTransactions()
+    End Sub
+    Private Sub ShowTransactions()
+
+    End Sub
 End Class
