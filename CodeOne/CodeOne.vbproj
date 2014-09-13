@@ -513,7 +513,7 @@
     </Compile>
     <Compile Include="Forms\Pie.aspx.vb">
       <DependentUpon>Pie.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Standard.aspx.designer.vb">
       <DependentUpon>Standard.aspx</DependentUpon>

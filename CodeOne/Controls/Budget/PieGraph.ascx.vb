@@ -13,5 +13,6 @@
     End Sub
     Private Sub AddJavaScript()
         ScriptManager.RegisterClientScriptBlock(Me, Me.GetType, "Account #" & Me.AccountNum.ToString, "javascript:LoadChart(" & Me.AccountNum & ");", True)
+
     End Sub
 End Class
