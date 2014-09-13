@@ -237,6 +237,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\site_css\bootstrap-theme.css" />
+    <Content Include="Styles\site_css\bootstrap-theme.min.css" />
+    <Content Include="Styles\site_css\bootstrap.css" />
+    <Content Include="Styles\site_css\bootstrap.min.css" />
     <Content Include="Styles\assets\site\img\personal\mainstage-blank-text.png" />
     <Content Include="Styles\assets\site\img\personal\mainstage-habitat-text.png" />
     <Content Include="Styles\assets\site\img\personal\mainstage-habitat.jpg" />
@@ -253,6 +257,8 @@
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\site_scripts\jquery-1.10.2.min.map" />
+    <Content Include="Styles\site_css\bootstrap-theme.css.map" />
+    <Content Include="Styles\site_css\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
