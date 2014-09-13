@@ -67,12 +67,10 @@
             <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
         </div>
         <div class="fullHeader">
-                <font>Accounts</font>
+            Accounts
         </div>
-        <div id="Deposit Accounts">
-            <h1>
+        <div id="DepositAccounts" class="acctHeader">
                 DEPOSIT ACCOUNTS
-            </h1>
 
         </div>
 
