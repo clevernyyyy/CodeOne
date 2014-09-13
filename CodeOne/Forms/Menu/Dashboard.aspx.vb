@@ -5,8 +5,8 @@
     Dim dtQL As DataTable
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID)
-            dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID)
+            Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+            dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
             FillRepeater(repDeposits, dt, "Checking", "Savings")
             FillRepeater(repInvestments, dt, "CD", "IRA")
             FillRepeater(repCredits, dt, "CREDIT CARD")

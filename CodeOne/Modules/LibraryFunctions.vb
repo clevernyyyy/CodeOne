@@ -136,14 +136,14 @@ Public Module LibraryFunctions
     End Sub
     Public Function FillDataTable(ByVal pcStoredProc As String,
                                   ByVal gcnnSQL As SqlConnection,
-                                  ByVal psParameterName As String, ByVal pnParameterValue As Integer,
+                                  ByVal psParameterName As String, ByVal pcParameterValue As String,
                                   Optional ByVal pcTableName As String = "DBTable") As DataTable
         Dim Command As New SqlCommand
         Command.CommandText = pcStoredProc
         Command.Connection = gcnnSQL
 
         With Command.Parameters
-            .AddWithValue(psParameterName, pnParameterValue)
+            .AddWithValue(psParameterName, pcParameterValue)
         End With
         Return FillDataTable(Command, pcTableName)
     End Function
