@@ -92,7 +92,8 @@
     End Sub
 
     Private Sub lnkAccountName_Click(sender As Object, e As EventArgs) Handles lnkAccountName.Click
-        Response.Redirect("~/Forms/Menu/Transactions.aspx?A=" & hfAccountNum.Value)
+        Session("Account") = hfAccountNum.Value
+        Response.Redirect("~/Forms/Menu/Transactions.aspx")
     End Sub
 
     Public Sub SetUpTransactions(ParamArray drTransactions() As DataRow)

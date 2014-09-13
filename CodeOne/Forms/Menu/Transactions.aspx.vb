@@ -7,12 +7,8 @@ Public Class Transactions
         If Not IsPostBack Then
 
             'Clear Everything
-            Session("Account") = Request.QueryString("A")
             LoadTransactions(Session("Account"))
             LoadCategories()
-
-            'Init hide display
-            'SetDisplay("none", divHideCategory)
         End If
     End Sub
 
@@ -24,7 +20,7 @@ Public Class Transactions
         Dim cmd = SqlCommand("Data.usp_Get_AccountDetail")
 
         With cmd.Parameters
-            .AddWithValue("@nAccountNum", 1) 'nAccountNum)
+            .AddWithValue("@nAccountNum", nAccountNum)
         End With
         dt = FillDataTable(cmd)
 

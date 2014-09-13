@@ -135,3 +135,31 @@
     margin-left:65px;
 
 }
+
+.smallfont
+{
+    margin-left:10px;
+    margin-top:3px;
+    margin-bottom:3px;
+    font-size:small;
+    font-weight:normal;
+    color:whitesmoke;
+    text-shadow:2px 2px 2px black;
+}
+
+.categories {
+    border: 2px solid darkgreen; 
+    border-radius: 10px; 
+    margin-top:3px; 
+    margin-bottom:3px; 
+    background-color:darkgreen;
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: default;
+}

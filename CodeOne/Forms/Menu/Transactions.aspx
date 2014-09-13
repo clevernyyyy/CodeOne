@@ -33,7 +33,7 @@
         $(init);
 
         function init() {
-            $('#MainContent_Accordion').find("span").draggable({
+            $('#MainContent_Accordion').find("div").draggable({
                 cursor: 'move'
                 
             });
@@ -68,10 +68,10 @@
 
     
     <div class="container">
+        <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
+        </h2>
         <div id="MainContent_Accordion">
             <div id="divHideCategory" runat="server">
-                <h2> Categories <a id="expand" class="noslide" href="#">+</a>
-                </h2>
                 <div id="divRepCategory" style="display:none" >
                     <asp:Repeater runat="server" ID="rptCategories">
                         <ItemTemplate>
@@ -136,11 +136,11 @@
 
       <hr>
 
+    
+    </div><!--/.container-->
       <footer>
         <p>&copy; Team A/S/L - 2014</p>
       </footer>
-    
-    </div><!--/.container-->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
