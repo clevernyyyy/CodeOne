@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Register.ascx.vb" Inherits="CodeLogically.Register" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Register.ascx.vb" Inherits="CodeOne.Register" %>
 
 <!-- Custom styles for this control -->
 <link href="/Styles/Login/Login.css" rel="stylesheet" />

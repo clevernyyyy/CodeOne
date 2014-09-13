@@ -2,6 +2,9 @@
 Imports System.Data.SqlClient
 Imports CodeOne.Enumerations
 Module MiscFunctions
+#Region "Connection"
+
+#End Region
 #Region "Login"
     Public Function ValidateUser(ByVal userName As String, ByVal passWord As String, ByRef objUser As User) As Boolean
         Dim lookupPassword As String
@@ -62,7 +65,7 @@ Module MiscFunctions
     End Function
 
     Public Function LoginUser(pstrEmail As String) As DataRow
-        Dim cmd As New SqlCommand("[Admin].usp_Login", NewConnection(True))
+        Dim cmd As New SqlCommand("[Admin].usp_Login", (New Connection).NewCnn)
         cmd.Parameters.AddWithValue("@cEmail", pstrEmail)
         cmd.CommandType = CommandType.StoredProcedure
         Dim dt As New DataTable

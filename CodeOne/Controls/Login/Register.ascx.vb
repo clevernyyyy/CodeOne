@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Public Class Register
     Inherits System.Web.UI.UserControl
-    Private cnn As SqlConnection = NewConnection(True)
+    Private cnn As SqlConnection = (New Connection).NewCnn
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("cErrorMessage") IsNot Nothing Then
             lblMsg.Text = Session("cErrorMessage").ToString

@@ -6,7 +6,7 @@ Imports Microsoft.AspNet.Identity.Owin
 Imports Microsoft.Owin.Security
 Imports Owin
 
-Partial Public Class Login
+Partial Public Class LoginOld
     Inherits Page
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         RegisterHyperLink.NavigateUrl = "Register"
@@ -27,7 +27,7 @@ Partial Public Class Login
 
             ' This doen't count login failures towards account lockout
             ' To enable password failures to trigger lockout, change to shouldLockout := True
-            Dim result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout := False)
+            Dim result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout:=False)
 
             Select Case result
                 Case SignInStatus.Success

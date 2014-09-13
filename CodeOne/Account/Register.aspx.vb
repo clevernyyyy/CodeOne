@@ -7,7 +7,7 @@ Imports Microsoft.AspNet.Identity.EntityFramework
 Imports Microsoft.AspNet.Identity.Owin
 Imports Owin
 
-Partial Public Class Register
+Partial Public Class RegisterOld
     Inherits Page
     Protected Sub CreateUser_Click(sender As Object, e As EventArgs)
         Dim userName As String = Email.Text

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Login.ascx.vb" Inherits="CodeLogically.Login" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Login.ascx.vb" Inherits="CodeOne.Login" %>
 
 <%@ Register Src="~/Controls/Login/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Register.aspx.vb" Inherits="CodeOne.Register" %>
+﻿<%@ Page Title="Register" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Register.aspx.vb" Inherits="CodeOne.RegisterOld" %>
 
 <%@ Import Namespace="CodeOne" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
