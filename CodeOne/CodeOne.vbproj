@@ -240,6 +240,26 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\config\css\content-homepage-buttons-sitebrand.css" />
+    <Content Include="Styles\config\css\content-homepage-sitebrand.css" />
+    <Content Include="Styles\config\css\jquery.megamenu-sitebrand.css" />
+    <Content Include="Styles\config\css\wrapper-homepage-sitebrand.css" />
+    <Content Include="Styles\config\img\bg-button.png" />
+    <Content Include="Styles\config\img\bg-gradient-tall-dark-bottom.png" />
+    <Content Include="Styles\config\img\bg-gradient.png" />
+    <Content Include="Styles\config\img\bg-login-homepage.png" />
+    <Content Include="Styles\config\img\bg-masthead.png" />
+    <Content Include="Styles\config\img\branded\mainstage-frame.png" />
+    <Content Include="Styles\config\img\branded\mm-triangle.png" />
+    <Content Include="Styles\config\img\btn-search.png" />
+    <Content Include="Styles\config\img\bullet-triangle.png" />
+    <Content Include="Styles\config\img\icon-lock-homepage.png" />
+    <Content Include="Styles\config\img\logo-bank-green.png" />
+    <Content Include="Styles\config\img\logo-equal-housing-lender.png" />
+    <Content Include="Styles\config\img\logo-facebook.png" />
+    <Content Include="Styles\config\img\logo-member-fdic.png" />
+    <Content Include="Styles\config\img\logo-twitter.png" />
+    <Content Include="Styles\config\img\logo.png" />
     <Content Include="Styles\site_css\bootstrap-theme.css" />
     <Content Include="Styles\site_css\bootstrap-theme.min.css" />
     <Content Include="Styles\site_css\bootstrap.css" />
@@ -506,7 +526,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Styles\config\" />
     <Folder Include="Styles\MarketingWeb\" />
   </ItemGroup>
   <PropertyGroup>

@@ -44,6 +44,97 @@
       </div>
     </div>
 
+    
+
+<div class="audience-switcher">
+  <ul>
+		
+		
+			
+
+
+			
+
+			
+        <li><a href="/site/personal/index.fhtml" class="here">Personal</a></li>
+				
+		
+			
+
+
+			
+
+			
+        <li><a href="/site/small-business/index.fhtml">Small Business</a></li>
+				
+		
+			
+
+
+			
+
+			
+        <li><a href="/site/corporate/index.fhtml">Corporate</a></li>
+				
+		
+			
+
+
+			
+
+			
+				 <!-- About Us navigation element was hidden in DCR -->
+        
+		
+			
+
+
+			
+
+			
+				 <!-- Help navigation element was hidden in DCR -->
+        
+		
+			
+
+
+			
+
+			
+				 <!-- Information Security Center navigation element was hidden in DCR -->
+        
+		
+  </ul>
+</div>  <!--  END audience-switcher -->
+
+  <div id="section1">
+
+
+    <div id="masthead"> <a href="/" class="logo"><img title="" alt="First National Bank" src="/config/img/logo.png"/></a>
+      <div class="utility">
+        <ul>
+          <li class="first"><a href="/site/help/" title="">Help</a></li>
+          <li><a href="/site/about-us/" title="">About Us</a></li>
+          <li><a href="https://firstnational.locatorsearch.com/" title="" class="popup" popup-title="ATM/Branch Locator" popup-preset="atmlocator">ATM/Branch Locator</a></li>
+          <li><a href="/RetailWeb/default/contactus/SHOW_FORM/form" title="">Contact Us</a></li>
+          <li class="last"><a href="/site/security-center/" title="">Information Security Center</a></li>
+        </ul>
+        <div class="search">
+          <form action="/util/searchresults.fhtml" method="get" name="search">
+            <input type="text" id="searchbox" value="" maxlength="256" size="15" name="q"/>
+            <input name="btnG" id="searchbtn" type="image" value="search" src="/config/img/btn-search.png" alt="Search"/>
+          </form>
+        </div>
+        <!-- search --> 
+        
+      </div>
+      <!-- end utility --> 
+      
+    </div>
+    <!-- masthead -->    
+  </div>
+  <!-- section1 -->
+
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main" >  <!-- style="background-color: #2b2b2b"> -->
     <form runat="server">

@@ -21,4 +21,58 @@ Partial Public Class Dashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents depRepeater As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''invRepeater control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents invRepeater As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''invAccount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents invAccount As Global.CodeOne.AccountLine
+
+    '''<summary>
+    '''creRepeater control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents creRepeater As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''creAccount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents creAccount As Global.CodeOne.AccountLine
+
+    '''<summary>
+    '''loanRepeater control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents loanRepeater As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''loanAccount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents loanAccount As Global.CodeOne.AccountLine
 End Class
