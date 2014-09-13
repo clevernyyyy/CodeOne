@@ -12,4 +12,31 @@ Option Explicit On
 
 
 Partial Public Class _Default
+
+    '''<summary>
+    '''ctrlLogin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ctrlLogin As Global.CodeOne.Login
+
+    '''<summary>
+    '''hUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hUser As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''hPass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hPass As Global.System.Web.UI.WebControls.HiddenField
 End Class
