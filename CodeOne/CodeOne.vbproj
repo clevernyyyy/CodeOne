@@ -260,6 +260,30 @@
     <Content Include="Styles\config\img\logo-member-fdic.png" />
     <Content Include="Styles\config\img\logo-twitter.png" />
     <Content Include="Styles\config\img\logo.png" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-homepage-buttons.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-homepage.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-ie7.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\jquery.awkward-showcase-homepage.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\jquery.megamenu.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\jquery.slideshow.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\remember-me.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\reset.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\wrapper-homepage.css" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\functions.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\global.onload.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery-1.7.1.min.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery.aw-showcase-init-homepage-ie8.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery.aw-showcase-init-homepage.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery.aw-showcase.min.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery.megamenu.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\jquery.top_up.min.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\remember-me\jquery.cookie.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\remember-me\jquery.remember-me.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\jquery\return-to-accounts.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\s-code-function-calls.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\s-code-functions.js" />
+    <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\js\s-code.js" />
     <Content Include="Styles\site_css\bootstrap-theme.css" />
     <Content Include="Styles\site_css\bootstrap-theme.min.css" />
     <Content Include="Styles\site_css\bootstrap.css" />
@@ -526,7 +550,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Styles\MarketingWeb\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
