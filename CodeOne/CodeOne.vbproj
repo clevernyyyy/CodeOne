@@ -362,6 +362,7 @@
     <Compile Include="Classes\Connection.vb" />
     <Compile Include="Classes\Enumerations.vb" />
     <Compile Include="Classes\Objects.vb" />
+    <Compile Include="Classes\User.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
