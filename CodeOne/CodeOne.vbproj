@@ -200,6 +200,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\holder.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\Login\Login.js" />
@@ -231,6 +232,16 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-blank-text.png" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-habitat-text.png" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-habitat.jpg" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-mobile-postlaunch-text.png" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-mobile-postlaunch.jpg" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-mortgage-text.png" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-mortgage.jpg" />
+    <Content Include="Styles\assets\site\img\personal\mainstage-rivercity-rodeo.jpg" />
+    <Content Include="Styles\assets\site\img\personal\promo-artsarben.jpg" />
+    <Content Include="Styles\assets\site\img\personal\promo-huskersdebit.jpg" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -458,7 +469,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Styles\assets\" />
     <Folder Include="Styles\config\" />
     <Folder Include="Styles\MarketingWeb\" />
   </ItemGroup>

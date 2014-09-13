@@ -7,10 +7,10 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CodeOne Test Site">
+    <meta name="description" content="Login Page">
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
-    <title>CodeOne Test Site</title>
+    <title>Login</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />
@@ -29,6 +29,7 @@
     <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
+    <script type="text/javascript" src="/Scripts/holder.js"></script>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />
@@ -37,39 +38,27 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Finance Logically</h1>
-        <p class="lead">Finance Logically is a web application to demonstrate logical spending, logical savings, and logical budgeting.</p>
-        <p><a href="https://www.firstnational.com/site/personal/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>FinanceLogically</h1>
+        <p class="lead">FinanceLogically is a web application to demonstrate logical spending, logical savings, and logical budgeting.</p>
+        <p><a href="" class="btn btn-success btn-lg">Login &raquo;</a>
+        <a href="https://www.firstnational.com/site/personal/" class="btn btn-success btn-lg">Learn more &raquo;</a></p>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting Started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+        <div class="col-md-1">
+            </div>
+        <div class="col-md-2">
+            <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
         </div>
+        <div class="col-md-1">
+            </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+            <img src="\Styles\assets\site\img\personal\mainstage-mobile-postlaunch.jpg" class="img-thumbnail" alt="">
         </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+        <div class="col-md-1">
+            </div>
+        <div class="col-md-2">
+            <img src="\Styles\assets\site\img\personal\promo-artsarben.jpg" class="img-thumbnail" alt="">
         </div>
     </div>
     
