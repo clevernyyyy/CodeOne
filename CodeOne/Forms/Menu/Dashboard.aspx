@@ -26,84 +26,48 @@
     
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
 
-    <style type="text/css">
-      /* Override some defaults */
-      html, body {
-        background-color: #eee;
-      }
-      body {
-        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
-      }
-      .container > footer p {
-        text-align: center; /* center align it with the container */
-      }
-      .container {
-        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
-      }
 
-      /* The white background content wrapper */
-      .content {
-        background-color: #fff;
-        padding: 20px;
-        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-        -webkit-border-radius: 0 0 6px 6px;
-           -moz-border-radius: 0 0 6px 6px;
-                border-radius: 0 0 6px 6px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-                box-shadow: 0 1px 2px rgba(0,0,0,.15);
-      }
-
-      /* Page header tweaks */
-      .page-header {
-        background-color: #f5f5f5;
-        padding: 20px 20px 10px;
-        margin: -20px -20px 20px;
-      }
-
-      /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content .span8,
-      .content .span2 {
-        min-height: 500px;
-      }
-      /* Give a quick and non-cross-browser friendly divider */
-      .content .span2 {
-        margin-left: 0;
-        padding-left: 19px;
-        border-left: 1px solid #eee;
-      }
-
-      .topbar .btn {
-        border: 0;
-      }
-
-    </style>
 
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        body
-        {
-            background: white !important;
-        }
+    <style type="text/css">
+     html, body, .container-fluid, .row {
+	height: 100%;
+}
+
+.sidebar {
+  background-color: #CCCCCC;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    background-color: #CCCCCC;
+  }
+}
+
     </style>
       <body>
 
-    <div class="container">
-             <div class="content">
-        <div class="page-header">
-          <h1>Page name <small>Supporting text or tagline</small></h1>
-        </div>
-        <div class="row">
-          <div class="span8">
-            <h2>Main content</h2>
-          </div>
-          <div class="span2">
-            <h3>Secondary content</h3>
-          </div>
-        </div>
-      </div>
+    <div class="container-fluid">
+  <div class="row">
+    
+    
+    <div class="col-md-9 col-md-offset-3 content">
+      Main Content
+    </div>
+
+    <div class="col-md-3 sidebar">
+      Sidebar
+    </div>
+    
+  </div>
 
       <hr>
 
