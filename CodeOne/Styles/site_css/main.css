@@ -124,11 +124,12 @@
 }
 
 .acctHeader {
+    float:left;
     margin-left:30px;
     font-size:large;
     font-weight:bold;
-    padding: 0.5em 0.6em;
     color:#216242;
+    display:inline-block;
 }
 
 .divAccts {
@@ -161,6 +162,10 @@
 
 .balHeader {
     float:right;
+    font-size:large;
+    font-weight:bold;
+    color:#216242;
+    margin-right: 35px;
 }
 
 .greenLink {

@@ -70,21 +70,35 @@
                     <div class="fullHeader">
                         Accounts
                     </div>
-                    <div id="DepositAccounts" class="acctHeader">
-                        DEPOSIT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
+                    <br />
+                    <div id="headerDep" style="margin-bottom:10px;">
+                        <span id="DepositAccounts" class="acctHeader">
+                            DEPOSIT ACCOUNTS
+                        </span>
+                        <span id="Balance" class="balHeader">
+                            BALANCE
+                        </span>
                     </div>
-                        <div id="divDeposits">
+                    <br />
+                    <div id="divDeposits">
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                             <asp:Repeater ID="repDeposits" runat="server">
                                 <ItemTemplate>
                                     <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-                    <div id="InvestmentAccounts" class="acctHeader">
-                        INVESTMENT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+                    <div id="headerInv" style="margin-bottom:10px;">
+                        <span id="InvestmentAccounts" class="acctHeader">
+                            INVESTMENT ACCOUNTS
+                        </span>
+                        <span id="Balance" class="balHeader">
+                            BALANCE
+                        </span>
                     </div>
+                    <br />
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                         <div id="divInvestments">
                             <asp:Repeater ID="repInvestments" runat="server">
                                 <ItemTemplate>
@@ -92,11 +106,18 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-
-                    <div id="CreditAccounts" class="acctHeader">
-                        CREDIT ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
+                    
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+                    <div id="headerCred" style="margin-bottom:10px;">
+                        <span id="CreditAccounts" class="acctHeader">
+                            CREDIT ACCOUNTS
+                        </span>
+                        <span id="Balance" class="balHeader">
+                            BALANCE
+                        </span>
                     </div>
+                    <br />
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
 
                         <div id="divCredits">
                             <asp:Repeater ID="repCredits" runat="server">
@@ -105,12 +126,18 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-
-                    <div id="LoanAccounts" class="acctHeader">
-                        LOAN ACCOUNTS
-                        <hr style="margin-bottom: 0px; margin-top: 0px;" />
+                    
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+                    <div id="headerLoan" style="margin-bottom:10px;">
+                        <span id="LoanAccounts" class="acctHeader">
+                            LOAN ACCOUNTS
+                        </span>
+                        <span id="Balance" class="balHeader">
+                            BALANCE
+                        </span>
                     </div>
-                        
+                    <br />
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                         <div id="divLoans">
                             <asp:Repeater ID="repLoans" runat="server">
                                 <ItemTemplate>
