@@ -39,7 +39,7 @@
         If e.Item.ItemType = ListItemType.AlternatingItem Or e.Item.ItemType = ListItemType.Item Then
             Dim dr As DataRow = oItem.DataItem
             Dim ctrlAccount As AccountLine = DirectCast(oItem.FindControl("uctrlAccount"), AccountLine)
-            ctrlAccount.AccountName = dr.Item("cAccountName").ToString().Trim()
+            ctrlAccount.AccountName = dr.Item("cAccountName").ToString().Trim() & " - " & dr.Item("cAccountNum")
             ctrlAccount.AccountNumber = dr.Item("cAccountNum")
             ctrlAccount.CurrentBalance = dr.Item("nAccountBalance")
             ctrlAccount.PaymentDueAmount = dr.Item("nPaymentDue")
