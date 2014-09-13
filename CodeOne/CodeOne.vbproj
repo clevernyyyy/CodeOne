@@ -262,6 +262,7 @@
     <Content Include="Styles\config\img\logo-member-fdic.png" />
     <Content Include="Styles\config\img\logo-twitter.png" />
     <Content Include="Styles\config\img\logo.png" />
+    <Content Include="Scripts\Dashboard\Account.js" />
     <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-homepage-buttons.css" />
     <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-homepage.css" />
     <Content Include="Styles\MarketingWeb\internet_tip\shared-content-library\config\css\content-ie7.css" />

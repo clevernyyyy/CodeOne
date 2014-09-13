@@ -104,13 +104,13 @@ Partial Public Class AccountLine
     Protected WithEvents lblBalance As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lnkViewTen control.
+    '''lblViewTen control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lnkViewTen As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents lblViewTen As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''dvgPack control.

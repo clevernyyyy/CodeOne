@@ -1,21 +1,29 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="AccountLine.ascx.vb" Inherits="CodeOne.AccountLine" %>
-
+<script type="text/javascript" src="~/Scripts/Dashboard/Account.js"></script>
 <div id="AccountControl" runat="server" class="divAccts">
     <asp:LinkButton id="lnkAccountName" runat="server" CssClass="acctHeadings"></asp:LinkButton>
     <asp:HiddenField ID="hfAccountNum" runat="server" />
-    <span id="divLast" runat="server">
-        <asp:Label ID="lblLastPaymentDate" runat="server" />
-        <asp:Label ID="lblLastPaymentAmount" runat="server" />
+    <span id="divLast" runat="server" class="acctBalanceBak">
+        <label class="acctBalance">Last Payment</label>
+        <br />
+        <asp:Label ID="lblLastPaymentAmount" runat="server"  CssClass="acctBalance"/>
+        <br />
+        <asp:Label ID="lblLastPaymentDate" runat="server"  CssClass="acctBalance"/>
     </span>
-    <span id="divDue" runat="server">
-        <asp:Label ID="lblDueDate" runat="server" />
-        <asp:Label ID="lblDueAmount" runat="server" />
+    <span id="divDue" runat="server" class="acctBalanceBak">
+        <label class="acctBalance">Next Payment Due</label>
+        <br />
+        <asp:Label ID="lblDueAmount" runat="server"  CssClass="acctBalance" />
+        <br />
+        <asp:Label ID="lblDueDate" runat="server" CssClass="acctBalance" />
     </span>
     <span id="balance" class="acctBalanceBak">
+        <label Class="acctBalance">Account Balance</label>
+        <br />
         <asp:Label ID="lblBalance" runat="server" CssClass="acctBalance"/>
     </span>
     <div>
-        <asp:LinkButton ID="lnkViewTen" runat="server" CssClass="greenLink">Last 10 Transactions</asp:LinkButton>
+        <asp:label ID="lblViewTen" runat="server" CssClass="greenLink">Last 10 Transactions</asp:label>
     </div>
       <div class="row row-offcanvas row-offcanvas-right">
           <!-- Transactions Gridview -->

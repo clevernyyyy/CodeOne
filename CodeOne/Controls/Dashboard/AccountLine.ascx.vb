@@ -50,17 +50,17 @@
             Return dPayment
         End Get
         Set(value As Date)
-            lblDueDate.Text = value.ToString
+            lblDueDate.Text = value.ToShortDateString
         End Set
     End Property
     Public Property PaymentDueAmount As Decimal
         Get
             Dim nDue As Decimal
-            Decimal.TryParse(lblDueAmount.Text, nDue)
+            Decimal.TryParse(Replace(lblDueAmount.Text, "$", ""), nDue)
             Return nDue
         End Get
         Set(value As Decimal)
-            lblDueAmount.Text = value.ToString
+            lblDueAmount.Text = "$" + value.ToString
         End Set
     End Property
     Public WriteOnly Property ShowLastPayment As Boolean
@@ -75,17 +75,17 @@
             Return dPayment
         End Get
         Set(value As Date)
-            lblLastPaymentDate.Text = value.ToString
+            lblLastPaymentDate.Text = value.ToShortDateString
         End Set
     End Property
     Public Property LastPaymentAmount As Decimal
         Get
             Dim nDue As Decimal
-            Decimal.TryParse(lblLastPaymentAmount.Text, nDue)
+            Decimal.TryParse(Replace(lblLastPaymentAmount.Text, "$", ""), nDue)
             Return nDue
         End Get
         Set(value As Decimal)
-            lblLastPaymentAmount.Text = value.ToString
+            lblLastPaymentAmount.Text = "$" + value.ToString
         End Set
     End Property
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -106,11 +106,6 @@
         LoadTransactions()
     End Sub
 
-    Private Sub lnkViewTen_Click(sender As Object, e As EventArgs) Handles lnkViewTen.Click
-        If IsPostBack Then
-            LoadTransactions()
-        End If
-    End Sub
 
 
 #Region "Last 10 Transactions"
@@ -164,5 +159,14 @@
     End Sub
 #End Region
 #End Region
+#Region "JavaScript"
+    Public Sub AddGetTopTenJavaScript()
+        Dim strJava As String
 
+        'Shows info from SQL if button is pressed
+        strJava = "javascript:ToggleRetrieve();"
+        lblViewTen.Attributes.Add("onclick", strJava)
+
+    End Sub
+#End Region
 End Class
