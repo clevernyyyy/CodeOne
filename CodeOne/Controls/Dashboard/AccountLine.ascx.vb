@@ -1,6 +1,16 @@
 ﻿Public Class AccountLine
     Inherits System.Web.UI.UserControl
-
+    Private Class TransactionQuickInfo
+        Public TransDesc As String
+        Public TransDate As Date
+        Public TransAmount As Decimal
+        Public Sub New(cDesc As String, dDate As Date, nAmt As Decimal)
+            TransDesc = cDesc
+            TransDate = dDate
+            TransAmount = nAmt
+        End Sub
+    End Class
+    Dim Transactions As System.Collections.ObjectModel.Collection(Of TransactionQuickInfo)
     Public Property AccountName As String
         Get
             Return lnkAccountName.text
@@ -83,5 +93,13 @@
 
     Private Sub lnkAccountName_Click(sender As Object, e As EventArgs) Handles lnkAccountName.Click
         Response.Redirect("~/Forms/Menu/Transactions.aspx?A=" & hfAccountNum.Value)
+    End Sub
+
+    Public Sub SetUpTransactions(ParamArray drTransactions() As DataRow)
+        Transactions = New System.Collections.ObjectModel.Collection(Of TransactionQuickInfo)
+        For Each drTrans As DataRow In drTransactions
+            Dim objTrans As New TransactionQuickInfo(drTrans.Item("cTransDesc"), CDate(drTrans.Item("dPostDt")), CDec(drTrans.Item("nTransAmt")))
+            Transactions.Add(objTrans)
+        Next
     End Sub
 End Class
