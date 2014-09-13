@@ -14,7 +14,8 @@
                 ctrlLogin.Visible = False
                 LoadUserLvlDisplay()    'Access Control
             End If
-        ElseIf Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login" Then
+        ElseIf IsPostBack AndAlso _
+            Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login" Then
             'Popup once button is hit
             OpenLoginDialog()
         Else

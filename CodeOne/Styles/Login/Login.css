@@ -1,0 +1,79 @@
+﻿body {
+}
+
+
+.bottomButtons
+{
+    font-size: 12px !important;
+    font-weight: bold;
+    font-family: Latha;
+    color: #ffffff;
+    min-width: 54px;
+    height: 24px; 
+    white-space: nowrap;   
+    cursor: pointer;  
+    outline: 0 none;
+    padding: 0 10px 2px;
+    text-align: center;
+       
+    /* Coloring */       
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003300', endColorstr='#006600'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003300', endColorstr='#006600'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#003300), to(#006600)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #003300, #006600); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #003300, #006600); /* for Opera */
+}
+
+.bottomButtons:hover
+{
+    cursor: pointer;    
+    /* Coloring */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #006600',endColorstr='#009900'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #006600',endColorstr='#009900'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#006600),to(#009900)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #006600, #009900); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #006600, #009900); /* for Opera */
+}
+
+
+
+/********************************/
+/****** jQuery Dialog Play ******/
+/********************************/
+
+
+.ui-widget-header
+{
+    /* Darker Green gradient*/
+    background: linear-gradient(to bottom, #003300 0%, #006600 40%, #006600 60%, #003300 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    
+    color: White;
+    font-weight: bold;
+    padding: 4px 18px;
+
+    /* Classes used in dialogs */
+    /* ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix */
+}
+
+
+/********************************/
+/********* Placeholders *********/
+/********************************/
+
+
+::-webkit-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+:-moz-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+
+:-ms-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}

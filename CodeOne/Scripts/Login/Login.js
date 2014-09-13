@@ -13,7 +13,7 @@ function OpenLoginDialog() {
         title: "Login Please",
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },
-        overlay: { backgroundColor: "#000", opacity: 0.5 },
+        overlay: { backgroundColor: "white", opacity: 0.5 },
         closeOnEscape: false
     }).css('z-index', '1005');
     return false;

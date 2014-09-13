@@ -3,7 +3,6 @@
 <%@ Register Src="~/Controls/Login/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
 
 <!-- including jQuery Dialog UI here-->
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/dialog.js"></script>
@@ -26,13 +25,13 @@
 
     <asp:Label ID="lblRegister" runat="server" Text="Don't have a login?  "></asp:Label>
     
-    <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!" ForeColor="SlateBlue"></asp:LinkButton>
+    <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!" ForeColor="ForestGreen"></asp:LinkButton>
        
     <div id="divBottomLeft" class="bottomPopupLeft">        
-        <button type="button" id="btnCancel" runat="server" onclick="__doPostBack('btnCancel','Cancel');">Cancel</button>
+        <button type="button" id="btnCancel" class="bottomButtons" runat="server" onclick="__doPostBack('btnCancel','Cancel');">Cancel</button>
     </div>
     <div id="divBottomRight" class="bottomPopupRight">
-        <button type="button" id="btnFinish" runat="server" onclick="__doPostBack('btnLogin','Login');">Login</button>
+        <button type="button" id="btnFinish" class="bottomButtons" runat="server" onclick="__doPostBack('btnLogin','Login');">Login</button>
     </div>
 
       </ContentTemplate>
