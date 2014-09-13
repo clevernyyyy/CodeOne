@@ -2,15 +2,15 @@
     Inherits System.Web.UI.Page
 
     Dim nUserID As Integer = 4
+    Dim dtQL As DataTable
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID)
+            dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID)
             FillRepeater(repDeposits, dt, "Checking", "Savings")
             FillRepeater(repInvestments, dt, "CD", "IRA")
             FillRepeater(repCredits, dt, "CREDIT CARD")
             FillRepeater(repLoans, dt, "Auto Loan", "Mortgage")
-
-
 
         End If
     End Sub
@@ -32,6 +32,8 @@
             ctrlAccount.AccountName = "First National " + dr.Item("cAccountName").ToString().Trim()
             ctrlAccount.AccountNumber = dr.Item("cAccountNum")
             ctrlAccount.CurrentBalance = dr.Item("nAccountBalance")
+            Dim drs() As DataRow = dtQL.Select("cAccountNum = '" & dr.Item("cAccountNum") & "'")
+            ctrlAccount.SetUpTransactions(drs)
         End If
     End Sub
 
@@ -47,6 +49,8 @@
             ctrlAccount.PaymentDueDate = dr.Item("dPaymentDue")
             ctrlAccount.LastPaymentAmount = dr.Item("nLastPayment")
             ctrlAccount.LastPaymentDate = dr.Item("dLastPayment")
+            Dim drs() As DataRow = dtQL.Select("cAccountNum = '" & dr.Item("cAccountNum") & "'")
+            ctrlAccount.SetUpTransactions(drs)
         End If
     End Sub
 
@@ -60,6 +64,8 @@
             ctrlAccount.CurrentBalance = dr.Item("nAccountBalance")
             ctrlAccount.LastPaymentAmount = dr.Item("nLastPayment")
             ctrlAccount.LastPaymentDate = dr.Item("dLastPayment")
+            Dim drs() As DataRow = dtQL.Select("cAccountNum = '" & dr.Item("cAccountNum") & "'")
+            ctrlAccount.SetUpTransactions(drs)
         End If
     End Sub
 End Class
