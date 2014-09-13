@@ -10,3 +10,6 @@
     <asp:Label ID="lblDueAmount" runat="server" />
 </div>
 <asp:Label ID="lblBalance" runat="server" />
+<div>
+    <asp:LinkButton ID="lnkViewTen" runat="server"></asp:LinkButton>
+</div>
