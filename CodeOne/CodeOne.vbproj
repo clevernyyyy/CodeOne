@@ -191,6 +191,7 @@
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\Dashboard.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -376,6 +377,13 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -450,7 +458,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Forms\" />
     <Folder Include="Styles\assets\" />
     <Folder Include="Styles\config\" />
     <Folder Include="Styles\MarketingWeb\" />
