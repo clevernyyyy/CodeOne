@@ -135,6 +135,35 @@
     margin-left:65px;
 
 }
+.acctHeadings {
+    font-weight:bolder;
+    color:black;
+    text-decoration:underline;
+}
+
+.acctBalance {
+    float:right;
+    font-family:'Arial';
+    color:whitesmoke;
+    font-size:medium;
+    font-weight:bold;
+}
+
+.acctBalanceBak {
+    background-color:darkgreen; 
+    border-radius: 5px; 
+    padding: 5px 5px 5px 15px;
+    display:inline-block;
+    float:right;
+    margin-right:30px;
+
+}
+
+.greenLink {
+    color:green;
+    font-size:small;
+    text-decoration:underline;
+}
 
 .smallfont
 {

@@ -41,8 +41,8 @@
                 cursor: 'move'
             });
 
-            $('#Retrieve_GridViewContainer').find("td").draggable({ cursor: "move", snap: true });
-            $('#Retrieve_GridViewContainer').find("td").droppable({
+            $('#Retrieve_GridViewContainer').find("td.left").draggable({ cursor: "move", snap: true });
+            $('#Retrieve_GridViewContainer').find("td.left").droppable({
                 drop: function (event, ui) {
                     $(this).html($(ui.draggable).html());
                 }
