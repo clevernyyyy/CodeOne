@@ -5,7 +5,7 @@
 
 function OpenLoginDialog() {
     $("#divLoginOpen").dialog({
-        appendTo: "form",
+        appendTo: "body",
         modal: true,
         dialogClass: "no-close",
         width: 450,
@@ -15,7 +15,7 @@ function OpenLoginDialog() {
         hide: { effect: "clip", duration: 800 },
         overlay: { backgroundColor: "white", opacity: 0.5 },
         closeOnEscape: false
-    }).css('z-index', '2005');
+    }).css('z-index', '5005');
     return false;
 }
 
