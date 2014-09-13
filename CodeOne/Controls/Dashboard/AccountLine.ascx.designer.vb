@@ -41,31 +41,22 @@ Partial Public Class AccountLine
     Protected WithEvents hfAccountNum As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''divLast control.
+    '''lblBalance control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divLast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents lblBalance As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblLastPaymentAmount control.
+    '''lblFake control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblLastPaymentAmount As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblLastPaymentDate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblLastPaymentDate As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblFake As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''divDue control.
@@ -95,22 +86,31 @@ Partial Public Class AccountLine
     Protected WithEvents lblDueDate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblBalance control.
+    '''divLast control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblBalance As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents divLast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''lnkViewTen control.
+    '''lblLastPaymentAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lnkViewTen As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents lblLastPaymentAmount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblLastPaymentDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblLastPaymentDate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''dvgPack control.

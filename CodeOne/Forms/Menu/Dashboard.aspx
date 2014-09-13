@@ -88,7 +88,6 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
                     <div id="headerInv" style="margin-bottom:10px;">
                         <span id="InvestmentAccounts" class="acctHeader">
                             INVESTMENT ACCOUNTS
@@ -106,8 +105,6 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-                    
-                    <hr style="margin-bottom:0px; margin-top:20px; margin-left:30px; border-color:lightslategray;" />
                     <div id="headerCred" style="margin-bottom:25px;">
                         <span id="CreditAccounts" class="acctHeader">
                             CREDIT ACCOUNTS
@@ -132,8 +129,7 @@
                                 </ItemTemplate>
                             </asp:Repeater>
                         </div>
-                    
-                    <hr style="margin-bottom:0px; margin-top:20px; margin-left:30px; border-color:lightslategray;" />
+                  
                     <div id="headerLoan" style="margin-bottom:25px;">
                         <span id="LoanAccounts" class="acctHeader">
                             LOAN ACCOUNTS

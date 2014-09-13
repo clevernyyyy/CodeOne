@@ -207,25 +207,17 @@ hfAccountNum control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AccountLine.divLast">
+</member><member name="F:CodeOne.AccountLine.lblBalance">
 	<summary>
-divLast control.
+lblBalance control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AccountLine.lblLastPaymentAmount">
+</member><member name="F:CodeOne.AccountLine.lblFake">
 	<summary>
-lblLastPaymentAmount control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblLastPaymentDate">
-	<summary>
-lblLastPaymentDate control.
+lblFake control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -255,17 +247,25 @@ lblDueDate control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AccountLine.lblBalance">
+</member><member name="F:CodeOne.AccountLine.divLast">
 	<summary>
-lblBalance control.
+divLast control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AccountLine.lnkViewTen">
+</member><member name="F:CodeOne.AccountLine.lblLastPaymentAmount">
 	<summary>
-lnkViewTen control.
+lblLastPaymentAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblLastPaymentDate">
+	<summary>
+lblLastPaymentDate control.
 </summary>
 	<remarks>
 Auto-generated field.
