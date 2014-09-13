@@ -21,7 +21,7 @@ $(document).ready(function()
 //		btn_numbers:			true,
 		btn_numbers:			false,
 //		btn_symbol: 			'&#9632;', /* btn_symbol is an FNN customization */
-		btn_symbol: 			'<img src="./config/img/branded/mainstage-frame.png" title="" alt="">', /* btn_symbol is an FNN customization */
+		btn_symbol: 			'<img src="/Styles/config/img/branded/mainstage-frame.png" title="" alt="">', /* btn_symbol is an FNN customization */
 		keybord_keys:			true,
 		mousetrace:				false, /* Trace x and y coordinates for the mouse */
 		pauseonover:			true,

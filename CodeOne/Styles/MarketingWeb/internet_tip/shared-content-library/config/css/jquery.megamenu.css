@@ -194,10 +194,11 @@ ul.megamenu .mm-js-shadow {
   color:#4c5a52;
   text-decoration:none;
 }
-.megamenu ul.nav a[href*="siteDisclosure"],
+.megamenu ul.nav a[href*="siteDisclosure"]
+.megamenu ul.nav a[href*="localhost"],
 .megamenu ul.nav a[href^="http://"],
 .megamenu ul.nav a[href^="https://"] {
-  background-image:url(./MarketingWeb/internet_tip/shared-content-library/config/img/icon-exit-arrow.gif);
+  background-image:url(/Styles/MarketingWeb/internet_tip/shared-content-library/config/img/icon-exit-arrow.gif);
   background-position:right 2px;
   background-repeat:no-repeat;
   padding-right:15px;

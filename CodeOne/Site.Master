@@ -27,7 +27,6 @@
 
     <!-- start of FNBO stuff -->
 
-    <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon"/>
     <meta content="" http-equiv="keywords"/>
     <meta content="" name="description"/>
     <meta content="all" name="robots"/>
@@ -168,67 +167,69 @@
   <div class="category" style="position:absolute; right:0; z-index:2000; top:-46px;">
 -->
   <div class="category "> 
-      <ul class="megamenu category layout">
+      <ul class="megamenu category layout" style="display:block">
 
     
-    <li class="category Banking"> <a href="/site/personal/banking/">Banking</a>
-          <div class="submenu">
-            <div class="background2">
-				<img src="/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
-              <table border="0" cellpadding="0" cellspacing="0" class="layout">
-                <tr>
-                  <td class="col1" style="width:200px; padding:0 10px 0 0;">
-                  	<h3><a href="/site/personal/banking/checking-accounts/">First National Checking</a></h3>
-                    <ul class="nav">
+    <li class="category Banking" style="float:left;">
+         <a href="/site/personal/banking/">Banking</a>
+          <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
+                        <div class="background2">
+				            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
+                          <table border="0" cellpadding="0" cellspacing="0" class="layout">
+                            <tr>
+                              <td class="col1" style="width:200px; padding:0 10px 0 0;">
+                  	            <h3><a href="/site/personal/banking/checking-accounts/">First National Checking</a></h3>
+                                <ul class="nav">
                      
-                      <li><a href="/site/personal/banking/checking-accounts/first-at-work-checking.fhtml">First At Work</a></li>
+                                  <li><a href="/site/personal/banking/checking-accounts/first-at-work-checking.fhtml">First At Work</a></li>
                       
-                    </ul>
-                  	<h3><a href="/site/personal/banking/savings-accounts/">Savings Accounts</a></h3>
-                    <ul class="nav">
-                      <li><a href="/site/personal/banking/savings-accounts/savings-accounts.fhtml">Savings</a></li>
-                      <li><a href="/site/personal/banking/savings-accounts/money-market.fhtml">Money Market</a></li>
+                                </ul>
+                  	            <h3><a href="/site/personal/banking/savings-accounts/">Savings Accounts</a></h3>
+                                <ul class="nav">
+                                  <li><a href="/site/personal/banking/savings-accounts/savings-accounts.fhtml">Savings</a></li>
+                                  <li><a href="/site/personal/banking/savings-accounts/money-market.fhtml">Money Market</a></li>
 					  
-                      <li><a href="/site/personal/banking/savings-accounts/minor-savings-accounts.fhtml">Minor Savings</a></li>
-                      <li><a href="/site/personal/banking/savings-accounts/health-savings-account.fhtml">First&nbsp;National&nbsp;Health&nbsp;Savings</a></li>
+                                  <li><a href="/site/personal/banking/savings-accounts/minor-savings-accounts.fhtml">Minor Savings</a></li>
+                                  <li><a href="/site/personal/banking/savings-accounts/health-savings-account.fhtml">First&nbsp;National&nbsp;Health&nbsp;Savings</a></li>
                       
-                    </ul>
-                  </td>
-                  <td class="col2" style="border-left:1px solid #ccc; width:200px; padding:0 10px;">
-                   	<h3><a href="/site/personal/banking/cd-ira-accounts/">CDs &amp; IRAs</a></h3>
-                    <ul class="nav">
-                      <li><a href="/site/personal/banking/cd-ira-accounts/cd-accounts.fhtml">CDs</a></li>
-                      <li><a href="/site/personal/banking/cd-ira-accounts/ira-accounts.fhtml">Traditional IRA</a></li>
-                      <li><a href="/site/personal/banking/cd-ira-accounts/roth-ira-accounts.fhtml">Roth IRA</a></li>
-                      <li><a href="/site/personal/banking/cd-ira-accounts/educational-savings-accounts.fhtml">Educational&nbsp;Savings&nbsp;Account</a></li>
-                    </ul>
-                   	<h3><a href="/site/personal/banking/online-services/">Online Services</a></h3>
-                    <ul class="nav">
-                      <li><a href="/site/personal/banking/online-services/online-banking.fhtml">Online Banking</a></li>
-                      <li><a href="/site/personal/banking/online-services/billpay.fhtml">BillPay</a></li>
-                      <li><a href="/site/personal/banking/online-services/statements.fhtml">Paperless Statements</a></li>
-                      <li><a href="/site/personal/banking/online-services/alerts.fhtml">Account Alerts</a></li>
-                      <li><a href="/site/personal/banking/online-services/credit-card-payments.fhtml">Credit Card Payments</a></li>
-                      <li><a href="/site/personal/banking/online-services/activate-card.fhtml">Activate Credit Card</a></li>
-                    </ul>
-                  </td>
-                  <td class="col3" style="border-left:1px solid #ccc; width:200px; padding:0 0 0 10px;">
-				  <h3><a href="/site/personal/banking/mobile-banking.fhtml">Mobile&nbsp;Banking</a></h3>
-				  <h3><a href="/site/personal/banking/foreign-currency.fhtml">Foreign&nbsp;Currency</a></h3>
-                  	<h3><a href="/site/personal/banking/personal-rates.fhtml">Rates</a></h3>
+                                </ul>
+                              </td>
+                              <td class="col2" style="border-left:1px solid #ccc; width:200px; padding:0 10px;">
+                   	            <h3><a href="/site/personal/banking/cd-ira-accounts/">CDs &amp; IRAs</a></h3>
+                                <ul class="nav">
+                                  <li><a href="/site/personal/banking/cd-ira-accounts/cd-accounts.fhtml">CDs</a></li>
+                                  <li><a href="/site/personal/banking/cd-ira-accounts/ira-accounts.fhtml">Traditional IRA</a></li>
+                                  <li><a href="/site/personal/banking/cd-ira-accounts/roth-ira-accounts.fhtml">Roth IRA</a></li>
+                                  <li><a href="/site/personal/banking/cd-ira-accounts/educational-savings-accounts.fhtml">Educational&nbsp;Savings&nbsp;Account</a></li>
+                                </ul>
+                   	            <h3><a href="/site/personal/banking/online-services/">Online Services</a></h3>
+                                <ul class="nav">
+                                  <li><a href="/site/personal/banking/online-services/online-banking.fhtml">Online Banking</a></li>
+                                  <li><a href="/site/personal/banking/online-services/billpay.fhtml">BillPay</a></li>
+                                  <li><a href="/site/personal/banking/online-services/statements.fhtml">Paperless Statements</a></li>
+                                  <li><a href="/site/personal/banking/online-services/alerts.fhtml">Account Alerts</a></li>
+                                  <li><a href="/site/personal/banking/online-services/credit-card-payments.fhtml">Credit Card Payments</a></li>
+                                  <li><a href="/site/personal/banking/online-services/activate-card.fhtml">Activate Credit Card</a></li>
+                                </ul>
+                              </td>
+                              <td class="col3" style="border-left:1px solid #ccc; width:200px; padding:0 0 0 10px;">
+				              <h3><a href="/site/personal/banking/mobile-banking.fhtml">Mobile&nbsp;Banking</a></h3>
+				              <h3><a href="/site/personal/banking/foreign-currency.fhtml">Foreign&nbsp;Currency</a></h3>
+                  	            <h3><a href="/site/personal/banking/personal-rates.fhtml">Rates</a></h3>
                   	
-                </td>
-                </tr>
-              </table>
-            </div>
-            <!-- background2 --> 
-          </div>
+                            </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!-- background2 --> 
+                  </div>
         </li>
        
-	 <li class="category Lending"> <a href="/site/personal/lending/">Lending</a>
-          <div class="submenu">
+	 <li class="category Lending"> 
+         <a href="/site/personal/lending/">Lending</a>
+          <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
-				<img src="/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
+				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
             
 			
 			<h3><a href="/site/personal/lending/mortgage-loans.fhtml">Mortgage</a></h3>
@@ -247,10 +248,11 @@
         </li>
 
 
-        <li class="category CreditCard"> <a href="/site/personal/credit-card/">Credit Cards</a>
-          <div class="submenu">
+        <li class="category CreditCard"> 
+            <a href="/site/personal/credit-card/">Credit Cards</a>
+          <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
-				<img src="/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
+				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
 		<h3><a href="/site/personal/credit-card/amex/">American Express</a></h3>
 			<ul class="nav">
 				 <li><a href="/site/personal/credit-card/amex/amex-standard.fhtml">First National Bank American Express Card</a></li>
@@ -273,11 +275,6 @@
 				<li><a href="/site/personal/credit-card/mastercard/mc-platinum.fhtml">Platinum Edition MasterCard Card</a></li>
 			</ul>
 			
-		
-		
-		
-
-
 		<h3><a href="/site/personal/credit-card/online-services/index.fhtml">Online Services</a></h3>
       		 <ul class="nav">
                       <li><a href="/site/personal/credit-card/online-services/online-banking.fhtml">Online Banking</a></li>
@@ -286,9 +283,7 @@
                       <li><a href="/site/personal/credit-card/online-services/credit-card-payments.fhtml">Credit Card Payments</a></li>
                       <li><a href="/site/personal/credit-card/online-services/activate-card.fhtml">Activate Credit Card</a></li>
                    </ul>      
-
-
-
+                
 		<h3><a href="/site/personal/credit-card/benefits/">Benefits</a></h3>
                     <ul class="nav">
                       <li><a href="/site/personal/credit-card/benefits/firstguard.fhtml">FirstGuard</a></li>
@@ -306,12 +301,11 @@
           </div>
         </li>
 
-
-
-        <li class="category WealthInvesting"> <a href="/site/personal/wealth-investing/">Wealth &amp; Investing</a>
-        <div class="submenu">
+        <li class="category WealthInvesting"> 
+            <a href="/site/personal/wealth-investing/">Wealth &amp; Investing</a>
+        <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
           <div class="background2">
-            <img src="/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->          
+            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->          
             <table border="0" cellpadding="0" cellspacing="0" class="layout">
               <tr>
                 <td class="col1" style="width:200px; padding:0 10px 0 0;">    
@@ -337,26 +331,41 @@
         </li>
        
 
-	 <li class="category ResourceCenter"> <a href="/site/personal/resource-center/">Resource Center</a>          
-          <div class="submenu">			
+	 <li class="category ResourceCenter"> 
+         <a href="/site/personal/resource-center/">Resource Center</a>          
+          <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">			
             <div class="background2">
-				<img src="/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
-          			<h3><a href="/site/personal/resource-center/smart-credit-management/index.fhtml">Smart&nbsp;Credit&nbsp;Management</a></h3>
+				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
+          		<h3><a href="/site/personal/resource-center/smart-credit-management/index.fhtml">Smart&nbsp;Credit&nbsp;Management</a></h3>
 				<h3><a href="/site/personal/resource-center/bank-green/index.fhtml">Bank Green</a></h3>
 				<h3><a href="/site/personal/resource-center/scra.fhtml">SCRA</a></h3>
 				<h3><a href="/site/personal/resource-center/newsletters/index.fhtml">Newsletters</a></h3>
                     <ul class="nav">
 					<li><a href="/site/personal/resource-center/newsletters/first-focus/index.fhtml">First Focus</a></li>
                       <li><a href="/site/personal/resource-center/newsletters/estate-planning-updates.fhtml">Estate Planning Updates</a></li></ul>
-				<h3><a href="/util/calculators/index.fhtml">Calculators</a></h3>
-					  
-                   
-
-
-       
+				<h3><a href="/util/calculators/index.fhtml">Calculators</a></h3>      
             </div>
             <!-- background2 --> 
           </div>
+        </li>
+
+        <li class="category FinanceLogically">
+            <a href="/Forms/Menu/Dashboard.aspx">FinanceLogically</a>
+            <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
+            <div class="background2">
+				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
+          	    <h3><a href="/Forms/Menu/Dashboard.aspx">Dashboard</a></h3>
+				<h3><a href="/Forms/Menu/Transactions.aspx">Transactions</a></h3>
+				<h3><a href="">Budgeting</a></h3>
+                    <ul class="nav">
+					    <li><a href="">Bucket List Budgeting</a></li>
+                        <li><a href="">Retirement Planning</a></li>
+                    </ul>
+				<h3><a href="">How Do I Rank?</a></h3>
+				<h3><a href="">Other Thing</a></h3>
+            </div>
+            <!-- background2 --> 
+            </div>
         </li>
       </ul>
     </div>
@@ -376,5 +385,31 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     </form>
+
+    
+
+		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code.js?v01" type="text/javascript"></script>
+		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-functions.js?v01" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript"><!--
+    /* Copyright 1997-2004 Omniture, Inc. */
+    scatalyst.pageName = "Personal:Homepage"
+    scatalyst.channel = "Marketing"
+    scatalyst.server = ""
+    scatalyst.pageType = ""
+    scatalyst.prop1 = "Personal"
+    scatalyst.prop2 = ""
+    scatalyst.prop4 = ""
+    scatalyst.prop5 = ""
+    scatalyst.prop6 = ""
+    scatalyst.prop7 = ""
+    scatalyst.prop9 = ""
+    scatalyst.prop10 = "logged out"
+    scatalyst.prop19 = ""
+    scatalyst.prop23 = ""
+    scatalyst.events = ""
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = scatalyst.t(); if (s_code) document.write(s_code)
+    //--></script>
+		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-function-calls.js?v01" type="text/javascript"></script>
 </body>
 </html>
