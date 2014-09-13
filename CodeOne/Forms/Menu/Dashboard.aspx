@@ -156,7 +156,13 @@
                 </div>
 
                 <div class="col-md-3 sidebar">
-                    Sidebar
+                    <div >
+                        <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
+                      </div>
+                      <div >
+                        <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
+                      </div>
+                    </div>
                 </div>
 
             </div>

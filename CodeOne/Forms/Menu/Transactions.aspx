@@ -69,9 +69,10 @@
 
     @media (min-width: 992px) {
       .sidebar {
-        position: fixed;
-        top: 138px;
-        right: -150px;
+        position: absolute;
+        top: 0;
+        width: 200px;
+        right: 0;
         bottom: 0;
         z-index: 100;
         display: block;
@@ -80,77 +81,153 @@
     }
     </style>
 
+   <%-- <style type ="text/css">
+        #wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 250px;
+  width: 250px;
+  background: #CCCCCC;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+}
+    </style>--%>
+
+    <%--<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="container-fluid"><a href="#">Home</a></li>
+            <li><a href="#">Another link</a></li>
+            <li><a href="#">Next link</a></li>
+            <li><a href="#">Last link</a></li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">--%>
+                        <!-- content of page -->
+                    
+
     <body>
     <div class="container">
-        <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
-        </h2>
-        <div id="MainContent_Accordion">
-            <div id="divHideCategory" runat="server">
-                <div id="divRepCategory" style="display:none" >
-                    <asp:Repeater runat="server" ID="rptCategories">
-                        <ItemTemplate>
-                            <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
-                        </ItemTemplate>
-                    </asp:Repeater>        
+       <div class="row-fluid">
+           <div class="span8 content">
+                <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
+                </h2>
+                <div id="MainContent_Accordion">
+                    <div id="divHideCategory" runat="server">
+                        <div id="divRepCategory" style="display:none" >
+                            <asp:Repeater runat="server" ID="rptCategories">
+                                <ItemTemplate>
+                                    <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
+                                </ItemTemplate>
+                            </asp:Repeater>        
+                        </div>
+                    </div>
+                </div>
+      
+
+          <div class="row row-offcanvas row-offcanvas-right">
+              <!-- Transactions Gridview -->
+            <div id="Retrieve" class="centered">
+       
+            <div class="rowClassSpace">
+                &nbsp;</div>
+                <asp:ScriptManager runat="server"></asp:ScriptManager>
+                <div id="Retrieve_GridViewContainer" class="gridViewContainer">
+                    <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
+                        AutoGenerateColumns="false"
+                        OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="6"
+                        PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
+                        <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
+                        <Columns >
+                            <%--0--%><asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
+                                ItemStyle-Width="50" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
+                            <%--1--%><asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
+                                SortExpression="dPostDt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered"  />
+                            <%--2--%><asp:BoundField DataField="cDebitCredit" HeaderText="DEBIT & CREDIT" 
+                                SortExpression="cDebitCredit" ItemStyle-Width="25"  HeaderStyle-CssClass="centered"/>
+                            <%--3--%><asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
+                                SortExpression="cTransDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
+                            <%--4--%><asp:BoundField DataField="cTranDetailDesc" HeaderText="TRANSACTION DESCRIPTION" 
+                                SortExpression="cTranDetailDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
+                            <%--5--%><asp:BoundField DataField="nTranAmt" HeaderText="AMOUNT" 
+                                SortExpression="nTranAmt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered" />
+                            <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
+                        </Columns>
+                        <PagerStyle CssClass="pager" />
+                        <PagerTemplate>
+                            <asp:Button ID="btnPrev" Text="<<" Width="75px" runat="server"
+                                OnClick="dgvPackPrev_Click" />
+                            <span style="display: inline-block; text-align: center; font-weight: bold;">Page
+                                <asp:DropDownList ID="dgvPackDDL" AutoPostBack="true" OnSelectedIndexChanged="dgvPackDDL_SelectedIndexChanged"
+                                    runat="server" />
+                                out of
+                                <asp:Label ID="lblPages" runat="server"></asp:Label>
+                            </span>
+                            <asp:Button ID="btnNext" Text=">>" Width="75px" runat="server"
+                                OnClick="dgvPackNext_Click" />
+                        </PagerTemplate>
+                    </asp:GridView>
                 </div>
             </div>
-        </div>
-      <div class="col-md-9 content">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-          <!-- Transactions Gridview -->
-        <div id="Retrieve" class="centered">
-       
-        <div class="rowClassSpace">
-            &nbsp;</div>
-            <asp:ScriptManager runat="server"></asp:ScriptManager>
-            <div id="Retrieve_GridViewContainer" class="gridViewContainer">
-                <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
-                    AutoGenerateColumns="false"
-                    OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="6"
-                    PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
-                    <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
-                    <Columns >
-                        <%--0--%><asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
-                            ItemStyle-Width="50" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
-                        <%--1--%><asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
-                            SortExpression="dPostDt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered"  />
-                        <%--2--%><asp:BoundField DataField="cDebitCredit" HeaderText="DEBIT & CREDIT" 
-                            SortExpression="cDebitCredit" ItemStyle-Width="25"  HeaderStyle-CssClass="centered"/>
-                        <%--3--%><asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
-                            SortExpression="cTransDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
-                        <%--4--%><asp:BoundField DataField="cTranDetailDesc" HeaderText="TRANSACTION DESCRIPTION" 
-                            SortExpression="cTranDetailDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
-                        <%--5--%><asp:BoundField DataField="nTranAmt" HeaderText="AMOUNT" 
-                            SortExpression="nTranAmt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered" />
-                        <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
-                    </Columns>
-                    <PagerStyle CssClass="pager" />
-                    <PagerTemplate>
-                        <asp:Button ID="btnPrev" Text="<<" Width="75px" runat="server"
-                            OnClick="dgvPackPrev_Click" />
-                        <span style="display: inline-block; text-align: center; font-weight: bold;">Page
-                            <asp:DropDownList ID="dgvPackDDL" AutoPostBack="true" OnSelectedIndexChanged="dgvPackDDL_SelectedIndexChanged"
-                                runat="server" />
-                            out of
-                            <asp:Label ID="lblPages" runat="server"></asp:Label>
-                        </span>
-                        <asp:Button ID="btnNext" Text=">>" Width="75px" runat="server"
-                            OnClick="dgvPackNext_Click" />
-                    </PagerTemplate>
-                </asp:GridView>
             </div>
-        </div>
-      </div>
-      </div>
-
-       <div class="col-md-3 sidebar">
-          Sidebar
-        </div>
-
-      <hr>
-
-    
+           </div>
+     
+           <div class="span4 sidebar">
+              <div >
+                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
+              </div>
+              <div >
+                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
+              </div>
+            </div>
+         </div>
     </div><!--/.container-->
       <footer>
         <p>&copy; Team A/S/L - 2014</p>
@@ -165,5 +242,11 @@
 
     <script src="/Scripts/site_scripts/offcanvas.js"></script>
 </body>
+                       <%-- </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>--%>
 </asp:Content>
 

@@ -126,9 +126,9 @@
 <body id="bodyid" class="bodyclass">
 <div class="audience-switcher">
   <ul>
-        <li><a href="/site/personal/index.fhtml" class="here">Personal</a></li>	
-        <li><a href="/site/small-business/index.fhtml">Small Business</a></li>			
-        <li><a href="/site/corporate/index.fhtml">Corporate</a></li>
+        <li><a href="/Default.aspx" class="here">Personal</a></li>	
+        <li><a href="https://www.firstnational.com/site/small-business/index.fhtml">Small Business</a></li>			
+        <li><a href="https://www.firstnational.com/site/corporate/index.fhtml">Corporate</a></li>
 				
 		<!-- About Us navigation element was hidden in DCR -->
 		<!-- Help navigation element was hidden in DCR -->
@@ -136,15 +136,15 @@
   </ul>
 </div>  <!--  END audience-switcher -->
 
-  <div id="section1">
+  <div id="section1" class="row-fluid">
     <div id="masthead"> <a href="/" class="logo"><img title="" alt="First National Bank" src="/Styles/config/img/logo.png"/></a>
       <div class="utility">
         <ul>
-          <li class="first"><a href="/site/help/" title="">Help</a></li>
-          <li><a href="/site/about-us/" title="">About Us</a></li>
+          <li class="first"><a href="https://www.firstnational.com/site/help/" title="">Help</a></li>
+          <li><a href="https://www.firstnational.com/site/about-us/" title="">About Us</a></li>
           <li><a href="https://firstnational.locatorsearch.com/" title="" class="popup" popup-title="ATM/Branch Locator" popup-preset="atmlocator">ATM/Branch Locator</a></li>
-          <li><a href="/RetailWeb/default/contactus/SHOW_FORM/form" title="">Contact Us</a></li>
-          <li class="last"><a href="/site/security-center/" title="">Information Security Center</a></li>
+          <li><a href="https://www.firstnational.com/RetailWeb/default/contactus/SHOW_FORM/form" title="">Contact Us</a></li>
+          <li class="last"><a href="https://www.firstnational.com/site/security-center/" title="">Information Security Center</a></li>
         </ul>
         <div class="search">
           <form action="/util/searchresults.fhtml" method="get" name="search">
@@ -172,7 +172,7 @@
 
     
     <li class="category Banking mm-item" style="float:left;">
-         <a href="/site/personal/banking/" class="mm-item-link">Banking</a>
+         <a href="https://www.firstnational.com/site/small-business/banking/" class="mm-item-link">Banking</a>
           <div class="submenu mm-item-content" style="display: none;  top:26px; left: 1px; height:auto;">
                         <div class="background2">
 				            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
@@ -227,7 +227,7 @@
         </li>
        
 	 <li class="category Lending"> 
-         <a href="/site/personal/lending/">Lending</a>
+         <a href="https://www.firstnational.com/site/small-business/lending/">Lending</a>
           <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
 				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
@@ -303,7 +303,7 @@
         </li>
 
         <li class="category WealthInvesting"> 
-            <a href="/site/personal/wealth-investing/">Wealth &amp; Investing</a>
+            <a href="https://www.firstnational.com/site/small-business/wealth-investing/">Wealth &amp; Investing</a>
         <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
           <div class="background2">
             <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->          
@@ -333,7 +333,7 @@
        
 
 	 <li class="category ResourceCenter"> 
-         <a href="/site/personal/resource-center/">Resource Center</a>          
+         <a href="https://www.firstnational.com/site/small-business/resource-center/">Resource Center</a>          
           <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">			
             <div class="background2">
 				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
