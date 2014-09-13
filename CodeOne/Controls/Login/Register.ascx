@@ -31,19 +31,13 @@
     </div>
 
     <div>
-        <span style="text-align: right; margin-top:15px;">
-            <asp:Label runat="server" Width="150px">NickName:</asp:Label>
-        </span><span>
-            <input type="text" id="inputNickName" placeholder="NickName" runat="server" style="margin-top:15px;"/>
-            <%--<asp:TextBox ID="txtNickName" runat="server" type="text" />--%>
 
-            <span id="colorSelector">
+          <%--  <span id="colorSelector">
                 <div style="background-color: #d94747"></div>
                 <span style="margin-left:50px;">
                     <asp:Label runat="server">Choose a Color!</asp:Label>
                 </span>
-            </span>
-        </span>
+            </span>--%>
     </div>
     <div>
         <span style="text-align: right; margin-top:15px;">

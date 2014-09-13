@@ -3,7 +3,6 @@
     Private cFirstName As String
     Private cMiddleName As String
     Private cLastName As String
-    Private cNickName As String
     Private nRole As Integer
     Public ReadOnly Property Email As String
         Get
@@ -25,11 +24,6 @@
             Return cLastName
         End Get
     End Property
-    Public ReadOnly Property NickName As String
-        Get
-            Return cNickName
-        End Get
-    End Property
     Public ReadOnly Property Role As Integer
         Get
             Return nRole
@@ -41,20 +35,18 @@
     '    End If
     '    Return False
     'End Function
-    Public Sub New(pstrEmail As String, pstrFName As String, pstrMName As String, pstrLName As String, pintRole As Integer, pstrNickName As String)
+    Public Sub New(pstrEmail As String, pstrFName As String, pstrMName As String, pstrLName As String, pintRole As Integer)
         Me.cEmail = pstrEmail
         Me.cFirstName = pstrFName
         Me.cMiddleName = pstrMName
         Me.cLastName = pstrLName
         Me.nRole = pintRole
-        Me.cNickName = pstrNickName
     End Sub
     Public Sub New(drUser As DataRow)
         Me.cEmail = drUser.Item("cEmail")
         Me.cFirstName = drUser.Item("cFName")
         Me.cMiddleName = drUser.Item("cMName")
         Me.cLastName = drUser.Item("cLName")
-        Me.cNickName = drUser.Item("cNickName")
         Me.nRole = drUser.Item("nRole")
     End Sub
     Public Sub New(pstrEmail As String)
