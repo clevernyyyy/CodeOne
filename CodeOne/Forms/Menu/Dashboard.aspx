@@ -107,13 +107,19 @@
                             </asp:Repeater>
                         </div>
                     
-                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                    <div id="headerCred" style="margin-bottom:10px;">
+                    <hr style="margin-bottom:0px; margin-top:20px; margin-left:30px; border-color:lightslategray;" />
+                    <div id="headerCred" style="margin-bottom:25px;">
                         <span id="CreditAccounts" class="acctHeader">
                             CREDIT ACCOUNTS
                         </span>
                         <span id="balCred" class="balHeader">
                             BALANCE
+                        </span>
+                        <span id="PayDueCred" class="dateHeader">
+                            PAYMENT DUE
+                        </span>
+                        <span id="lastPayCred" class="dateHeader">
+                            LAST PAYMENT
                         </span>
                     </div>
                     <br />
@@ -127,13 +133,19 @@
                             </asp:Repeater>
                         </div>
                     
-                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                    <div id="headerLoan" style="margin-bottom:10px;">
+                    <hr style="margin-bottom:0px; margin-top:20px; margin-left:30px; border-color:lightslategray;" />
+                    <div id="headerLoan" style="margin-bottom:25px;">
                         <span id="LoanAccounts" class="acctHeader">
                             LOAN ACCOUNTS
                         </span>
                         <span id="balLoan" class="balHeader">
                             BALANCE
+                        </span>
+                        <%--<span id="PayDueLoan" class="dateHeader">
+                            PAYMENT DUE
+                        </span>--%>
+                        <span id="lastPayLoan" class="dateHeader">
+                            LAST PAYMENT
                         </span>
                     </div>
                     <br />

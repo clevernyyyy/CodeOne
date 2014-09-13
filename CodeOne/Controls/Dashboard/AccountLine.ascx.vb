@@ -41,6 +41,7 @@
     Public WriteOnly Property ShowPaymentDue As Boolean
         Set(value As Boolean)
             divDue.Visible = value
+
         End Set
     End Property
     Public Property PaymentDueDate As Date

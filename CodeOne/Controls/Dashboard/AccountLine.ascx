@@ -3,24 +3,20 @@
 <div id="AccountControl" runat="server" class="divAccts">
     <asp:LinkButton id="lnkAccountName" runat="server" CssClass="acctHeadings"></asp:LinkButton>
     <asp:HiddenField ID="hfAccountNum" runat="server" />
-    <span id="divLast" runat="server" class="acctBalanceBak">
-        <label class="acctBalance">Last Payment</label>
-        <br />
-        <asp:Label ID="lblLastPaymentAmount" runat="server"  CssClass="acctBalance"/>
-        <br />
-        <asp:Label ID="lblLastPaymentDate" runat="server"  CssClass="acctBalance"/>
-    </span>
-    <span id="divDue" runat="server" class="acctBalanceBak">
-        <label class="acctBalance">Next Payment Due</label>
-        <br />
-        <asp:Label ID="lblDueAmount" runat="server"  CssClass="acctBalance" />
-        <br />
-        <asp:Label ID="lblDueDate" runat="server" CssClass="acctBalance" />
-    </span>
     <span id="balance" class="acctBalanceBak">
-        <label Class="acctBalance">Account Balance</label>
-        <br />
         <asp:Label ID="lblBalance" runat="server" CssClass="acctBalance"/>
+        <br />
+        <asp:Label ID="lblFake" runat="server" CssClass="acctBalance" />
+    </span>
+    <span id="divDue" runat="server" class="acctDebBak">
+        <asp:Label ID="lblDueAmount" runat="server"  CssClass="acctDeb" />
+        <br />
+        <asp:Label ID="lblDueDate" runat="server" CssClass="acctDeb" />
+    </span>
+    <span id="divLast" runat="server" class="acctDebBak">
+        <asp:Label ID="lblLastPaymentAmount" runat="server"  CssClass="acctDeb"/>
+        <br />
+        <asp:Label ID="lblLastPaymentDate" runat="server"  CssClass="acctDeb"/>
     </span>
     <div>
         <a ID="ancViewTen"  class="greenLink pointer">Last 10 Transactions</a> 
