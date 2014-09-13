@@ -15,13 +15,13 @@
     <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
     <link href="/Styles/site_css/main.css" rel="stylesheet" />
-    <link href="/Styles/site_css/icomoon.css" rel="stylesheet" />
-    <link href="/Styles/site_css/animate-custom.css" rel="stylesheet" />
+    <%--<link href="/Styles/site_css/icomoon.css" rel="stylesheet" />
+    <link href="/Styles/site_css/animate-custom.css" rel="stylesheet" />--%>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic'
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
-    <link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />
+    <%--<link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />--%>
 
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
@@ -72,6 +72,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../Styles/site_css/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../Styles/site_css/docs.min.js"></script>
+    <%--<script type="text/javascript" src="../Styles/site_css/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Styles/site_css/docs.min.js"></script>--%>
 </asp:Content>
