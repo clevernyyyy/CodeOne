@@ -14,7 +14,7 @@ Option Explicit On
 Partial Public Class Transactions
 
     '''<summary>
-    '''divHideCategory  control.
+    '''divHideCategory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.

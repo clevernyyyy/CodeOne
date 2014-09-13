@@ -25,6 +25,10 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-draggable.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-ui-draggable.min.js"></script>
+
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2-droppable.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-ui-droppable.js"></script>
+
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="/Scripts/WebForms/Menu/Transactions.js"></script>
@@ -35,38 +39,48 @@
         function init() {
             $('#MainContent_Accordion').find("div").draggable({
                 cursor: 'move'
-                
             });
+
+            $('#Retrieve_GridViewContainer').find("td").draggable({ cursor: "move", snap: true });
+            $('#Retrieve_GridViewContainer').find("td").droppable({
+                drop: function (event, ui) {
+                    $(this).html($(ui.draggable).html());
+                }
+            });
+
+            //function handleDragStop(event, ui) {
+            //    var offsetXPos = parseInt(ui.offset.left);
+            //    var offsetYPos = parseInt(ui.offset.top);
+            //    alert("Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
+            //}
         }
     </script>
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
-     html, body, .container-fluid, .row {
-	height: 100%;
-}
+         html, body, .container-fluid, .row {
+	    height: 100%;
+    }
 
-.sidebar {
-  background-color: #CCCCCC;
-}
+    .sidebar {
+      background-color: #CCCCCC;
+    }
 
-@media (min-width: 992px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    display: block;
-    background-color: #CCCCCC;
-  }
-}
-
+    @media (min-width: 992px) {
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: block;
+        background-color: #CCCCCC;
+      }
+    }
     </style>
-    <body>
 
-    
+    <body>
     <div class="container">
         <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
         </h2>
@@ -91,12 +105,12 @@
             &nbsp;</div>
             <asp:ScriptManager runat="server"></asp:ScriptManager>
             <div id="Retrieve_GridViewContainer" class="gridViewContainer">
-                <asp:GridView ID="dvgPack" runat="server" CssClass="table table-hover table-striped table-bordered table-condensed" 
+                <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
                     AutoGenerateColumns="false"
                     OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="6"
                     PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
                     <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
-                    <Columns>
+                    <Columns >
                         <%--0--%><asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
                             ItemStyle-Width="50" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
                         <%--1--%><asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
@@ -150,6 +164,6 @@
     <script src="/Scripts/site_scripts/ie10-viewport-bug-workaround.js"></script>
 
     <script src="/Scripts/site_scripts/offcanvas.js"></script>
-  </body>
+</body>
 </asp:Content>
 

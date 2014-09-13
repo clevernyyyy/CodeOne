@@ -69,7 +69,7 @@ Public Class Transactions
             ''This code allows the gridview to be selectable
             e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
-            e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
+            'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
         ElseIf e.Row.RowType = DataControlRowType.Pager Then
             ' Retrieve the DropDownList and Label controls from the row.
             Dim pageList As DropDownList = CType(e.Row.Cells(0).FindControl("dgvPackDDL"), DropDownList)
@@ -100,13 +100,13 @@ Public Class Transactions
             lblPages.Text = dvgPack.PageCount
 
             'Hide nav buttons if necessary
-            'If dvgPack.PageIndex = 0 Then
-            '    Dim btnPrev As UserControls_CustomButton = CType(e.Row.Cells(0).FindControl("btnPrev"), UserControls_CustomButton)
-            '    btnPrev.Style.Item("visibility") = "hidden"
-            'ElseIf dvgPack.PageIndex >= dvgPack.PageCount - 1 Then
-            '    Dim btnNext As UserControls_CustomButton = CType(e.Row.Cells(0).FindControl("btnNext"), UserControls_CustomButton)
-            '    btnNext.Style.Item("visibility") = "hidden"
-            'End If
+            If dvgPack.PageIndex = 0 Then
+                Dim btnPrev As Button = CType(e.Row.Cells(0).FindControl("btnPrev"), Button)
+                btnPrev.Style.Item("visibility") = "hidden"
+            ElseIf dvgPack.PageIndex >= dvgPack.PageCount - 1 Then
+                Dim btnNext As Button = CType(e.Row.Cells(0).FindControl("btnNext"), Button)
+                btnNext.Style.Item("visibility") = "hidden"
+            End If
         End If
     End Sub
 
@@ -124,6 +124,7 @@ Public Class Transactions
 
     Protected Sub dgvPackNext_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Set the PageIndex property to display that page selected by the user.
+
         dvgPack.PageIndex += 1
         LoadTransactions(Session("Account"), True)
     End Sub
