@@ -7,8 +7,9 @@ Public Class Transactions
         If Not IsPostBack Then
 
             'Clear Everything
-
-            LoadTransactions(1)
+            Session("Account") = Request.QueryString("A")
+            LoadTransactions(Session("Account"))
+            LoadCategories()
 
         End If
     End Sub
@@ -28,12 +29,35 @@ Public Class Transactions
         dvgPack.DataSource = dt
         dvgPack.DataBind()
 
+        If Session("dtSearch") IsNot Nothing Then
+            Session("dtSearch").Clear()
+        End If
+        Session("dtSearch") = dt
 
         If lSetFocusToTop Then
             Dim pageList As DropDownList = CType(dvgPack.TopPagerRow.FindControl("dgvPackDDL"), DropDownList)
             If Not pageList Is Nothing Then
                 ScriptManager.GetCurrent(Page).SetFocus(pageList.ClientID)
             End If
+        End If
+    End Sub
+
+    Private Sub LoadCategories()
+        Dim dt As DataTable = Nothing
+
+        Dim cmd = SqlCommand("Data.usp_Get_Categories")
+
+        dt = FillDataTable(cmd)
+
+        rptCategories.DataSource = dt
+        rptCategories.DataBind()
+    End Sub
+
+    Private Sub rptCategories_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptCategories.ItemDataBound
+        Dim strCategory As String = e.Item.DataItem.Item("cCategory")
+        If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
+            Dim ctrl As Category = DirectCast(e.Item.FindControl("ctrlCategory"), Category)
+            ctrl.Category = strCategory
         End If
     End Sub
 #End Region
@@ -43,7 +67,7 @@ Public Class Transactions
         If e.Row.RowType = DataControlRowType.DataRow Then
             e.Row.Height = 25
             Dim d As DateTime = e.Row.Cells(1).Text
-            e.Row.Cells(2).Text = d.ToShortDateString
+            e.Row.Cells(1).Text = d.ToShortDateString
             ''This code allows the gridview to be selectable
             e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
@@ -91,22 +115,33 @@ Public Class Transactions
     Protected Sub dgvPackDDL_SelectedIndexChanged(ByVal pageList As DropDownList, ByVal e As EventArgs)
         ' Set the PageIndex property to display that page selected by the user.
         dvgPack.PageIndex = pageList.SelectedIndex
-        LoadTransactions(1, True)
+        LoadTransactions(Session("Account"), True)
+    End Sub
+
+    Protected Sub dgvPackPrev_Click(ByVal sender As Object, ByVal e As EventArgs)
+        ' Set the PageIndex property to display that page selected by the user.
+        dvgPack.PageIndex -= 1
+        LoadTransactions(Session("Account"), True)
+    End Sub
+
+    Protected Sub dgvPackNext_Click(ByVal sender As Object, ByVal e As EventArgs)
+        ' Set the PageIndex property to display that page selected by the user.
+        dvgPack.PageIndex += 1
+        LoadTransactions(Session("Account"), True)
     End Sub
 
     Protected Sub dgvPack_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs)
         Dim dv As New DataView(Session("dtSearch"))
-        If (e.SortExpression = "dDateOfLoss" OrElse e.SortExpression = "nEntryID") Then
+        If Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("ASC") Then
             dv.Sort = e.SortExpression & " DESC"
+        ElseIf Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("DESC") Then
+            dv.Sort = e.SortExpression & " ASC"
         Else
             dv.Sort = e.SortExpression & " ASC"
         End If
         HttpContext.Current.Session("strSortedBy") = dv.Sort.ToString
         dvgPack.DataSource = dv
         dvgPack.DataBind()
-        'If GetServer() = enmServer.Live Then
-        'dvgPack.Columns(6).Visible = False
-        'End If
     End Sub
 #End Region
 

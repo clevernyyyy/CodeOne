@@ -11,23 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Transactions
+Partial Public Class Category
 
     '''<summary>
-    '''rptCategories control.
+    '''lblCategoryText control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rptCategories As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''dvgPack control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents dvgPack As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents lblCategoryText As Global.System.Web.UI.WebControls.Label
 End Class

@@ -191,6 +191,7 @@
     <Content Include="Controls\Dashboard\AccountLine.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
+    <Content Include="Controls\Transactions\Category.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Forms\Menu\Dashboard.aspx" />
     <Content Include="Forms\Menu\Transactions.aspx" />
@@ -218,6 +219,7 @@
     <Content Include="Scripts\WebForms\GridView.js" />
     <Content Include="Scripts\WebForms\Menu.js" />
     <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\Menu\Transactions.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
@@ -400,6 +402,13 @@
     </Compile>
     <Compile Include="Controls\Login\Register.ascx.vb">
       <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Transactions\Category.ascx.designer.vb">
+      <DependentUpon>Category.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Transactions\Category.ascx.vb">
+      <DependentUpon>Category.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">
