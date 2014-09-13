@@ -206,6 +206,8 @@
     <Content Include="Scripts\site_scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\site_scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\Login\Login.js" />
+    <Content Include="Scripts\site_scripts\jquery-draggable.min.js" />
+    <Content Include="Scripts\site_scripts\jquery-ui-draggable.min.js" />
     <Content Include="Scripts\site_scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\site_scripts\offcanvas.js" />
     <Content Include="Scripts\site_scripts\respond.js" />
