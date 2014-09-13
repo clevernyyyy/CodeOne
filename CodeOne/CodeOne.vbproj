@@ -188,7 +188,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Controls\AccountLine.ascx" />
+    <Content Include="Controls\Dashboard\AccountLine.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -381,10 +381,10 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Controls\AccountLine.ascx.designer.vb">
+    <Compile Include="Controls\Dashboard\AccountLine.ascx.designer.vb">
       <DependentUpon>AccountLine.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\AccountLine.ascx.vb">
+    <Compile Include="Controls\Dashboard\AccountLine.ascx.vb">
       <DependentUpon>AccountLine.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

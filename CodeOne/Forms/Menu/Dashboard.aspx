@@ -60,11 +60,14 @@
     <div class="col-md-9  content">
         <br />
         <div class="minitron">            
-            <h1>Welcome!</h1>
-            <p>We're excited to be help you FinanceLogically&copy.</p>
+            <h1>Welcome!
+                <img src="../../Styles/config/img/logo.png" alt="logo" style="float:right" />
+
+            </h1>
+            <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
         </div>
         <div class="fullHeader">
-            Accounts
+                <font>Accounts</font>
         </div>
         <div id="Deposit Accounts">
             <h1>

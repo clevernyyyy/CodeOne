@@ -1,16 +1,15 @@
 ﻿body {
 }
 
-.bottomPopupLeft
-{
+.bottomPopupLeft {
     position: relative;
     position: absolute;
     bottom: 0;
     left: 0;
     margin-left: 10px;
 }
-.bottomPopupRight
-{
+
+.bottomPopupRight {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -19,63 +18,86 @@
 
 .minitron {
     padding: 0.5em 0.6em;
-    h1 {
+    h1;
+
+    {
         font-size: 2em;
     }
+
     p {
         font-size: 1.2em;
-        .btn {
-            padding: 0.5em;
-        }
+        .btn;
+
+    {
+        padding: 0.5em;
+    }
+
     }
 }
 
 
 .minitron {
-  padding: 0.5em 0.6em;
-  margin-bottom: 30px;
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: whitesmoke;
-    /* Coloring */       
+    padding: 0.5em 0.6em;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: whitesmoke;
+    /* Coloring */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003300', endColorstr='#006600'); /* for IE */
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003300', endColorstr='#006600'); /* for IE 8 and above */
     background: -webkit-gradient(linear, left top, left bottom, from(#003300), to(#006600)); /* for webkit browsers */
     background: -moz-linear-gradient(top, #003300, #006600); /* for firefox 3.6+ */
     background: -o-linear-gradient(top, #003300, #006600); /* for Opera */
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  margin-left:30px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-left: 30px;
 }
 
-.minitron h1 {
-font-size: 2em;
-margin-top: 5px;
-margin-bottom: 5px;
-}
+    .minitron h1 {
+        font-size: 2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
 
-.minitron p {
+    .minitron p {
         font-size: 1.1em;
         color: #66FF00;
-        .btn {
-            padding: 0.5em;
-        }
+        margin-left: 15px;
+        .btn;
+
+{
+    padding: 0.5em;
+}
+
 }
 
 .container .minitron {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 @media screen and (min-width: 768px) {
-  .minitron {
-    padding-bottom: 5px;
-  }
-  .container .minitron {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-  .minitron h1 {
-    font-size: 55px;
-  }
+    .minitron {
+        padding-bottom: 5px;
+    }
+
+    .container .minitron {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .minitron h1 {
+        font-size: 55px;
+    }
+}
+
+
+.fullHeader {
+    background-color:#eee;
+    margin-left:30px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 0.5em 0.6em;
+
 }
