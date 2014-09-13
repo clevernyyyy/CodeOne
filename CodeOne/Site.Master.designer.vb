@@ -14,6 +14,78 @@ Option Explicit On
 Partial Public Class SiteMaster
 
     '''<summary>
+    '''HeadContent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HeadContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+    '''<summary>
+    '''mnuHome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuHome As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuRight control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuRight As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuSurveys control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuChat control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuChat As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuCreateSurveys control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuCreateSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuTakeSurveys control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuTakeSurveys As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''mnuSurveyAnalytics control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mnuSurveyAnalytics As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''MainContent control.
     '''</summary>
     '''<remarks>

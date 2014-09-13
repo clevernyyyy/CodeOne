@@ -479,6 +479,70 @@ lblMsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CodeOne.SiteMaster.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuHome">
+	<summary>
+mnuHome control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuRight">
+	<summary>
+mnuRight control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuSurveys">
+	<summary>
+mnuSurveys control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuChat">
+	<summary>
+mnuChat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuCreateSurveys">
+	<summary>
+mnuCreateSurveys control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuTakeSurveys">
+	<summary>
+mnuTakeSurveys control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.mnuSurveyAnalytics">
+	<summary>
+mnuSurveyAnalytics control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeOne.SiteMaster.MainContent">
 	<summary>
 MainContent control.
