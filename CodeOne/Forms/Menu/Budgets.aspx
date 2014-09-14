@@ -151,9 +151,12 @@
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:Repeater>
+                                            <asp:Button ID="btnSaveMonthly" runat="server" text="Save Monthly Expenses"/>
                                         </ContentTemplate>
                                         <Triggers>
                                             <asp:AsyncPostBackTrigger ControlID="ddlCategories" EventName="SelectedIndexChanged" />
+                                            <asp:AsyncPostBackTrigger ControlID="btnSaveMonthly" EventName="Click" />
+                                        
                                         </Triggers>
                                     </asp:UpdatePanel>
                                 </div>
@@ -246,13 +249,13 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle">RETIREMENT PLANNING
+                                    <a class="accordion-toggle">BUDGET REPORT
                                     </a>
                                 </h4>
                             </div>
                             <div id="collapseFour" class="panel-collapse collapse">
                                 <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+
                                 </div>
                             </div>
                         </div>

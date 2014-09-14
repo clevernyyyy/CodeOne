@@ -68,15 +68,6 @@ Partial Public Class Budgets
     Protected WithEvents btnAddExpense As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''ctrlExpenses control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ctrlExpenses As Global.CodeOne.IncomeExpense
-
-    '''<summary>
     '''ddlCategories control.
     '''</summary>
     '''<remarks>
@@ -102,6 +93,15 @@ Partial Public Class Budgets
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptMonthlyExpenses As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''btnSaveMonthly control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSaveMonthly As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lineGraphYay control.
