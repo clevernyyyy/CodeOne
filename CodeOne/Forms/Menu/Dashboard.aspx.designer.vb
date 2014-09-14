@@ -14,24 +14,6 @@ Option Explicit On
 Partial Public Class Dashboard
 
     '''<summary>
-    '''divDeposit control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divDeposit As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''headerDep control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents headerDep As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
     '''repDeposits control.
     '''</summary>
     '''<remarks>
@@ -39,24 +21,6 @@ Partial Public Class Dashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents repDeposits As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''divInvest control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divInvest As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''headerInv control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents headerInv As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''repInvestments control.
@@ -68,24 +32,6 @@ Partial Public Class Dashboard
     Protected WithEvents repInvestments As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
-    '''divCredit control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divCredit As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''headerCred control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents headerCred As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
     '''repCredits control.
     '''</summary>
     '''<remarks>
@@ -93,15 +39,6 @@ Partial Public Class Dashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents repCredits As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''divLoan control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divLoan As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''repLoans control.

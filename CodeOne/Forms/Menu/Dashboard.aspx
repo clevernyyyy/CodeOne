@@ -47,7 +47,7 @@
                         <h1>Welcome!
                             <img src="../../Styles/config/img/logo.png" alt="logo" style="float: right" />
                         </h1>
-                        <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
+                        <p>We're excited to be help you FinanceLogically.<span style="vertical-align: super; font-size: x-small;">&copy</span></p>
                     </div>
                     <div class="panel-group collapsibleDiv" id="accordion">
                         <div class="panel panel-default">
