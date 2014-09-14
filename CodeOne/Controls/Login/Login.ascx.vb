@@ -21,6 +21,10 @@
                 If SignIn(inputUser.Value, inputPassword.Value) Then
                     Response.Redirect("~/Forms/Menu/Dashboard.aspx")
                 End If
+            ElseIf (Convert.ToString(Request.Form("__EVENTTARGET")) = "btnSignIn") Then
+                If SignIn(inputUser.Value, inputPassword.Value) Then
+                    Response.Redirect("~/Forms/Menu/Dashboard.aspx")
+                End If
             End If
         End If
 

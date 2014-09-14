@@ -395,7 +395,7 @@
                         <div class="form-group">
                             <input id="txtPassword" type="password" placeholder="Password" class="form-control" runat="server" />
                         </div>
-                        <button id="btnSignIn" type="submit" class="btn btn-success" runat="server">Sign In</button>
+                        <button id="btnSignIn" title="btnSignIn" type="submit" onclick="raisePostBack();" class="btn btn-success" runat="server">Sign In</button>
                     </form>
                 </div>
                 <div class="navbar-form navbar-right" style="margin-top: 0px; margin-bottom: 0px;" id="divUser" runat="server">
@@ -419,6 +419,12 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" >
+        raisePostBack = function () {
+            __doPostBack("<%=btnSignIn.ClientID%>", "Login");
+        }
+    </script>
+
     <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/bootstrap.min.js"></script>
