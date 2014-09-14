@@ -522,18 +522,18 @@ Public Module LibraryFunctions
             End Try
         Next
     End Sub
-    Public Sub ObejctToDataTable(ByRef dt As DataTable, ByVal objList As System.Collections.Generic.IEnumerable(Of Object))
+    Public Sub ObjectToDataTable(ByRef dt As DataTable, ByVal objList As System.Collections.Generic.IEnumerable(Of Object))
         dt.Clear()
 
         If Not objList Is Nothing Then
             For Each obj In objList
                 Dim dr As DataRow = dt.NewRow
-                ObejctToDataRow(dr, obj)
+                ObjectToDataRow(dr, obj)
                 dt.Rows.Add(dr)
             Next
         End If
     End Sub
-    Public Sub ObejctToDataRow(ByRef dr As DataRow, ByVal obj As Object)
+    Public Sub ObjectToDataRow(ByRef dr As DataRow, ByVal obj As Object)
         Dim t As Type = obj.GetType
         Dim properties As System.Reflection.PropertyInfo() = t.GetProperties()
 

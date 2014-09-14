@@ -145,7 +145,7 @@ Public Class AccountLine
         ancViewTen.Attributes.Add("onClick", "ShowHideTransactions(this);")
         ancViewPie.Attributes.Add("onClick", "ShowHideGraph(this);")
         LibraryFunctions.AddColumnsToDataTable(dt, "TransDesc", "TransDate", "TransAmount")
-        LibraryFunctions.ObejctToDataTable(dt, Transactions)
+        LibraryFunctions.ObjectToDataTable(dt, Transactions)
         dvgPack.DataSource = dt
         dvgPack.DataBind()
 

@@ -63,7 +63,7 @@
     Private Sub LoadMonthlyExpense()
         Dim dt As New DataTable
         LibraryFunctions.AddColumnsToDataTable(dt, "Category", "Amount")
-        LibraryFunctions.ObejctToDataTable(dt, MonthlyExpense)
+        LibraryFunctions.ObjectToDataTable(dt, MonthlyExpense)
         rptMonthlyExpenses.DataSource = dt
         rptMonthlyExpenses.DataBind()
 
