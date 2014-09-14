@@ -78,11 +78,17 @@
     Dim dtFrequency As DataTable
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            dtTypes = FillDataTable("Budget.usp_GetTypes", (New Connection).NewCnn, "@cType", Type)
+            dtTypes = FillDataTable("Budget.usp_GetTypes", (New Connection).NewCnn, "@cType", EI)
             ddlType.DataSource = dtTypes
-            ddlType.DataTextField = "nIncomeType"
-            ddlType.DataValueField = "cIncomeType"
+            If EI = "I" Then
+                ddlType.DataTextField = "cIncomeType"
+                ddlType.DataValueField = "nIncomeType"
+            Else
+                ddlType.DataTextField = "cExpenseType"
+                ddlType.DataValueField = "nExpenseType"
+            End If
             ddlType.DataBind()
+
             dtFrequency = FillDataTable("Budget.usp_GetFrequencies", (New Connection).NewCnn)
             ddlFrequency.DataSource = dtFrequency
             ddlFrequency.DataTextField = "cFrequency"
