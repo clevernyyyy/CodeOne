@@ -547,6 +547,7 @@
     <Compile Include="Modules\Formatting.vb" />
     <Compile Include="Modules\LibraryFunctions.vb" />
     <Compile Include="Modules\MiscFunctions.vb" />
+    <Compile Include="Modules\BudgetTargetFunctions.vb" />
     <Compile Include="Modules\ObjectDataRetrieval.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

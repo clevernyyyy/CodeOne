@@ -32,7 +32,7 @@ function LoadChart(nID, strType, index) {
             $("[id*='_dvChart']")[index].appendChild(el);
 
             var ctx = el.getContext('2d');
-            var userStrengthsChart = new Chart(ctx).Pie(data, { animateRotate: false });
+            var userStrengthsChart = new Chart(ctx).Line(data);
             //userStrengthsChart.setAttribute("width", "400");
             //userStrengthsChart.setAttribute("height", "400");
             //userStrengthsChart.resize();
