@@ -393,9 +393,7 @@
           .sidebar {
             position: absolute;
             top: 135px;
-            right: 0;
-            bottom: 0;
-            width: 200px;
+            width: 150px;
             z-index: 100;
             display: block;
           }
