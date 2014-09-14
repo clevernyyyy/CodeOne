@@ -1,5 +1,12 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="AccountLine.ascx.vb" Inherits="CodeOne.AccountLine" %>
+
+<!-- Scripts -->
 <script type="text/javascript" src="/Scripts/WebForms/Menu/Dashboard.js"></script>
+<script src="../../Scripts/WebForms/Chart.js"></script>
+
+<!-- Controls -->
+<%@ Register Src="~/Controls/Budget/PieGraph.ascx" TagPrefix="uctrl" TagName="Pie" %>
+
 <div id="AccountControl" runat="server" class="divAccts">
     <asp:LinkButton id="lnkAccountName" runat="server" CssClass="acctHeadings"></asp:LinkButton>
     <asp:HiddenField ID="hfAccountNum" runat="server" />
@@ -67,7 +74,7 @@
           </div>
         <div id="pie" style="display:none; margin-left:15px;" class="row row-offcanvas row-offcanvas-right">
             <div id="pieContent" style="background-color:lightblue; height:50px;">
-                TEST
+                <uctrl:Pie ID="ctrlPie" runat="server" style="float:left;"/>
             </div>
         </div>
     </div>

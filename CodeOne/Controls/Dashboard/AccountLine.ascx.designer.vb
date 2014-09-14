@@ -120,4 +120,13 @@ Partial Public Class AccountLine
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dvgPack As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''ctrlPie control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ctrlPie As Global.CodeOne.PieGraph
 End Class

@@ -24,12 +24,11 @@
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
 
+    <!-- Styles -->
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
-
-
+    
     <!-- Controls -->
     <%@ Register Src="~/Controls/Dashboard/AccountLine.ascx" TagPrefix="uctrl" TagName="Account" %>
-
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -65,33 +64,13 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                           <div class="panel-body">
+                              <!-- Maybe all PIES ? -->
                               TEST
                           </div>
                         </div>
                       </div>
                     </div>
                     <br />
-<%--                    <div class="fullHeader">
-                        <span id="accts">
-                            Accounts
-                        </span>
-                        <span id="graphs" style="float:right; margin-right:15px;">
-                            <asp:linkButton id="lnkGraphs" runat="server" text="Visualize!" CssClass="visualize"></asp:linkButton>
-                              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                Visualize Accounts <span class="caret"></span>
-                              </button>
-                        </span>
-                    </div>
-                    <br />
-                    <div id="divPie">
-                        <div id="divPieCharts" class="divPie">
-                            Test
-                            <br />
-                            Test
-                        </div>
-                        <br />
-                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                    </div>--%>
                     <div id="headerDep" style="margin-bottom:10px;">
                         <span id="DepositAccounts" class="acctHeader">
                             DEPOSIT ACCOUNTS
