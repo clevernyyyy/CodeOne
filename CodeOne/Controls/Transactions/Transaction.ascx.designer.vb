@@ -50,6 +50,24 @@ Partial Public Class Transaction
     Protected WithEvents lblAmount As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''divCategory control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents divCategory As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''lblCategory control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblCategory As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''divDetail control.
     '''</summary>
     '''<remarks>
@@ -59,7 +77,7 @@ Partial Public Class Transaction
     Protected WithEvents divDetail As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''lblDetail  control.
+    '''lblDetail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.

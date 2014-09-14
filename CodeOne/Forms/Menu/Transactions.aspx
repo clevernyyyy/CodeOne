@@ -56,13 +56,13 @@
             //}
         }
     </script>
-    
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
-         html, body, .container-fluid, .row {
-	    height: 100%;
-    }
+        html, body, .container-fluid, .row {
+            height: 100%;
+        }
     </style>
 
     <div class="container">
@@ -74,32 +74,42 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>--%>
-       <%-- <asp:DropDownList runat="server" ID="ddlCategories"></asp:DropDownList>--%>
+        <%-- <asp:DropDownList runat="server" ID="ddlCategories"></asp:DropDownList>--%>
 
-        <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
+        <h2 class="cursor">Categories <a id="expand" class="noslide" href="#">+</a>
         </h2>
-        <div id="MainContent_Accordion">
-            <div id="divHideCategory" runat="server">
-                <div id="divRepCategory" style="display:none" >
-                    <asp:Repeater runat="server" ID="rptCategories">
-                        <ItemTemplate>
-                            <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
-                        </ItemTemplate>
-                    </asp:Repeater>        
+        <div id="playground">
+            <div id="categories" style="margin-bottom:50px">
+                <div id="MainContent_Accordion">
+                    <div id="divHideCategory" runat="server">
+                        <div id="divRepCategory" style="display: none">
+                            <asp:Repeater runat="server" ID="rptCategories">
+                                <ItemTemplate>
+                                    <uctrl:Category ID="ctrlCategory" runat="server"></uctrl:Category>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div id="transactions">
+                <asp:Repeater ID="rptTrans" runat="server">
+                    <ItemTemplate>
+                        <div id="divTransactions" runat="server">
+                            <uctrl:Transaction ID="ctrlTransaction" runat="server"></uctrl:Transaction>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+
+
+
+
+
         </div>
 
-         <asp:Repeater ID="rptTrans" runat="server">
-            <ItemTemplate>
-                <div id="divTransactions" style="display:inline-block;" runat="server">
-                    <uctrl:Transaction id="ctrlTransaction" runat="server"></uctrl:Transaction><hr><hr />
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-      
 
-         <%-- <div class="row row-offcanvas row-offcanvas-right">
+        <%-- <div class="row row-offcanvas row-offcanvas-right">
               <!-- Transactions Gridview -->
             <div id="Retrieve" class="centered">
        
@@ -144,11 +154,12 @@
             </div>
             </div>
            </div>
-        </div>
-    </div><!--/.container-->
-      <footer>
+        </div>--%>
+    </div>
+    <!--/.container-->
+    <footer>
         <p>&copy; Team A/S/L - 2014</p>
-      </footer>--%>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -158,6 +169,6 @@
     <script src="/Scripts/site_scripts/ie10-viewport-bug-workaround.js"></script>
 
     <script src="/Scripts/site_scripts/offcanvas.js"></script>
-</body>
+    </body>
 </asp:Content>
 

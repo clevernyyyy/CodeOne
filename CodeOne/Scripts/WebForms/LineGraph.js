@@ -20,8 +20,8 @@ function LoadChart(nID) {
             el.setAttribute("width", '450');
             $("[id*='_dvChart']")[index].appendChild(el);
 
-            var ctx = el.getContext('2d');
-            var userStrengthsChart = new Chart(ctx).Line(data);
+            //var ctx = el.getContext('2d');
+            //var userStrengthsChart = new Chart(ctx).Line(data);
             //userStrengthsChart.setAttribute("width", "400");
             //userStrengthsChart.setAttribute("height", "400");
             //userStrengthsChart.resize();

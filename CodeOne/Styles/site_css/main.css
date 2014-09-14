@@ -391,3 +391,15 @@
 .longGuy{
     width:180px;
 }
+
+
+
+/*Transactions*/
+.transEl {
+    border: 1px solid slategrey; 
+    padding: 10px 10px 10px 10px; 
+    background-color:whitesmoke; 
+    -moz-border-radius: 7px; 
+    border-radius: 7px;
+    margin-left:25px;
+}
