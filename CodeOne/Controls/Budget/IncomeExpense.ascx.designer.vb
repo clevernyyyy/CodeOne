@@ -77,13 +77,13 @@ Partial Public Class IncomeExpense
     Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''dtpstart control.
+    '''dtpStart control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dtpstart As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents dtpStart As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''hfStart control.

@@ -118,7 +118,7 @@ Public Class Dashboard
                 cText = dr.Item("cSubProdCd") + " - Expenses"
             End If
             cValue = dr.Item(cValueColumn)
-            sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
+            sb.Append(String.Format("text :'{0}', value:{1:C2}, color: '{2}'", cText, cValue, color))
             sb.Append("},")
         Next
         If sb.Length > 1 Then
