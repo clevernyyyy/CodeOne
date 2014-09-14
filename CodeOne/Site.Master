@@ -375,75 +375,21 @@
   </div>
 
     <form runat="server">
-    <div class="wrapper">
-        <div class="col-md-13 content">
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            </div>
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="Div1" role="navigation">
+                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />
+                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br /><br /><br />
+                <ul class="static-links">
+	                <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li><br /><br /><br />
+                </ul>
+            </div>
         </div>
-
-            <style type="text/css">
-                 html, body, .container-fluid, .row {
-	            height: 100%;
-            }
-
-            .sidebar {
-              background-color: #CCCCCC;
-            }
-
-            .content
-            {
-                width:100%;
-                position:relative;
-                float:left;
-            }
-
-            .wrapper
-            {
-                min-height:100%;
-                width:70%;
-                position:absolute;
-                display:inline-block;
-            }
-
-            @media (min-width: 992px) {
-              .sidebar {
-                /*position: absolute;
-                top: 135px;
-                right: 0;
-                bottom: -200px;
-                width: 200px;
-                z-index: 100;
-                display: block;*/
-                width:10%;
-                top:0px;
-                right:0px;
-                bottom:0px;
-                position:absolute;
-              }
-            }
-
-
-            </style>
-    
-            <div class="sidebar">
-                <%--<div >
-                    <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
-                </div>
-                <div >
-                    <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
-                </div>--%>
-
-                <%--<div class="row-md-2">--%>
-                    <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />
-                <%--</div>
-                <div class="row-md-1">--%>
-                    <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br /><br /><br />
-                <%-- </div>--%>
-                    <ul class="static-links">
-	                    <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li><br /><br /><br />
-                    </ul>
-               </div>
-
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/bootstrap.min.js"></script>
@@ -452,9 +398,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     </form>
 
-    
-
-		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code.js?v01" type="text/javascript"></script>
+    	<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code.js?v01" type="text/javascript"></script>
 		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-functions.js?v01" type="text/javascript"></script>
 		<script language="javascript" type="text/javascript"><!--
     /* Copyright 1997-2004 Omniture, Inc. */

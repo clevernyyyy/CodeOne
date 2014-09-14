@@ -39,9 +39,9 @@
         }
     </style>
     <body>
-        <div class="container-fluid mainbody">
+        <div class="">
             <div class="row">
-                <div class="col-md-9  content">
+                <div class="">
                     <br />
                     <div class="minitron">
                         <h1>Welcome!
@@ -151,7 +151,6 @@
                 <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-top:0px; margin-bottom:0px; color:#216242;">CodeOne Hackathon - FNBO</p>
             </footer>
 
-        </div>
         <!--/.container-->
 
     <!-- Bootstrap core JavaScript
