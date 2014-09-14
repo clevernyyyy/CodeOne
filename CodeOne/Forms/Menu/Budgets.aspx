@@ -70,7 +70,7 @@
                     </div>
                     <span style="display:inline-block; position:absolute; margin-left:30px;">At First National Bank, we take your expenses seriously.  We are consistently rolling out innovative ideas to help our members stay on top of their finances and their goals.  With BudgetLogically, we're rolling out a brand new way to budget.  Just follow the steps in each section below!</span>
                     <hr />
-
+                    <asp:ScriptManager runat="server"></asp:ScriptManager>
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -88,7 +88,23 @@
                                     <p>First, setup your known credits!</p>
                                     <span style="font-size: large;">INCOME:</span>
                                     <p>A common example of an income entry is a bi-weekly paycheck.  FinanceLogically can handle anything from an annuity payment to a simple check from grandma!</p>
-                                    <uctrl:IncomeExpense ID="ctrlIncome" runat="server" EI="I" />
+                                    <asp:UpdatePanel ID="panelIncomes" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                             <asp:Repeater ID="rptIncomes" runat="server">
+                                                <ItemTemplate>
+                                                    <div id="divIncome" style="display:inline-block;" runat="server">
+                                                        <uctrl:IncomeExpense ID="ctrlIncome" runat="server" EI="I" />
+                                                    </div>
+                                                </ItemTemplate>
+                                                 <FooterTemplate>
+                                                     <asp:Button ID="btnAddIncome" runat="server" />
+                                                 </FooterTemplate>
+                                            </asp:Repeater>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="ddlCategories" EventName="SelectedIndexChanged" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
                                     <br />
                                     <!-- Step Two -->
                                     <span class="steps">Step Two</span>
@@ -97,6 +113,23 @@
                                     <p>Next, fill out your known expenses!</p>
                                     <span style="font-size: large;">EXPENSES:</span>
                                     <p>A good example of a common expense would be your weekly grocery budget.  Or perhaps your car insurance bill.</p>
+                                    <asp:UpdatePanel ID="panelExpenses" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                             <asp:Repeater ID="rptExpenses" runat="server">
+                                                <ItemTemplate>
+                                                    <div id="divExpense" style="display:inline-block;" runat="server">
+                                                        <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" EI="E" />
+                                                    </div>
+                                                </ItemTemplate>
+                                                 <FooterTemplate>
+                                                     <asp:Button ID="btnAddExpense" runat="server" />
+                                                 </FooterTemplate>
+                                            </asp:Repeater>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="ddlCategories" EventName="SelectedIndexChanged" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
                                     <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" EI="E" />
                                     <br />
                                     <!-- Step Three -->
@@ -111,7 +144,7 @@
                                         <span style="margin-left:0;">Category</span>
                                         <span style="margin-left:25px;">Amount</span>
                                     </div>
-                                    <asp:ScriptManager runat="server"></asp:ScriptManager>
+                                    
                                      <asp:UpdatePanel ID="panelMonthlyExpense" runat="server" UpdateMode="Conditional">
                                         <ContentTemplate>
                                              <asp:Repeater ID="rptMonthlyExpenses" runat="server">
