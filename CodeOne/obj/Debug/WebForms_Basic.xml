@@ -6,98 +6,81 @@ CodeOne
 </name>
 </assembly>
 <members>
-<member name="F:CodeOne.Confirm.successPanel">
+<member name="F:CodeOne.TwoFactorAuthenticationSignIn.sendcode">
 	<summary>
-successPanel control.
+sendcode control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Confirm.login">
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.Providers">
 	<summary>
-login control.
+Providers control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Confirm.errorPanel">
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.ProviderSubmit">
 	<summary>
-errorPanel control.
+ProviderSubmit control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Category.lblCategoryText">
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.verifycode">
 	<summary>
-lblCategoryText control.
+verifycode control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="P:CodeOne.My.MyWebExtension.Computer">
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.SelectedProvider">
 	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:CodeOne.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="T:CodeOne.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
-</member><member name="F:CodeOne.Manage.SuccessMessagePlaceHolder">
-	<summary>
- SuccessMessagePlaceHolder control.
- </summary>
+SelectedProvider control.
+</summary>
 	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.ChangePassword">
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.ErrorMessage">
 	<summary>
- ChangePassword control.
- </summary>
+ErrorMessage control.
+</summary>
 	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.CreatePassword">
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.FailureText">
 	<summary>
- CreatePassword control.
- </summary>
+FailureText control.
+</summary>
 	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.Manage.PhoneNumber">
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.Code">
 	<summary>
- PhoneNumber control.
- </summary>
+Code control.
+</summary>
 	<remarks>
- Auto-generated field.
- To modify move field declaration from designer file to code-behind file.
- </remarks>
-</member><member name="F:CodeOne.ResetPasswordConfirmation.login">
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.RememberBrowser">
 	<summary>
-login control.
+RememberBrowser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.CodeSubmit">
+	<summary>
+CodeSubmit control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -183,113 +166,138 @@ ConfirmNewPassword control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.AccountLine.AccountControl">
-	<summary>
-AccountControl control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lnkAccountName">
-	<summary>
-lnkAccountName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.hfAccountNum">
-	<summary>
-hfAccountNum control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblBalance">
-	<summary>
-lblBalance control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblFake">
-	<summary>
-lblFake control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.divDue">
-	<summary>
-divDue control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblDueAmount">
-	<summary>
-lblDueAmount control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblDueDate">
-	<summary>
-lblDueDate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.divLast">
-	<summary>
-divLast control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblLastPaymentAmount">
-	<summary>
-lblLastPaymentAmount control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.lblLastPaymentDate">
-	<summary>
-lblLastPaymentDate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.AccountLine.dvgPack">
-	<summary>
-dvgPack control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.OpenAuthProviders.providerDetails">
-	<summary>
-providerDetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
 </member><member name="F:CodeOne.RegisterExternalLogin.email">
 	<summary>
 email control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.MonthlyExpense.hfBudgetID">
+	<summary>
+hfBudgetID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.MonthlyExpense.hfID">
+	<summary>
+hfID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.MonthlyExpense.hfType">
+	<summary>
+hfType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.MonthlyExpense.lblCategory">
+	<summary>
+lblCategory control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.MonthlyExpense.txtAmount">
+	<summary>
+txtAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:CodeOne.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:CodeOne.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:CodeOne.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CodeOne.SiteMaster.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.divLogin">
+	<summary>
+divLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.txtUserName">
+	<summary>
+txtUserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.txtPassword">
+	<summary>
+txtPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.lblWelcome">
+	<summary>
+lblWelcome control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.btnSignIn">
+	<summary>
+btnSignIn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.SiteMaster.btnSignOut">
+	<summary>
+btnSignOut control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -311,47 +319,23 @@ PhoneNumber control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.sendcode">
+</member><member name="F:CodeOne.ResetPasswordConfirmation.login">
 	<summary>
-sendcode control.
+login control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.Providers">
+</member><member name="F:CodeOne.ForgotPassword.loginForm">
 	<summary>
-Providers control.
+loginForm control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.ProviderSubmit">
-	<summary>
-ProviderSubmit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.verifycode">
-	<summary>
-verifycode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.SelectedProvider">
-	<summary>
-SelectedProvider control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.ErrorMessage">
+</member><member name="F:CodeOne.ForgotPassword.ErrorMessage">
 	<summary>
 ErrorMessage control.
 </summary>
@@ -359,7 +343,7 @@ ErrorMessage control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.FailureText">
+</member><member name="F:CodeOne.ForgotPassword.FailureText">
 	<summary>
 FailureText control.
 </summary>
@@ -367,25 +351,81 @@ FailureText control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.Code">
+</member><member name="F:CodeOne.ForgotPassword.Email">
 	<summary>
-Code control.
+Email control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.RememberBrowser">
+</member><member name="F:CodeOne.ForgotPassword.DisplayEmail">
 	<summary>
-RememberBrowser control.
+DisplayEmail control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.CodeSubmit">
+</member><member name="F:CodeOne.OpenAuthProviders.providerDetails">
 	<summary>
-CodeSubmit control.
+providerDetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.ctrlIncome">
+	<summary>
+ctrlIncome control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.ctrlExpenses">
+	<summary>
+ctrlExpenses control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.ddlCategories">
+	<summary>
+ddlCategories control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.panelMonthlyExpense">
+	<summary>
+panelMonthlyExpense control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.rptMonthlyExpenses">
+	<summary>
+rptMonthlyExpenses control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.BudgetTargets.lblLABELSARECOOL">
+	<summary>
+lblLABELSARECOOL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.BudgetTargets.hfUserId">
+	<summary>
+hfUserId control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -591,97 +631,49 @@ rptCategories control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.Transactions.dvgPack">
+</member><member name="F:CodeOne.Transactions.rptTrans">
 	<summary>
-dvgPack control.
+rptTrans control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.SiteMaster.HeadContent">
+</member><member name="F:CodeOne.Confirm.successPanel">
 	<summary>
-HeadContent control.
+successPanel control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne.SiteMaster.MainContent">
+</member><member name="F:CodeOne.Confirm.login">
 	<summary>
-MainContent control.
+login control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne._Default.btnLogin">
+</member><member name="F:CodeOne.Confirm.errorPanel">
 	<summary>
-btnLogin control.
+errorPanel control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne._Default.ctrlLogin">
+</member><member name="F:CodeOne.PieGraph.rptGraphs">
 	<summary>
-ctrlLogin control.
+rptGraphs control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeOne._Default.hUser">
+</member><member name="F:CodeOne.Category.lblCategoryText">
 	<summary>
-hUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne._Default.hPass">
-	<summary>
-hPass control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.loginForm">
-	<summary>
-loginForm control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.ErrorMessage">
-	<summary>
-ErrorMessage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.FailureText">
-	<summary>
-FailureText control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.Email">
-	<summary>
-Email control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ForgotPassword.DisplayEmail">
-	<summary>
-DisplayEmail control.
+lblCategoryText control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -719,6 +711,134 @@ ConfirmPassword control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CodeOne.AccountLine.AccountControl">
+	<summary>
+AccountControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lnkAccountName">
+	<summary>
+lnkAccountName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.hfAccountNum">
+	<summary>
+hfAccountNum control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblBalance">
+	<summary>
+lblBalance control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblFake">
+	<summary>
+lblFake control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.divDue">
+	<summary>
+divDue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblDueAmount">
+	<summary>
+lblDueAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblDueDate">
+	<summary>
+lblDueDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.divLast">
+	<summary>
+divLast control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblLastPaymentAmount">
+	<summary>
+lblLastPaymentAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.lblLastPaymentDate">
+	<summary>
+lblLastPaymentDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.ancViewTen">
+	<summary>
+ancViewTen control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.divider">
+	<summary>
+divider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.ancViewPie">
+	<summary>
+ancViewPie control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.dvgPack">
+	<summary>
+dvgPack control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.AccountLine.ctrlPie">
+	<summary>
+ctrlPie control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeOne.Dashboard.repDeposits">
 	<summary>
 repDeposits control.
@@ -746,38 +866,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeOne.Dashboard.repLoans">
 	<summary>
 repLoans control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.ManageLogins.SuccessMessagePlaceholder">
-	<summary>
-SuccessMessagePlaceholder control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.VerifyPhoneNumber.ErrorMessage">
-	<summary>
-ErrorMessage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.VerifyPhoneNumber.PhoneNumber">
-	<summary>
-PhoneNumber control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeOne.VerifyPhoneNumber.Code">
-	<summary>
-Code control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -826,6 +914,262 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeOne.Site_Mobile.ViewSwitcher1">
 	<summary>
 ViewSwitcher1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.ManageLogins.SuccessMessagePlaceholder">
+	<summary>
+SuccessMessagePlaceholder control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Manage.SuccessMessagePlaceHolder">
+	<summary>
+ SuccessMessagePlaceHolder control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.ChangePassword">
+	<summary>
+ ChangePassword control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.CreatePassword">
+	<summary>
+ CreatePassword control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.Manage.PhoneNumber">
+	<summary>
+ PhoneNumber control.
+ </summary>
+	<remarks>
+ Auto-generated field.
+ To modify move field declaration from designer file to code-behind file.
+ </remarks>
+</member><member name="F:CodeOne.VerifyPhoneNumber.ErrorMessage">
+	<summary>
+ErrorMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.VerifyPhoneNumber.PhoneNumber">
+	<summary>
+PhoneNumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.VerifyPhoneNumber.Code">
+	<summary>
+Code control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.hfBudgetID">
+	<summary>
+hfBudgetID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.hfID">
+	<summary>
+hfID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.hfType">
+	<summary>
+hfType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.ddlType">
+	<summary>
+ddlType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.txtName">
+	<summary>
+txtName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.ddlFrequency">
+	<summary>
+ddlFrequency control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.txtAmount">
+	<summary>
+txtAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.dtpStart">
+	<summary>
+dtpStart control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.IncomeExpense.dtpEnd">
+	<summary>
+dtpEnd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Categories.divOutline">
+	<summary>
+divOutline control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Categories.lblCategory">
+	<summary>
+lblCategory control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Categories.rptTrans">
+	<summary>
+rptTrans control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.TransactionControl">
+	<summary>
+TransactionControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.lblDate">
+	<summary>
+lblDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.divAmount">
+	<summary>
+divAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.lblAmount">
+	<summary>
+lblAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.divCategory">
+	<summary>
+divCategory control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.lblCategory">
+	<summary>
+lblCategory control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.divDetail">
+	<summary>
+divDetail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Transaction.lblDetail">
+	<summary>
+lblDetail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne._Default.btnLogin">
+	<summary>
+btnLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne._Default.ctrlLogin">
+	<summary>
+ctrlLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne._Default.hUser">
+	<summary>
+hUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne._Default.hPass">
+	<summary>
+hPass control.
 </summary>
 	<remarks>
 Auto-generated field.
