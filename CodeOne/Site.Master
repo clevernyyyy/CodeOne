@@ -56,10 +56,10 @@
     <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/jquery.top_up.min.js?libs=" type="text/javascript"></script>
 
     <script type="text/javascript">
-	    jQuery(function(){
-		    var SelfLocation = window.location.href.split('?');
-				    jQuery(".megamenu").megamenu();
-	    });
+        jQuery(function () {
+            var SelfLocation = window.location.href.split('?');
+            jQuery(".megamenu").megamenu();
+        });
     </script>
 
     <script src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/global.onload.js" type="text/javascript"></script>

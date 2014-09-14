@@ -48,4 +48,13 @@ Partial Public Class Dashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents repLoans As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''btnLogOut control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnLogOut As Global.System.Web.UI.WebControls.Button
 End Class
