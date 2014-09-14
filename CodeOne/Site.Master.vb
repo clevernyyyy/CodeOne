@@ -58,4 +58,23 @@
         Response.Redirect("~/Default.aspx")
     End Sub
 
+    Private Sub SignIn()
+        SignIn(txtUserName.Value, txtPassword.Value)
+    End Sub
+    Private Sub SignIn(userName As String, passWord As String)
+        Dim objUser As User
+        If ValidateUser(userName, passWord, objUser) Then
+            Session("User") = objUser
+        End If
+    End Sub
+
+    Private Sub btnSignIn_ServerClick(sender As Object, e As System.EventArgs) Handles btnSignIn.ServerClick
+
+        SignIn()
+
+    End Sub
+
+    Private Sub btnSubmit_ServerClick(sender As Object, e As EventArgs) Handles btnSubmit.ServerClick
+        SignIn()
+    End Sub
 End Class

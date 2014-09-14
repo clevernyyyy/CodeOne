@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="CodeOne.SiteMaster" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="CodeOne.SiteMaster" %>
 
 <%@ Import Namespace="CodeOne" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
@@ -14,7 +14,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="/Styles/site_css/main.css" rel="stylesheet" />
     <link href="/Styles/config/css/content-homepage-buttons-sitebrand.css" rel="stylesheet" />
     <link href="/Styles/config/css/wrapper-homepage-sitebrand.css" rel="stylesheet" />
@@ -23,23 +23,24 @@
 
     <!-- favicon -->
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        
+
 
     <!-- start of FNBO stuff -->
 
-    <meta content="" http-equiv="keywords"/>
-    <meta content="" name="description"/>
-    <meta content="all" name="robots"/>
+    <meta content="" http-equiv="keywords" />
+    <meta content="" name="description" />
+    <meta content="all" name="robots" />
 
 
-    <meta http-equiv="imagetoolbar" content="no"> <!-- suppress IE image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no">
+    <!-- suppress IE image toolbar -->
 
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/reset.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.megamenu.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.slideshow.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage-buttons.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/reset.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/wrapper-homepage.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.megamenu.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/jquery.slideshow.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-homepage-buttons.css" />
     <!--[if IE 7]>
 		    <link href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/content-ie7.css" rel="stylesheet" type="text/css" media="screen, print" />
 	    <![endif]-->
@@ -80,151 +81,157 @@
 
 
     <!-- Remember Me -->
-    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.cookie.js" ></script>
-    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.remember-me.js" ></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/remember-me/jquery.remember-me.js"></script>
     <link href="/Styles/MarketingWeb/internet_tip/shared-content-library/config/css/remember-me.css" rel="stylesheet" type="text/css" media="screen" />
 
     <script type="text/javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/jquery/return-to-accounts.js"></script>
 
     <!-- local css -->
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/wrapper-homepage-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/jquery.megamenu-sitebrand.css"/>
-    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-buttons-sitebrand.css"/>
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/wrapper-homepage-sitebrand.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-sitebrand.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/jquery.megamenu-sitebrand.css" />
+    <link media="screen, print" type="text/css" rel="stylesheet" href="/Styles/config/css/content-homepage-buttons-sitebrand.css" />
     <!-- local css -->
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 
-    
-</head>    
-<body id="bodyid" class="bodyclass">
-<div class="audience-switcher">
-  <ul>
-        <li><a href="/Default.aspx" class="here">Personal</a></li>	
-        <li><a href="https://www.firstnational.com/site/small-business/index.fhtml">Small Business</a></li>			
-        <li><a href="https://www.firstnational.com/site/corporate/index.fhtml">Corporate</a></li>
-				
-		<!-- About Us navigation element was hidden in DCR -->
-		<!-- Help navigation element was hidden in DCR -->
-        <!-- Information Security Center navigation element was hidden in DCR -->		
-  </ul>
-</div>  <!--  END audience-switcher -->
 
-  <div id="section1" class="row-fluid">
-    <div id="masthead"> <a href="/" class="logo"><img title="" alt="First National Bank" src="/Styles/config/img/logo.png"/></a>
-      <div class="utility">
+</head>
+<body id="bodyid" class="bodyclass">
+    <%--<form runat="server">--%>
+    <div class="audience-switcher">
         <ul>
-          <li class="first"><a href="https://www.firstnational.com/site/help/" title="">Help</a></li>
-          <li><a href="https://www.firstnational.com/site/about-us/" title="">About Us</a></li>
-          <li><a href="https://firstnational.locatorsearch.com/" title="" class="popup" popup-title="ATM/Branch Locator" popup-preset="atmlocator">ATM/Branch Locator</a></li>
-          <li><a href="https://www.firstnational.com/RetailWeb/default/contactus/SHOW_FORM/form" title="">Contact Us</a></li>
-          <li class="last"><a href="https://www.firstnational.com/site/security-center/" title="">Information Security Center</a></li>
+            <li><a href="/Default.aspx" class="here">Personal</a></li>
+            <li><a href="https://www.firstnational.com/site/small-business/index.fhtml">Small Business</a></li>
+            <li><a href="https://www.firstnational.com/site/corporate/index.fhtml">Corporate</a></li>
+
+            <!-- About Us navigation element was hidden in DCR -->
+            <!-- Help navigation element was hidden in DCR -->
+            <!-- Information Security Center navigation element was hidden in DCR -->
         </ul>
-        <div class="search">
-          <form action="/util/searchresults.fhtml" method="get" name="search">
-            <input type="text" id="searchbox" value="" maxlength="256" size="15" name="q"/>
-            <input name="btnG" id="searchbtn" type="image" value="search" src="/Styles/config/img/btn-search.png" alt="Search"/>
-          </form>
-        </div>
-        <!-- search --> 
-        
-      </div>
-      <!-- end utility --> 
-      
     </div>
-    <!-- masthead -->    
-  </div>
-  <!-- section1 -->
-     
-<!-- personal menu -->
-<div class="nav" style="position:relative; margin:0 auto; width:960px;z-index:2000; ">
-<!-- 2012.10.15
+    <!--  END audience-switcher -->
+
+    <div id="section1" class="row-fluid">
+        <div id="masthead">
+            <a href="/" class="logo">
+                <img title="" alt="First National Bank" src="/Styles/config/img/logo.png" /></a>
+            <div class="utility">
+                <ul>
+                    <li class="first"><a href="https://www.firstnational.com/site/help/" title="">Help</a></li>
+                    <li><a href="https://www.firstnational.com/site/about-us/" title="">About Us</a></li>
+                    <li><a href="https://firstnational.locatorsearch.com/" title="" class="popup" popup-title="ATM/Branch Locator" popup-preset="atmlocator">ATM/Branch Locator</a></li>
+                    <li><a href="https://www.firstnational.com/RetailWeb/default/contactus/SHOW_FORM/form" title="">Contact Us</a></li>
+                    <li class="last"><a href="https://www.firstnational.com/site/security-center/" title="">Information Security Center</a></li>
+                </ul>
+                <div class="search">
+                    <form action="/util/searchresults.fhtml" method="get" name="search">
+                        <input type="text" id="searchbox" value="" maxlength="256" size="15" name="q" />
+                        <input name="btnG" id="searchbtn" type="image" value="search" src="/Styles/config/img/btn-search.png" alt="Search" />
+                    </form>
+                </div>
+                <!-- search -->
+
+            </div>
+            <!-- end utility -->
+
+        </div>
+        <!-- masthead -->
+    </div>
+    <!-- section1 -->
+
+    <!-- personal menu -->
+    <div class="nav" style="position: relative; margin: 0 auto; width: 960px; z-index: 2000;">
+        <!-- 2012.10.15
   <div class="category" style="position:absolute; right:0; z-index:2000; top:-46px;">
 -->
-  <div class="category "> 
-      <ul class="megamenu category layout" style="display:block;">
+        <div class="category ">
+            <ul class="megamenu category layout" style="display: block;">
 
-    
-    <li class="category Banking mm-item" style="float:left;">
-         <a href="https://www.firstnational.com/site/small-business/banking/" class="mm-item-link">Banking</a>
-          <div class="submenu mm-item-content" style="display: none;  top:26px; left: 1px; height:auto;">
+
+                <li class="category Banking mm-item" style="float: left;">
+                    <a href="https://www.firstnational.com/site/small-business/banking/" class="mm-item-link">Banking</a>
+                    <div class="submenu mm-item-content" style="display: none; top: 26px; left: 1px; height: auto;">
                         <div class="background2">
-				            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->            
-                          <table border="0" cellpadding="0" cellspacing="0" class="layout">
-                            <tr>
-                              <td class="col1" style="width:200px; padding:0 10px 0 0;">
-                  	            <h3><a href="/site/personal/banking/checking-accounts/">First National Checking</a></h3>
-                                <ul class="nav">
-                     
-                                  <li><a href="/site/personal/banking/checking-accounts/first-at-work-checking.fhtml">First At Work</a></li>
-                      
-                                </ul>
-                  	            <h3><a href="/site/personal/banking/savings-accounts/">Savings Accounts</a></h3>
-                                <ul class="nav">
-                                  <li><a href="/site/personal/banking/savings-accounts/savings-accounts.fhtml">Savings</a></li>
-                                  <li><a href="/site/personal/banking/savings-accounts/money-market.fhtml">Money Market</a></li>
-					  
-                                  <li><a href="/site/personal/banking/savings-accounts/minor-savings-accounts.fhtml">Minor Savings</a></li>
-                                  <li><a href="/site/personal/banking/savings-accounts/health-savings-account.fhtml">First&nbsp;National&nbsp;Health&nbsp;Savings</a></li>
-                      
-                                </ul>
-                              </td>
-                              <td class="col2" style="border-left:1px solid #ccc; width:200px; padding:0 10px;">
-                   	            <h3><a href="/site/personal/banking/cd-ira-accounts/">CDs &amp; IRAs</a></h3>
-                                <ul class="nav">
-                                  <li><a href="/site/personal/banking/cd-ira-accounts/cd-accounts.fhtml">CDs</a></li>
-                                  <li><a href="/site/personal/banking/cd-ira-accounts/ira-accounts.fhtml">Traditional IRA</a></li>
-                                  <li><a href="/site/personal/banking/cd-ira-accounts/roth-ira-accounts.fhtml">Roth IRA</a></li>
-                                  <li><a href="/site/personal/banking/cd-ira-accounts/educational-savings-accounts.fhtml">Educational&nbsp;Savings&nbsp;Account</a></li>
-                                </ul>
-                   	            <h3><a href="/site/personal/banking/online-services/">Online Services</a></h3>
-                                <ul class="nav">
-                                  <li><a href="/site/personal/banking/online-services/online-banking.fhtml">Online Banking</a></li>
-                                  <li><a href="/site/personal/banking/online-services/billpay.fhtml">BillPay</a></li>
-                                  <li><a href="/site/personal/banking/online-services/statements.fhtml">Paperless Statements</a></li>
-                                  <li><a href="/site/personal/banking/online-services/alerts.fhtml">Account Alerts</a></li>
-                                  <li><a href="/site/personal/banking/online-services/credit-card-payments.fhtml">Credit Card Payments</a></li>
-                                  <li><a href="/site/personal/banking/online-services/activate-card.fhtml">Activate Credit Card</a></li>
-                                </ul>
-                              </td>
-                              <td class="col3" style="border-left:1px solid #ccc; width:200px; padding:0 0 0 10px;">
-				              <h3><a href="/site/personal/banking/mobile-banking.fhtml">Mobile&nbsp;Banking</a></h3>
-				              <h3><a href="/site/personal/banking/foreign-currency.fhtml">Foreign&nbsp;Currency</a></h3>
-                  	            <h3><a href="/site/personal/banking/personal-rates.fhtml">Rates</a></h3>
-                  	
-                            </td>
-                            </tr>
-                          </table>
+                            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" />
+                            <!-- drop-down indicator -->
+                            <table border="0" cellpadding="0" cellspacing="0" class="layout">
+                                <tr>
+                                    <td class="col1" style="width: 200px; padding: 0 10px 0 0;">
+                                        <h3><a href="/site/personal/banking/checking-accounts/">First National Checking</a></h3>
+                                        <ul class="nav">
+
+                                            <li><a href="/site/personal/banking/checking-accounts/first-at-work-checking.fhtml">First At Work</a></li>
+
+                                        </ul>
+                                        <h3><a href="/site/personal/banking/savings-accounts/">Savings Accounts</a></h3>
+                                        <ul class="nav">
+                                            <li><a href="/site/personal/banking/savings-accounts/savings-accounts.fhtml">Savings</a></li>
+                                            <li><a href="/site/personal/banking/savings-accounts/money-market.fhtml">Money Market</a></li>
+
+                                            <li><a href="/site/personal/banking/savings-accounts/minor-savings-accounts.fhtml">Minor Savings</a></li>
+                                            <li><a href="/site/personal/banking/savings-accounts/health-savings-account.fhtml">First&nbsp;National&nbsp;Health&nbsp;Savings</a></li>
+
+                                        </ul>
+                                    </td>
+                                    <td class="col2" style="border-left: 1px solid #ccc; width: 200px; padding: 0 10px;">
+                                        <h3><a href="/site/personal/banking/cd-ira-accounts/">CDs &amp; IRAs</a></h3>
+                                        <ul class="nav">
+                                            <li><a href="/site/personal/banking/cd-ira-accounts/cd-accounts.fhtml">CDs</a></li>
+                                            <li><a href="/site/personal/banking/cd-ira-accounts/ira-accounts.fhtml">Traditional IRA</a></li>
+                                            <li><a href="/site/personal/banking/cd-ira-accounts/roth-ira-accounts.fhtml">Roth IRA</a></li>
+                                            <li><a href="/site/personal/banking/cd-ira-accounts/educational-savings-accounts.fhtml">Educational&nbsp;Savings&nbsp;Account</a></li>
+                                        </ul>
+                                        <h3><a href="/site/personal/banking/online-services/">Online Services</a></h3>
+                                        <ul class="nav">
+                                            <li><a href="/site/personal/banking/online-services/online-banking.fhtml">Online Banking</a></li>
+                                            <li><a href="/site/personal/banking/online-services/billpay.fhtml">BillPay</a></li>
+                                            <li><a href="/site/personal/banking/online-services/statements.fhtml">Paperless Statements</a></li>
+                                            <li><a href="/site/personal/banking/online-services/alerts.fhtml">Account Alerts</a></li>
+                                            <li><a href="/site/personal/banking/online-services/credit-card-payments.fhtml">Credit Card Payments</a></li>
+                                            <li><a href="/site/personal/banking/online-services/activate-card.fhtml">Activate Credit Card</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="col3" style="border-left: 1px solid #ccc; width: 200px; padding: 0 0 0 10px;">
+                                        <h3><a href="/site/personal/banking/mobile-banking.fhtml">Mobile&nbsp;Banking</a></h3>
+                                        <h3><a href="/site/personal/banking/foreign-currency.fhtml">Foreign&nbsp;Currency</a></h3>
+                                        <h3><a href="/site/personal/banking/personal-rates.fhtml">Rates</a></h3>
+
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
-                        <!-- background2 --> 
-                  </div>
-        </li>
-       
-	 <li class="category Lending"> 
-         <a href="https://www.firstnational.com/site/small-business/lending/">Lending</a>
-          <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
-            <div class="background2">
-				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
-            
-			
-			<h3><a href="/site/personal/lending/mortgage-loans.fhtml">Mortgage</a></h3>
-             
-			<h3><a href="/site/personal/lending/home-equity-loans.fhtml">Home Equity</a></h3>
-                  
-			<h3><a href="/site/personal/lending/auto-loans.fhtml">Auto</a></h3>
-             
-			<h3><a href="/site/personal/lending/personal-loans-lines-of-credit.fhtml">Personal</a></h3>
-                   
-			<h3><a href="/site/personal/lending/rates.fhtml">Rates</a></h3>
-              
-            </div>
-            <!-- background2 --> 
-          </div>
-        </li>
+                        <!-- background2 -->
+                    </div>
+                </li>
+
+                <li class="category Lending">
+                    <a href="https://www.firstnational.com/site/small-business/lending/">Lending</a>
+                    <div class="submenu" style="display: none; top: 27px; left: 1px; height: auto;">
+                        <div class="background2">
+                            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" />
+                            <!-- drop-down indicator -->
 
 
-<%--        <li class="category CreditCard"> 
+                            <h3><a href="/site/personal/lending/mortgage-loans.fhtml">Mortgage</a></h3>
+
+                            <h3><a href="/site/personal/lending/home-equity-loans.fhtml">Home Equity</a></h3>
+
+                            <h3><a href="/site/personal/lending/auto-loans.fhtml">Auto</a></h3>
+
+                            <h3><a href="/site/personal/lending/personal-loans-lines-of-credit.fhtml">Personal</a></h3>
+
+                            <h3><a href="/site/personal/lending/rates.fhtml">Rates</a></h3>
+
+                        </div>
+                        <!-- background2 -->
+                    </div>
+                </li>
+
+
+                <%--        <li class="category CreditCard"> 
             <a href="/site/personal/credit-card/">Credit Cards</a>
           <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
@@ -277,37 +284,40 @@
           </div>
         </li>--%>
 
-        <li class="category WealthInvesting"> 
-            <a href="https://www.firstnational.com/site/small-business/wealth-investing/">Wealth &amp; Investing</a>
-        <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
-          <div class="background2">
-            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->          
-            <table border="0" cellpadding="0" cellspacing="0" class="layout">
-              <tr>
-                <td class="col1" style="width:200px; padding:0 10px 0 0;">    
-							
-			    <h3><a href="/site/personal/wealth-investing/investments-planning.fhtml">Investments&nbsp;&amp&nbsp;Planning</a></h3>
-             	<h3><a href="/site/personal/wealth-investing/wealth-solutions.fhtml">Wealth&nbsp;Management</a></h3>
-                <h3><a href="/site/personal/wealth-investing/tributary-funds.fhtml">Tributary&nbsp;Funds</a></h3>
-		       	<h3><a href="/site/personal/wealth-investing/529-savings-plans.fhtml">529&nbsp;Savings&nbsp;Plans&nbsp;(NEST)</a></h3></td>
-			
-                <td class="col2" style="border-left:1px solid #ccc; width:200px; padding:0 10px;">
-				  <h3>Account Access</h3>
-                  <ul class="nav">
-				  <li><a href="https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=ng&subProduct=fnbtrust" target="_blank">Client&nbsp;Point</a></li>
-				  <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'National Financial Services LLC', 'https://www.mystreetscape.com/my/investmentsandplanning', 'yes');">Investments&nbsp;&amp&nbsp;Planning</a><li>
-				  <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Ascensus, Inc.', 'https://www.retirementgold.com/fnbo/', 'yes');">Retirement Gold</a></li>
- 				  <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Northern Lights Distributors, LLC', 'https://www3.financialtrans.com/tf/FANWeb?tx=Disclaim&cz=a05081718190514022018', 'yes');">Tributary&nbsp;Funds</a></li>
- 				  <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Nebraska Educational Savings Plan Trust (NEST)', 'https://www.nest529direct.com/nedtpl/auth/loginFormAction.do?tplcb=%2Fnedtpl%2Facctmaint%2FacctList.do', 'yes');">NEST</a><li>				                 </ul>
-				 </td>
-				</table>				  
-            </div>
-            <!-- background2 --> 
-          </div>
-        </li>
-       
+                <li class="category WealthInvesting">
+                    <a href="https://www.firstnational.com/site/small-business/wealth-investing/">Wealth &amp; Investing</a>
+                    <div class="submenu" style="display: none; top: 27px; left: 1px; height: auto;">
+                        <div class="background2">
+                            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" />
+                            <!-- drop-down indicator -->
+                            <table border="0" cellpadding="0" cellspacing="0" class="layout">
+                                <tr>
+                                    <td class="col1" style="width: 200px; padding: 0 10px 0 0;">
 
-<%--	 <li class="category ResourceCenter"> 
+                                        <h3><a href="/site/personal/wealth-investing/investments-planning.fhtml">Investments&nbsp;&amp&nbsp;Planning</a></h3>
+                                        <h3><a href="/site/personal/wealth-investing/wealth-solutions.fhtml">Wealth&nbsp;Management</a></h3>
+                                        <h3><a href="/site/personal/wealth-investing/tributary-funds.fhtml">Tributary&nbsp;Funds</a></h3>
+                                        <h3><a href="/site/personal/wealth-investing/529-savings-plans.fhtml">529&nbsp;Savings&nbsp;Plans&nbsp;(NEST)</a></h3>
+                                    </td>
+
+                                    <td class="col2" style="border-left: 1px solid #ccc; width: 200px; padding: 0 10px;">
+                                        <h3>Account Access</h3>
+                                        <ul class="nav">
+                                            <li><a href="https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=ng&subProduct=fnbtrust" target="_blank">Client&nbsp;Point</a></li>
+                                            <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'National Financial Services LLC', 'https://www.mystreetscape.com/my/investmentsandplanning', 'yes');">Investments&nbsp;&amp&nbsp;Planning</a><li>
+                                            <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Ascensus, Inc.', 'https://www.retirementgold.com/fnbo/', 'yes');">Retirement Gold</a></li>
+                                            <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Northern Lights Distributors, LLC', 'https://www3.financialtrans.com/tf/FANWeb?tx=Disclaim&cz=a05081718190514022018', 'yes');">Tributary&nbsp;Funds</a></li>
+                                            <li><a href="javascript:siteDisclosure('website', 'First National Bank', 'Nebraska Educational Savings Plan Trust (NEST)', 'https://www.nest529direct.com/nedtpl/auth/loginFormAction.do?tplcb=%2Fnedtpl%2Facctmaint%2FacctList.do', 'yes');">NEST</a><li>
+                                        </ul>
+                                    </td>
+                            </table>
+                        </div>
+                        <!-- background2 -->
+                    </div>
+                </li>
+
+
+                <%--	 <li class="category ResourceCenter"> 
          <a href="https://www.firstnational.com/site/small-business/resource-center/">Resource Center</a>          
           <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">			
             <div class="background2">
@@ -325,59 +335,86 @@
           </div>
         </li>--%>
 
-        <li class="category FinanceLogically">
-            <a href="/Forms/Menu/Dashboard.aspx">FinanceLogically<span style="vertical-align:super; font-size:x-small; ">&copy</span></a>
-            <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
-            <div class="background2">
-				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
-          	    <h3><a href="/Forms/Menu/Dashboard.aspx">Dashboard</a></h3>
-				<h3><a href="/Forms/Menu/Transactions.aspx">Transactions</a></h3>
-				<h3><a href="/Forms/Menu/Budgets.aspx">Budgeting</a></h3>
-                    <ul class="nav">
-					    <li><a>Bucket List Budgeting</a></li>
-                        <li><a>Retirement Planning</a></li>
-                    </ul>
-				<h3><a>How Do I Rank?</a></h3>
-				<h3><a>Other Thing</a></h3>
-            </div>
-            <!-- background2 --> 
-            </div>
-        </li>
-        <li class="category BudgetLogically">
-            <a href="/Forms/Menu/Budgets.aspx">BudgetLogically<span style="vertical-align:super; font-size:x-small; ">&copy</span></a>
-            <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
-            <div class="background2">
-				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
-          	    <h3><a href="/Forms/Menu/Dashboard.aspx">Dashboard</a></h3>
-				<h3><a href="/Forms/Menu/Transactions.aspx">Transactions</a></h3>
-				<h3><a href="/Forms/Menu/Budgets.aspx">Budgeting</a></h3>
-                    <ul class="nav">
-					    <li><a>Bucket List Budgeting</a></li>
-                        <li><a>Retirement Planning</a></li>
-                    </ul>
-				<h3><a>How Do I Rank?</a></h3>
-            </div>
-            <!-- background2 --> 
-            </div>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- category --> 
-  </div>
+                <li class="category FinanceLogically">
+                    <a href="/Forms/Menu/Dashboard.aspx">FinanceLogically<span style="vertical-align: super; font-size: x-small;">&copy</span></a>
+                    <div class="submenu" style="display: none; top: 27px; left: 1px; height: auto;">
+                        <div class="background2">
+                            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" />
+                            <!-- drop-down indicator -->
+                            <h3><a href="/Forms/Menu/Dashboard.aspx">Dashboard</a></h3>
+                            <h3><a href="/Forms/Menu/Transactions.aspx">Transactions</a></h3>
+                            <h3><a href="/Forms/Menu/Budgets.aspx">Budgeting</a></h3>
+                            <ul class="nav">
+                                <li><a>Bucket List Budgeting</a></li>
+                                <li><a>Retirement Planning</a></li>
+                            </ul>
+                            <h3><a>How Do I Rank?</a></h3>
+                            <h3><a>Other Thing</a></h3>
+                        </div>
+                        <!-- background2 -->
+                    </div>
+                </li>
+                <li class="category BudgetLogically">
+                    <a href="/Forms/Menu/Budgets.aspx">BudgetLogically<span style="vertical-align: super; font-size: x-small;">&copy</span></a>
+                    <div class="submenu" style="display: none; top: 27px; left: 1px; height: auto;">
+                        <div class="background2">
+                            <img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" />
+                            <!-- drop-down indicator -->
+                            <h3><a href="/Forms/Menu/Dashboard.aspx">Dashboard</a></h3>
+                            <h3><a href="/Forms/Menu/Transactions.aspx">Transactions</a></h3>
+                            <h3><a href="/Forms/Menu/Budgets.aspx">Budgeting</a></h3>
+                            <ul class="nav">
+                                <li><a>Bucket List Budgeting</a></li>
+                                <li><a>Retirement Planning</a></li>
+                            </ul>
+                            <h3><a>How Do I Rank?</a></h3>
+                        </div>
+                        <!-- background2 -->
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    <form runat="server">
+        <!-- category -->
+    </div>
+
     <div class="container">
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-xs-12 col-sm-9">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
             </div>
             <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="Div1" role="navigation">
-                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />
-                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br /><br /><br />
+                <div class="navbar-form navbar-right" id="divLogin" runat="server">
+                    <form role="form">
+                        <div class="form-group">
+                            <input id="txtUserName" type="text" placeholder="Email" class="form-control" runat="server" />
+                        </div>
+                        <div class="form-group">
+                            <input id="txtPassword" type="password" placeholder="Password" class="form-control" runat="server" />
+                        </div>
+                        <button id="btnSignIn" type="submit" class="btn btn-success" runat="server">Sign In</button>
+                    </form>
+                </div>
+                <div class="navbar-form navbar-right" style="margin-top: 0px; margin-bottom: 0px;" id="divUser" runat="server">
+                    <form role="form">
+                        <div class="form-group">
+                            <%--<asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />--%>
+                        </div>
+
+                        <%--<button id="btnSignOut" type="submit" class="btn" style="vertical-align:top;" runat="server" >Sign Out</button>--%>
+                    </form>
+                </div>
+                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br />
+                <br />
+                <br />
                 <ul class="static-links">
-	                <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li><br /><br /><br />
+                    <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li>
+                    <br />
+                    <br />
+                    <br />
                 </ul>
             </div>
         </div>
@@ -388,11 +425,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    </form>
+    <%--</form>--%>
 
-    	<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code.js?v01" type="text/javascript"></script>
-		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-functions.js?v01" type="text/javascript"></script>
-		<script language="javascript" type="text/javascript"><!--
+    <script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code.js?v01" type="text/javascript"></script>
+    <script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-functions.js?v01" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript"><!--
     /* Copyright 1997-2004 Omniture, Inc. */
     scatalyst.pageName = "Personal:Homepage"
     scatalyst.channel = "Marketing"
@@ -412,6 +449,6 @@
     /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
     var s_code = scatalyst.t(); if (s_code) document.write(s_code)
     //--></script>
-		<script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-function-calls.js?v01" type="text/javascript"></script>
+    <script language="javascript" src="/Styles/MarketingWeb/internet_tip/shared-content-library/config/js/s-code-function-calls.js?v01" type="text/javascript"></script>
 </body>
 </html>

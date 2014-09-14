@@ -5,7 +5,7 @@
 
 function OpenLoginDialog() {
     $("#divLoginOpen").dialog({
-        appendTo: "body",
+        appendTo: "form",
         modal: true,
         dialogClass: "no-close",
         width: 450,

@@ -32,11 +32,56 @@ Partial Public Class SiteMaster
     Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
-    '''btnLogOut control.
+    '''divLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnLogOut As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents divLogin As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''txtUserName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtUserName As Global.System.Web.UI.HtmlControls.HtmlInputText
+
+    '''<summary>
+    '''txtPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtPassword As Global.System.Web.UI.HtmlControls.HtmlInputPassword
+
+    '''<summary>
+    '''btnSubmit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSubmit As Global.System.Web.UI.HtmlControls.HtmlInputSubmit
+
+    '''<summary>
+    '''btnSignIn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSignIn As Global.System.Web.UI.HtmlControls.HtmlButton
+
+    '''<summary>
+    '''divUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents divUser As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 End Class
