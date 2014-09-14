@@ -11,11 +11,21 @@ Public Class BudgetTargets
         hfUserId.Value = 4
     End Sub
     <WebMethod()> _
-    Public Shared Function GetChart(nUserId As Integer) As String
-        Dim ds1 As DataSet = GetPopularTargetComps(nUserId)
+    Public Shared Function GetChart(nUserId As String) As String
+        Dim ds1 As DataSet = GetPopularTargetComps(CInt(nUserId))
         Dim ds As DataSet = CompareBudgetTargetData(ds1)
         Dim sb As New StringBuilder
-        sb.Append("[")
+        Dim lstCategories As List(Of String)
+        Dim cats = From dr As DataRow In ds.Tables(0).Rows
+                   Select CStr(dr.Item("cCategory"))
+
+        lstCategories = cats.ToList()
+        sb.Append("labels: [")
+        Dim cCats As String = ""
+        For Each strcat As String In lstCategories
+            cCats &= "'" & strcat & "',"
+        Next
+        sb.Append(cCats.Trim(",") & "],datasets:[")
         For Each dt As DataTable In ds.Tables
             sb.Append("{")
             System.Threading.Thread.Sleep(50)

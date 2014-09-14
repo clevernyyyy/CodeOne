@@ -202,7 +202,6 @@
     <Content Include="Forms\Menu\BudgetTargets.aspx" />
     <Content Include="Forms\Menu\Dashboard.aspx" />
     <Content Include="Forms\Menu\Transactions.aspx" />
-    <Content Include="Forms\Pie.aspx" />
     <Content Include="Forms\Standard.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -534,13 +533,6 @@
     <Compile Include="Forms\Menu\Transactions.aspx.vb">
       <DependentUpon>Transactions.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Forms\Pie.aspx.designer.vb">
-      <DependentUpon>Pie.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Pie.aspx.vb">
-      <DependentUpon>Pie.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Standard.aspx.designer.vb">
       <DependentUpon>Standard.aspx</DependentUpon>
