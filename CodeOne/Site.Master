@@ -405,12 +405,11 @@
                 <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br />
                 <br />
                 <br />
-                <ul class="static-links">
-                    <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li>
-                    <br />
-                    <br />
-                    <br />
-                </ul>
+                <span class="" style="border:1px solid lightgray; background-color:#F8F8F8 ;-moz-border-radius: 7px; border-radius: 7px; padding: 10px 10px 10px 10px;">
+                    <a style="color:#009900; font-size:smaller; font-weight:bolder; text-decoration:none;" href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></span>
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     </div>

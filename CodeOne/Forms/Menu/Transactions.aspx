@@ -38,7 +38,7 @@
         $(init);
 
         function init() {
-            $('#MainContent_Accordion').find("div").draggable({
+            $('#divRepCategory').find("div").draggable({
                 cursor: 'move'
             });
 
@@ -48,12 +48,6 @@
                     $(this).html($(ui.draggable).html());
                 }
             });
-
-            //function handleDragStop(event, ui) {
-            //    var offsetXPos = parseInt(ui.offset.left);
-            //    var offsetYPos = parseInt(ui.offset.top);
-            //    alert("Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
-            //}
         }
     </script>
 
@@ -66,33 +60,24 @@
     </style>
 
     <div class="container">
-
-        <%--<asp:Repeater ID="rptCoverage" runat="server">
-            <ItemTemplate>
-                <div id="divCoverage" style="display:inline-block;" runat="server">
-                    <uctrl:Categories id="ctrlCategories" runat="server"></uctrl:Categories>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>--%>
-        <%-- <asp:DropDownList runat="server" ID="ddlCategories"></asp:DropDownList>--%>
-
-        <h2 class="cursor">Categories <a id="expand" class="noslide" href="#">+</a>
-        </h2>
-        <div id="playground">
-            <div id="categories" style="margin-bottom:50px">
-                <div id="MainContent_Accordion">
-                    <div id="divHideCategory" runat="server">
-                        <div id="divRepCategory" style="display: none">
-                            <asp:Repeater runat="server" ID="rptCategories">
-                                <ItemTemplate>
-                                    <uctrl:Category ID="ctrlCategory" runat="server"></uctrl:Category>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
+        <h1>Transactions</h1>
+        <div id="playground" style="border: 1px solid darkgreen; -moz-border-radius: 15px; border-radius: 15px;">
+            <div id="categories" style="display:block;">
+                <h3 class="cursor" style="margin-left:25px;">Categories <a id="expand" style="text-decoration:none; color:darkgreen;" href="#">+</a>
+                </h3>
+                <div id="divHideCategory" runat="server">
+                    <div id="divRepCategory" style="display: none">
+                        <asp:Repeater runat="server" ID="rptCategories">
+                            <ItemTemplate>
+                                <uctrl:Category ID="ctrlCategory" runat="server"></uctrl:Category>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
-            <div id="transactions">
+            <br />
+            <div id="transactions" style="margin-top:50px;">
+                <br />
                 <asp:Repeater ID="rptTrans" runat="server">
                     <ItemTemplate>
                         <div id="divTransactions" runat="server">
@@ -101,11 +86,6 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
-
-
-
-
-
         </div>
 
 

@@ -1,5 +1,10 @@
 ﻿$(document).ready(function () {
 
+    $('#divRepCategory').draggable({
+        containment: '#categories',
+        cursor: 'move',
+        snap: '#categories'
+    });
 
     $("[id*='expand']").click(function (e) {
         if ($("[id*='expand']").text() == "+") {

@@ -9,7 +9,7 @@
             <asp:Label ID="lblAmount" runat="server" />
         </span>
         <span id="divCategory" runat="server" class="transEl" style="border: 1px solid slategrey;">
-            <asp:Label ID="lblCategory" runat="server" />
+            <asp:Label ID="lblCategory" runat="server" CssClass="longGuy"/>
         </span>
         <span id="divDetail" runat="server" class="transEl" style="border: 1px solid slategrey;">
             <asp:Label ID="lblDetail" runat="server" />
