@@ -51,7 +51,7 @@
                     </div>
                     <div class="panel-group collapsibleDiv" id="accordion">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-headingAccrd">
                                 <h4 class="panel-title">
                                     <span class="accdrHeader">Accounts</span>
                                 </h4>
