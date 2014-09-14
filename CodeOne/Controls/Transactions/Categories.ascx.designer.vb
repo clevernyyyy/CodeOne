@@ -11,25 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Transactions
+Partial Public Class Categories
 
     '''<summary>
-    '''divHideCategory control.
+    '''divOutline control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divHideCategory As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents divOutline As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''rptCategories control.
+    '''lblCategory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rptCategories As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents lblCategory As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''rptTrans control.

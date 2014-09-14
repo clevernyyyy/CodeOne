@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Transactions" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.vb" Inherits="CodeOne.Transactions" %>
 
+<%@ Register Src="~/Controls/Transactions/Transaction.ascx" TagPrefix="uctrl" TagName="Transaction" %>
 <%@ Register Src="~/Controls/Transactions/Category.ascx" TagPrefix="uctrl" TagName="Category" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
@@ -64,26 +65,41 @@
     }
     </style>
 
-    <body>
     <div class="container">
-       <div class="row-fluid">
-           <div class="span8 content">
-                <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
-                </h2>
-                <div id="MainContent_Accordion">
-                    <div id="divHideCategory" runat="server">
-                        <div id="divRepCategory" style="display:none" >
-                            <asp:Repeater runat="server" ID="rptCategories">
-                                <ItemTemplate>
-                                    <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
-                                </ItemTemplate>
-                            </asp:Repeater>        
-                        </div>
-                    </div>
+
+        <%--<asp:Repeater ID="rptCoverage" runat="server">
+            <ItemTemplate>
+                <div id="divCoverage" style="display:inline-block;" runat="server">
+                    <uctrl:Categories id="ctrlCategories" runat="server"></uctrl:Categories>
                 </div>
+            </ItemTemplate>
+        </asp:Repeater>--%>
+       <%-- <asp:DropDownList runat="server" ID="ddlCategories"></asp:DropDownList>--%>
+
+        <h2 class="cursor"> Categories <a id="expand" class="noslide" href="#">+</a>
+        </h2>
+        <div id="MainContent_Accordion">
+            <div id="divHideCategory" runat="server">
+                <div id="divRepCategory" style="display:none" >
+                    <asp:Repeater runat="server" ID="rptCategories">
+                        <ItemTemplate>
+                            <uctrl:Category id="ctrlCategory" runat="server"></uctrl:Category>
+                        </ItemTemplate>
+                    </asp:Repeater>        
+                </div>
+            </div>
+        </div>
+
+         <asp:Repeater ID="rptTrans" runat="server">
+            <ItemTemplate>
+                <div id="divTransactions" style="display:inline-block;" runat="server">
+                    <uctrl:Transaction id="ctrlTransaction" runat="server"></uctrl:Transaction><hr><hr />
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
       
 
-          <div class="row row-offcanvas row-offcanvas-right">
+         <%-- <div class="row row-offcanvas row-offcanvas-right">
               <!-- Transactions Gridview -->
             <div id="Retrieve" class="centered">
        
@@ -97,19 +113,18 @@
                         PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
                         <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
                         <Columns >
-                            <%--0--%><asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
+                            <asp:BoundField DataField="cCategory" HeaderText="CATEGORY" SortExpression="cCategory"
                                 ItemStyle-Width="50" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
-                            <%--1--%><asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
+                            <asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
                                 SortExpression="dPostDt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered"  />
-                            <%--2--%><asp:BoundField DataField="cDebitCredit" HeaderText="DEBIT & CREDIT" 
+                            <asp:BoundField DataField="cDebitCredit" HeaderText="DEBIT & CREDIT" 
                                 SortExpression="cDebitCredit" ItemStyle-Width="25"  HeaderStyle-CssClass="centered"/>
-                            <%--3--%><asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
+                            <asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
                                 SortExpression="cTransDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
-                            <%--4--%><asp:BoundField DataField="cTranDetailDesc" HeaderText="TRANSACTION DESCRIPTION" 
+                            <asp:BoundField DataField="cTranDetailDesc" HeaderText="TRANSACTION DESCRIPTION" 
                                 SortExpression="cTranDetailDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
-                            <%--5--%><asp:BoundField DataField="nTranAmt" HeaderText="AMOUNT" 
+                            <asp:BoundField DataField="nTranAmt" HeaderText="AMOUNT" 
                                 SortExpression="nTranAmt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered" />
-                            <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
                         </Columns>
                         <PagerStyle CssClass="pager" />
                         <PagerTemplate>
@@ -133,7 +148,7 @@
     </div><!--/.container-->
       <footer>
         <p>&copy; Team A/S/L - 2014</p>
-      </footer>
+      </footer>--%>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -144,11 +159,5 @@
 
     <script src="/Scripts/site_scripts/offcanvas.js"></script>
 </body>
-                       <%-- </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--%>
 </asp:Content>
 

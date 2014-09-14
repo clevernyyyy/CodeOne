@@ -194,7 +194,9 @@
     <Content Include="Controls\Dashboard\AccountLine.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
+    <Content Include="Controls\Transactions\Categories.ascx" />
     <Content Include="Controls\Transactions\Category.ascx" />
+    <Content Include="Controls\Transactions\Transaction.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Forms\Menu\Budgets.aspx" />
     <Content Include="Forms\Menu\Dashboard.aspx" />
@@ -473,11 +475,25 @@
       <DependentUpon>Register.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Controls\Transactions\Categories.ascx.designer.vb">
+      <DependentUpon>Categories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Transactions\Categories.ascx.vb">
+      <DependentUpon>Categories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Controls\Transactions\Category.ascx.designer.vb">
       <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Transactions\Category.ascx.vb">
       <DependentUpon>Category.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Transactions\Transaction.ascx.designer.vb">
+      <DependentUpon>Transaction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Transactions\Transaction.ascx.vb">
+      <DependentUpon>Transaction.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">

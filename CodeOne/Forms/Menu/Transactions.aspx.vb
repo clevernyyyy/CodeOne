@@ -7,38 +7,85 @@ Public Class Transactions
         If Not IsPostBack Then
 
             'Clear Everything
-            LoadTransactions(Session("Account"))
+            'LoadTransactions(Session("Account"))
             LoadCategories()
+
+            LoadTransactions()
         End If
     End Sub
 
-#Region "Data Retrieval"
+    'Private Sub LoadCategories()
+    '    Dim dt As DataTable = Nothing
 
-    Private Sub LoadTransactions(ByVal nAccountNum, Optional ByVal lSetFocusToTop = False)
+    '    Dim cmd = SqlCommand("Data.usp_Get_Categories")
+
+    '    dt = FillDataTable(cmd)
+
+    '    ddlCategories.DataSource = dt
+    '    ddlCategories.DataTextField = "cCategory"
+    '    ddlCategories.DataValueField = "cCategory"
+    '    ddlCategories.DataBind()
+    'End Sub
+
+    Private Sub LoadTransactions()
         Dim dt As DataTable = Nothing
 
         Dim cmd = SqlCommand("Data.usp_Get_AccountDetail")
+        cmd.Parameters.AddWithValue("@nAccountNum", Session("Account"))
 
-        With cmd.Parameters
-            .AddWithValue("@nAccountNum", nAccountNum)
-        End With
         dt = FillDataTable(cmd)
 
-        dvgPack.DataSource = dt
-        dvgPack.DataBind()
+        rptTrans.DataSource = dt
+        rptTrans.DataBind()
+    End Sub
 
-        If Session("dtSearch") IsNot Nothing Then
-            Session("dtSearch").Clear()
-        End If
-        Session("dtSearch") = dt
-
-        If lSetFocusToTop Then
-            Dim pageList As DropDownList = CType(dvgPack.TopPagerRow.FindControl("dgvPackDDL"), DropDownList)
-            If Not pageList Is Nothing Then
-                ScriptManager.GetCurrent(Page).SetFocus(pageList.ClientID)
-            End If
+    Private Sub rptTrans_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptTrans.ItemDataBound
+        Dim dDate As Date = e.Item.DataItem.Item("dPostDt")
+        Dim intAmount As Integer = e.Item.DataItem.Item("nTranAmt")
+        Dim strDetail As String = e.Item.DataItem.Item("cTransDesc")
+        If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
+            Dim ctrl As Transaction = DirectCast(e.Item.FindControl("ctrlTransaction"), Transaction)
+            ctrl.PostDate = dDate
+            ctrl.Amount = intAmount
+            ctrl.Detail = strDetail
         End If
     End Sub
+
+    'Private Sub rptCoverage_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptCoverage.ItemDataBound
+    '    Dim strCategory As String = e.Item.DataItem.Item("cCategory")
+    '    If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
+    '        Dim ctrl As Categories = DirectCast(e.Item.FindControl("ctrlCategories"), Categories)
+    '        ctrl.Category = strCategory
+    '    End If
+    'End Sub
+
+#Region "Data Retrieval"
+
+    'Private Sub LoadTransactions(ByVal nAccountNum, Optional ByVal lSetFocusToTop = False)
+    '    Dim dt As DataTable = Nothing
+
+    '    Dim cmd = SqlCommand("Data.usp_Get_AccountDetail")
+
+    '    With cmd.Parameters
+    '        .AddWithValue("@nAccountNum", nAccountNum)
+    '    End With
+    '    dt = FillDataTable(cmd)
+
+    '    dvgPack.DataSource = dt
+    '    dvgPack.DataBind()
+
+    '    If Session("dtSearch") IsNot Nothing Then
+    '        Session("dtSearch").Clear()
+    '    End If
+    '    Session("dtSearch") = dt
+
+    '    If lSetFocusToTop Then
+    '        Dim pageList As DropDownList = CType(dvgPack.TopPagerRow.FindControl("dgvPackDDL"), DropDownList)
+    '        If Not pageList Is Nothing Then
+    '            ScriptManager.GetCurrent(Page).SetFocus(pageList.ClientID)
+    '        End If
+    '    End If
+    'End Sub
 
     Private Sub LoadCategories()
         Dim dt As DataTable = Nothing
@@ -61,91 +108,86 @@ Public Class Transactions
 #End Region
 
 #Region "Search Grid Stuff"
-    Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound
-        If e.Row.RowType = DataControlRowType.DataRow Then
-            e.Row.Height = 25
-            Dim d As DateTime = e.Row.Cells(1).Text
-            e.Row.Cells(1).Text = d.ToShortDateString
-            ''This code allows the gridview to be selectable
-            e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
-            e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
-            'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
-        ElseIf e.Row.RowType = DataControlRowType.Pager Then
-            ' Retrieve the DropDownList and Label controls from the row.
-            Dim pageList As DropDownList = CType(e.Row.Cells(0).FindControl("dgvPackDDL"), DropDownList)
-            For i As Integer = 0 To dvgPack.PageCount - 1
+    'Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound
+    '    If e.Row.RowType = DataControlRowType.DataRow Then
+    '        e.Row.Height = 25
+    '        Dim d As DateTime = e.Row.Cells(1).Text
+    '        e.Row.Cells(1).Text = d.ToShortDateString
+    '        ''This code allows the gridview to be selectable
+    '        e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
+    '        e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
+    '        'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
+    '    ElseIf e.Row.RowType = DataControlRowType.Pager Then
+    '        ' Retrieve the DropDownList and Label controls from the row.
+    '        Dim pageList As DropDownList = CType(e.Row.Cells(0).FindControl("dgvPackDDL"), DropDownList)
+    '        For i As Integer = 0 To dvgPack.PageCount - 1
 
-                ' Create a ListItem object to represent a page.
-                Dim pageNumber As Integer = i + 1
-                Dim item As ListItem = New ListItem(pageNumber.ToString())
+    '            ' Create a ListItem object to represent a page.
+    '            Dim pageNumber As Integer = i + 1
+    '            Dim item As ListItem = New ListItem(pageNumber.ToString())
 
-                ' If the ListItem object matches the currently selected
-                ' page, flag the ListItem object as being selected. Because
-                ' the DropDownList control is recreated each time the pager
-                ' row gets created, this will persist the selected item in
-                ' the DropDownList control.   
-                If i = dvgPack.PageIndex Then
+    '            ' If the ListItem object matches the currently selected
+    '            ' page, flag the ListItem object as being selected. Because
+    '            ' the DropDownList control is recreated each time the pager
+    '            ' row gets created, this will persist the selected item in
+    '            ' the DropDownList control.   
+    '            If i = dvgPack.PageIndex Then
 
-                    item.Selected = True
+    '                item.Selected = True
 
-                End If
+    '            End If
 
-                ' Add the ListItem object to the Items collection of the 
-                ' DropDownList.
-                pageList.Items.Add(item)
-            Next
+    '            ' Add the ListItem object to the Items collection of the 
+    '            ' DropDownList.
+    '            pageList.Items.Add(item)
+    '        Next
 
-            'Fix up 'out of' label
-            Dim lblPages As Label = CType(e.Row.Cells(0).FindControl("lblPages"), Label)
-            lblPages.Text = dvgPack.PageCount
+    '        'Fix up 'out of' label
+    '        Dim lblPages As Label = CType(e.Row.Cells(0).FindControl("lblPages"), Label)
+    '        lblPages.Text = dvgPack.PageCount
 
-            'Hide nav buttons if necessary
-            If dvgPack.PageIndex = 0 Then
-                Dim btnPrev As Button = CType(e.Row.Cells(0).FindControl("btnPrev"), Button)
-                btnPrev.Style.Item("visibility") = "hidden"
-            ElseIf dvgPack.PageIndex >= dvgPack.PageCount - 1 Then
-                Dim btnNext As Button = CType(e.Row.Cells(0).FindControl("btnNext"), Button)
-                btnNext.Style.Item("visibility") = "hidden"
-            End If
-        End If
-    End Sub
+    '        'Hide nav buttons if necessary
+    '        If dvgPack.PageIndex = 0 Then
+    '            Dim btnPrev As Button = CType(e.Row.Cells(0).FindControl("btnPrev"), Button)
+    '            btnPrev.Style.Item("visibility") = "hidden"
+    '        ElseIf dvgPack.PageIndex >= dvgPack.PageCount - 1 Then
+    '            Dim btnNext As Button = CType(e.Row.Cells(0).FindControl("btnNext"), Button)
+    '            btnNext.Style.Item("visibility") = "hidden"
+    '        End If
+    '    End If
+    'End Sub
 
-    Protected Sub dgvPackDDL_SelectedIndexChanged(ByVal pageList As DropDownList, ByVal e As EventArgs)
-        ' Set the PageIndex property to display that page selected by the user.
-        dvgPack.PageIndex = pageList.SelectedIndex
-        LoadTransactions(Session("Account"), True)
-    End Sub
+    'Protected Sub dgvPackDDL_SelectedIndexChanged(ByVal pageList As DropDownList, ByVal e As EventArgs)
+    '    ' Set the PageIndex property to display that page selected by the user.
+    '    dvgPack.PageIndex = pageList.SelectedIndex
+    '    LoadTransactions(Session("Account"), True)
+    'End Sub
 
-    Protected Sub dgvPackPrev_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Set the PageIndex property to display that page selected by the user.
-        dvgPack.PageIndex -= 1
-        LoadTransactions(Session("Account"), True)
-    End Sub
+    'Protected Sub dgvPackPrev_Click(ByVal sender As Object, ByVal e As EventArgs)
+    '    ' Set the PageIndex property to display that page selected by the user.
+    '    dvgPack.PageIndex -= 1
+    '    LoadTransactions(Session("Account"), True)
+    'End Sub
 
-    Protected Sub dgvPackNext_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Set the PageIndex property to display that page selected by the user.
+    'Protected Sub dgvPackNext_Click(ByVal sender As Object, ByVal e As EventArgs)
+    '    ' Set the PageIndex property to display that page selected by the user.
 
-        dvgPack.PageIndex += 1
-        LoadTransactions(Session("Account"), True)
-    End Sub
+    '    dvgPack.PageIndex += 1
+    '    LoadTransactions(Session("Account"), True)
+    'End Sub
 
-    Protected Sub dgvPack_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs)
-        Dim dv As New DataView(Session("dtSearch"))
-        If Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("ASC") Then
-            dv.Sort = e.SortExpression & " DESC"
-        ElseIf Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("DESC") Then
-            dv.Sort = e.SortExpression & " ASC"
-        Else
-            dv.Sort = e.SortExpression & " ASC"
-        End If
-        HttpContext.Current.Session("strSortedBy") = dv.Sort.ToString
-        dvgPack.DataSource = dv
-        dvgPack.DataBind()
-    End Sub
+    'Protected Sub dgvPack_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs)
+    '    Dim dv As New DataView(Session("dtSearch"))
+    '    If Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("ASC") Then
+    '        dv.Sort = e.SortExpression & " DESC"
+    '    ElseIf Session("strSortedBy") IsNot Nothing AndAlso Session("strSortedBy").contains("DESC") Then
+    '        dv.Sort = e.SortExpression & " ASC"
+    '    Else
+    '        dv.Sort = e.SortExpression & " ASC"
+    '    End If
+    '    HttpContext.Current.Session("strSortedBy") = dv.Sort.ToString
+    '    dvgPack.DataSource = dv
+    '    dvgPack.DataBind()
+    'End Sub
 #End Region
-
-    Protected Sub LogOut_Click(sender As Object, e As EventArgs)
-        Response.Redirect("~/Default.aspx")
-    End Sub
-
 End Class
