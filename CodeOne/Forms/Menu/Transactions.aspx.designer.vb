@@ -14,29 +14,11 @@ Option Explicit On
 Partial Public Class Transactions
 
     '''<summary>
-    '''divHideCategory control.
+    '''dvgPack control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divHideCategory As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''rptCategories control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rptCategories As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
-    '''rptTrans control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rptTrans As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents dvgPack As Global.System.Web.UI.WebControls.GridView
 End Class
