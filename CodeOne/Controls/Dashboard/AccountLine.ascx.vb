@@ -145,6 +145,43 @@
             e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
             'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
+        ElseIf e.Row.RowType = DataControlRowType.Pager Then
+            ' Retrieve the DropDownList and Label controls from the row.
+            Dim pageList As DropDownList = CType(e.Row.Cells(0).FindControl("dgvPackDDL"), DropDownList)
+            For i As Integer = 0 To dvgPack.PageCount - 1
+
+                ' Create a ListItem object to represent a page.
+                Dim pageNumber As Integer = i + 1
+                Dim item As ListItem = New ListItem(pageNumber.ToString())
+
+                ' If the ListItem object matches the currently selected
+                ' page, flag the ListItem object as being selected. Because
+                ' the DropDownList control is recreated each time the pager
+                ' row gets created, this will persist the selected item in
+                ' the DropDownList control.   
+                If i = dvgPack.PageIndex Then
+
+                    item.Selected = True
+
+                End If
+
+                ' Add the ListItem object to the Items collection of the 
+                ' DropDownList.
+                pageList.Items.Add(item)
+            Next
+
+            'Fix up 'out of' label
+            Dim lblPages As Label = CType(e.Row.Cells(0).FindControl("lblPages"), Label)
+            lblPages.Text = dvgPack.PageCount
+
+            'Hide nav buttons if necessary
+            If dvgPack.PageIndex = 0 Then
+                Dim btnPrev As Button = CType(e.Row.Cells(0).FindControl("btnPrev"), Button)
+                btnPrev.Style.Item("visibility") = "hidden"
+            ElseIf dvgPack.PageIndex >= dvgPack.PageCount - 1 Then
+                Dim btnNext As Button = CType(e.Row.Cells(0).FindControl("btnNext"), Button)
+                btnNext.Style.Item("visibility") = "hidden"
+            End If
         End If
     End Sub
 

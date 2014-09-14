@@ -27,7 +27,6 @@
           <div id="grid" style="display:none;" class="row row-offcanvas row-offcanvas-right">
               <!-- Transactions Gridview -->
             <div id="Retrieve" class="centered">
-       
                 <div id="Retrieve_GridViewContainer" class="gridViewContainer">
                     <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
                         AutoGenerateColumns="false"
