@@ -62,96 +62,7 @@
          html, body, .container-fluid, .row {
 	    height: 100%;
     }
-
-    .sidebar {
-      background-color: #CCCCCC;
-    }
-
-    @media (min-width: 992px) {
-      .sidebar {
-        position: absolute;
-        top: 0;
-        width: 200px;
-        right: 0;
-        bottom: 0;
-        z-index: 100;
-        display: block;
-        background-color: #CCCCCC;
-      }
-    }
     </style>
-
-   <%-- <style type ="text/css">
-        #wrapper {
-  padding-left: 250px;
-  transition: all 0.4s ease 0s;
-}
-
-#sidebar-wrapper {
-  margin-right: -250px;
-  right: 250px;
-  width: 250px;
-  background: #CCCCCC;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease 0s;
-}
-
-#page-content-wrapper {
-  width: 100%;
-}
-
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media (max-width:767px) {
-
-    #wrapper {
-      padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-      left: 0;
-    }
-
-    #wrapper.active {
-      position: relative;
-      left: 250px;
-    }
-
-    #wrapper.active #sidebar-wrapper {
-      left: 250px;
-      width: 250px;
-      transition: all 0.4s ease 0s;
-    }
-
-}
-    </style>--%>
-
-    <%--<div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="container-fluid"><a href="#">Home</a></li>
-            <li><a href="#">Another link</a></li>
-            <li><a href="#">Next link</a></li>
-            <li><a href="#">Last link</a></li>
-        </ul>
-    </div>
-    <div id="page-content-wrapper">
-        <div class="page-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">--%>
-                        <!-- content of page -->
-                    
 
     <body>
     <div class="container">
@@ -218,16 +129,7 @@
             </div>
             </div>
            </div>
-     
-           <div class="span4 sidebar">
-              <div >
-                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
-              </div>
-              <div >
-                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
-              </div>
-            </div>
-         </div>
+        </div>
     </div><!--/.container-->
       <footer>
         <p>&copy; Team A/S/L - 2014</p>
