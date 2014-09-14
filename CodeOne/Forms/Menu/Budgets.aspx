@@ -120,36 +120,17 @@
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
+                                                        <input type="checkbox" value="0" />Newborn Child
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
+                                                        <input type="checkbox" value="1" />Hot Tub/Pool
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="College Savings" />College Savings
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-horizontal col-md-4">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
-                                                    </label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
-                                                    </label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="College Savings" />College Savings
+                                                        <input type="checkbox" value="2" />A New Pet
                                                     </label>
                                                 </div>
                                             </div>
@@ -158,17 +139,36 @@
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
+                                                        <input type="checkbox" value="3" />Dream House
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
+                                                        <input type="checkbox" value="4" />A New Car
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="College Savings" />College Savings
+                                                        <input type="checkbox" value="5" />Wedding
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-horizontal col-md-4">
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" value="6" />Family Vacation (USA)
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" value="7" />Family Vacation (International)
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" value="8" />College Savings
                                                     </label>
                                                 </div>
                                             </div>
