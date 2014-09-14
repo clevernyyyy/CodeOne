@@ -51,20 +51,10 @@
                     </div>
                     <div class="panel-group collapsibleDiv" id="accordion">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-headingAccrd">
                                 <h4 class="panel-title">
                                     <span class="accdrHeader">Accounts</span>
-                                    <span class="accdrButton">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="visualize">
-                                            Visualize Accounts <span class="caret white-caret"></span>
-                                        </a>
-                                    </span>
                                 </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    TEST
-                                </div>
                             </div>
                         </div>
                     </div>
