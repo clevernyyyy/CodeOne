@@ -6,8 +6,8 @@ Public Class Transactions
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
 
-            LoadTransactions(Session("Account"))
-
+            'LoadTransactions(Session("Account"))
+            LoadTransactions(2)
         End If
     End Sub
 
@@ -48,7 +48,7 @@ Public Class Transactions
             Dim d As DateTime = e.Row.Cells(1).Text
             e.Row.Cells(1).Text = d.ToShortDateString
             ''This code allows the gridview to be selectable
-            e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#E0EECA';")
+            e.Row.Attributes.Add("onmouseover", "this.style.cursor='pointer'; this.style.backgroundColor='#333';")
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='';")
             'e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(sender, "Select$" + e.Row.RowIndex.ToString))
         ElseIf e.Row.RowType = DataControlRowType.Pager Then

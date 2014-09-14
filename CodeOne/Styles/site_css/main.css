@@ -414,6 +414,9 @@
     border-radius: 7px;
     margin-left:25px;
 }
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #DFF5E2;
+}
 
 
 /*Site Master*/
