@@ -374,3 +374,12 @@
     cursor: pointer;
     padding: 6px 15px !important;
 }
+
+
+
+.shortGuy{
+    width:90px;
+}
+.longGuy{
+    width:180px;
+}

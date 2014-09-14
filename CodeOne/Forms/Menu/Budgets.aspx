@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="/Scripts/WebForms/Menu/Budgets.js"></script>
-    <script type="text/javascript" src="/Scripts/site_scripts/icheck.js"></script>
+    <script type="text/javascript" src="../../Scripts/WebForms/Chart.js"></script>
 
     <!--Styles-->
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
@@ -34,18 +34,8 @@
     <link href="../Styles/skins/square/green.css" rel="stylesheet">
 
     <!-- Controls -->
-    <%@ Register Src="~/Controls/Dashboard/AccountLine.ascx" TagPrefix="uctrl" TagName="Account" %>
-
-    <script>
-        $(document).ready(function () {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square',
-                radioClass: 'iradio_square',
-                increaseArea: '20%' // optional
-            });
-        });
-</script>
-
+    <%@ Register Src="~/Controls/Budget/IncomeExpense.ascx" TagPrefix="uctrl" TagName="IncomeExpense" %>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
@@ -85,7 +75,18 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+                                    <span style="font-size:large; text-decoration:underline;">Step One:</span>
+                                    <p>First, setup your known credits!</p>
+
+                                    <span style="font-size:large;">INCOME:</span>
+                                    <p>A common example of an income entry is a bi-weekly paycheck.  FinanceLogically can handle anything from an annuity payment to a simple check from grandma!</p>
+                                    <uctrl:IncomeExpense ID="ctrlIncome" runat="server" />
+                                    <br />
+                                    <span style="font-size:large; text-decoration:underline;">Step Two:</span>
+                                    <p>Next, fill out your known expenses!</p>
+                                    <span style="font-size:large;">EXPENSES:</span>
+                                    <p>A good example of a common expense would be your weekly grocery budget.  Or perhaps your car insurance bill.</p>
+                                    <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" />
                                 </div>
                             </div>
                         </div>
