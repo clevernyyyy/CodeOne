@@ -51,8 +51,6 @@ Public Class SiteMaster
         If Request.QueryString.Count = 2 Then
             SignIn(Request.QueryString.Item(0), Request.QueryString.Item(1))
             Response.Redirect("~/Default.aspx")
-            'Response.Redirect("~/Forms/Menu/Dashboard.aspx")
-            Response.Redirect(Request.Path)
         End If
 
         If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "SignOut") Then
@@ -77,17 +75,6 @@ Public Class SiteMaster
             btnSignOut.Visible = False
         End If
     End Sub
-
-    'Protected Sub Unnamed_LoggingOut(sender As Object, e As LoginCancelEventArgs)
-    '    Context.GetOwinContext().Authentication.SignOut()
-    'End Sub
-
-    'Protected Sub SignOut_Click(sender As Object, e As EventArgs)
-    '    If HttpContext.Current.Session("User") IsNot Nothing Then
-    '        Session.Clear()
-    '    End If
-    '    Response.Redirect("~/Default.aspx")
-    'End Sub
 
     Public Function SignIn(userName As String, passWord As String) As Boolean
         Dim blnSuccess As Boolean = False
