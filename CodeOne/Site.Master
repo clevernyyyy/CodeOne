@@ -22,7 +22,7 @@
     <link href="/Styles/config/css/content-homepage-sitebrand.css" rel="stylesheet" />
 
     <!-- favicon -->
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" />
 
 
     <!-- start of FNBO stuff -->
