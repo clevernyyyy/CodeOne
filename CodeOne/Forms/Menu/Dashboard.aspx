@@ -37,6 +37,24 @@
         html, body, .container-fluid, .row {
             height: 100%;
         }
+
+        .sidebar {
+            background-color: #CCCCCC;
+                border-left:5px solid #216242;
+        }
+
+        @media (min-width: 992px) {
+            .sidebar {
+                position: fixed;
+                top: 138px;
+                right: -150px;
+                bottom: 0;
+                z-index: 1000;
+                display: block;
+                background-color: #CCCCCC;
+                border-left:5px solid #216242;
+            }
+        }
     </style>
     <body>
         <div class="container-fluid mainbody">
@@ -137,6 +155,14 @@
                         </div>
                 </div>
 
+                <div class="col-md-3 sidebar">
+                    <div >
+                        <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
+                      </div>
+                      <div >
+                        <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
+                      </div>
+                    </div>
                 </div>
 
             </div>
