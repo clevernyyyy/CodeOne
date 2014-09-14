@@ -45,11 +45,5 @@
                 <input type="text"  class="shortGuy" id="dtpEnd">
             </span>
         </div>
-
-
-        <br />
-        <br />
-        <div id="divEffectiveDates" style="display:inline-block;">
-        </div>
     </div>
-</form
+</form>
