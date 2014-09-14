@@ -11,50 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Budgets
+Partial Public Class MonthlyExpense
 
     '''<summary>
-    '''ctrlIncome control.
+    '''hfBudgetID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ctrlIncome As Global.CodeOne.IncomeExpense
+    Protected WithEvents hfBudgetID As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''ctrlExpenses control.
+    '''hfID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ctrlExpenses As Global.CodeOne.IncomeExpense
+    Protected WithEvents hfID As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''ddlCategories control.
+    '''hfType control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddlCategories As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents hfType As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''panelMonthlyExpense control.
+    '''lblCategory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents panelMonthlyExpense As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents lblCategory As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''rptMonthlyExpenses control.
+    '''txtAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rptMonthlyExpenses As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
 End Class
