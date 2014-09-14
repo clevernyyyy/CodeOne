@@ -67,7 +67,7 @@ Public Class SiteMaster
 
         If HttpContext.Current.Session("User") IsNot Nothing Then
             lblWelcome.Visible = True
-            lblWelcome.Text &= Session("User").FirstName & " " & Session("User").MiddleName & " " & Session("User").LastName & "!"
+            lblWelcome.Text = "Welcome " & Session("User").FirstName & " " & Session("User").MiddleName & " " & Session("User").LastName & "!"
             txtUserName.Visible = False
             txtPassword.Visible = False
             btnSignIn.Visible = False

@@ -396,7 +396,7 @@
                             <input id="txtPassword" type="password" placeholder="Password" class="form-control" runat="server" />
                         </div>
                         <div style="margin-bottom:20px;">
-                            <asp:label id="lblWelcome" CssClass="steps" text="Welcome " runat="server" />
+                            <asp:label id="lblWelcome" CssClass="steps" text="" runat="server" />
                         </div>                        
                         <!-- No need for fancy, secure login control.  FNBO already has one. -->
                         <button id="btnSignIn" title="btnSignIn" type="submit" class="btn btn-success" runat="server">Sign In</button>
