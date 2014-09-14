@@ -375,49 +375,74 @@
   </div>
 
     <form runat="server">
-    <div class="col-md-13">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
+    <div class="wrapper">
+        <div class="col-md-13 content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
 
-        <style type="text/css">
-             html, body, .container-fluid, .row {
-	        height: 100%;
-        }
+            <style type="text/css">
+                 html, body, .container-fluid, .row {
+	            height: 100%;
+            }
 
-        .sidebar {
-          background-color: #CCCCCC;
-        }
+            .sidebar {
+              background-color: #CCCCCC;
+            }
 
-        @media (min-width: 992px) {
-          .sidebar {
-            position: absolute;
-            top: 135px;
-            right: 0;
-            bottom: 0;
-            width: 200px;
-            z-index: 100;
-            display: block;
-          }
-        }
+            .content
+            {
+                width:100%;
+                position:relative;
+                float:left;
+            }
 
-        </style>
+            .wrapper
+            {
+                min-height:100%;
+                width:70%;
+                position:absolute;
+                display:inline-block;
+            }
 
-     <div class="sidebar">
-            <%--<div >
-                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
-            </div>
-            <div >
-                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
-            </div>--%>
+            @media (min-width: 992px) {
+              .sidebar {
+                /*position: absolute;
+                top: 135px;
+                right: 0;
+                bottom: -200px;
+                width: 200px;
+                z-index: 100;
+                display: block;*/
+                width:10%;
+                top:0px;
+                right:0px;
+                bottom:0px;
+                position:absolute;
+              }
+            }
 
-            <%--<div class="row-md-2">--%>
-                <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
-            <%--</div>
-            <div class="row-md-1">--%>
-                <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
-           <%-- </div>--%>
-       </div>
+
+            </style>
+    
+            <div class="sidebar">
+                <%--<div >
+                    <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" CssClass="btn btn-default"/>
+                </div>
+                <div >
+                    <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt="">
+                </div>--%>
+
+                <%--<div class="row-md-2">--%>
+                    <asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />
+                <%--</div>
+                <div class="row-md-1">--%>
+                    <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br /><br /><br />
+                <%-- </div>--%>
+                    <ul class="static-links">
+	                    <li class="security-center"><a href="https://www.firstnational.com/site/security-center/index.fhtml">Information Security Center</a></li><br /><br /><br />
+                    </ul>
+               </div>
 
     <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
