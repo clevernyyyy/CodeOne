@@ -26,7 +26,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
-    <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
+    <%--<script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>--%>
     <script type="text/javascript" src="/Scripts/site_scripts/holder.js"></script>
 
     <!-- favicon -->
@@ -35,16 +35,15 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
+    <div class="minitronHome" style="margin-top:10px;">
         <h1>FinanceLogically</h1>
         <p class="lead">FinanceLogically is a web application to demonstrate logical spending, logical savings, and logical budgeting.</p>
         <p>
-        <button type="button" class="btn btn-success btn-lg" id="btnLogin" runat="server" onclick="__doPostBack('btnLogin','Login');">Login &raquo;</button>
+        <%--<button type="button" class="btn btn-success btn-lg" id="btnLogin" runat="server" onclick="__doPostBack('btnLogin','Login');">Login &raquo;</button>--%>
 
             
         <a href="https://www.firstnational.com/site/personal/" class="btn btn-success btn-lg">Learn more &raquo;</a></p>
     </div>
-
     <div class="row">
         <div class="col-md-1">
             </div>

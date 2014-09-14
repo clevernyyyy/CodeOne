@@ -19,6 +19,15 @@
         End Set
     End Property
 
+    Public Property Category As String
+        Get
+            Return lblCategory.Text
+        End Get
+        Set(value As String)
+            lblCategory.Text = value
+        End Set
+    End Property
+
     Public Property Detail As String
         Get
             Return lblDetail.Text

@@ -5,11 +5,13 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 
-  <script>
-  $(function() {
-      $("#dtpStart").datepicker();
-      $("#dtpEnd").datepicker();
-  });
+  <script type="text/javascript">
+    $(function() {
+        //$("#dtpStart").datepicker();
+        //$("#dtpEnd").datepicker();
+        $("[id*='dtpstart']").datepicker();
+        $("[id*='dtpEnd']").datepicker();
+    });
   </script>
 </head>
 
@@ -39,7 +41,7 @@
                 <asp:TextBox ID="txtAmount" runat="server" CssClass="shortGuy" />
             </span>        
             <span id="start" style="margin-left:25px;">
-                <input type="text" class="shortGuy" id="dtpStart">
+                <input type="text" class="shortGuy" id="dtpstart">
             </span>
             <span id="end" style="margin-left:25px;">
                 <input type="text"  class="shortGuy" id="dtpEnd">

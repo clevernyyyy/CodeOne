@@ -284,18 +284,17 @@
 
 .smallfont
 {
-    margin-left:10px;
+    margin-left:6px;
     margin-top:3px;
     margin-bottom:3px;
-    font-size:small;
+    font-size:smaller;
     font-weight:normal;
     color:whitesmoke;
-    text-shadow:2px 2px 2px black;
 }
 
 .categories {
-    border: 2px solid darkgreen; 
-    border-radius: 10px; 
+    border-radius: 7px; 
+    -moz-border-radius: 7px;
     margin-top:3px; 
     margin-bottom:3px; 
     background-color:darkgreen;
@@ -390,4 +389,110 @@
 }
 .longGuy{
     width:180px;
+}
+
+
+
+/*Transactions*/
+.transEl {
+    border: 1px solid slategrey; 
+    padding: 10px 10px 10px 10px; 
+    background-color:whitesmoke; 
+    -moz-border-radius: 7px; 
+    border-radius: 7px;
+    margin-left:25px;
+}
+
+
+/*Site Master*/
+media="screen, print"
+#section2 .static-links li {
+background-color: #EFEFEF;
+background-image: url(/config/img/bg-gradient-nav.png);
+background-position: 0 20px;
+background-repeat: repeat-x;
+border: 1px solid #ccc;
+border-radius: 4px;
+list-style-type: none;
+vertical-align: middle;
+width: 208px;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+
+.minitron {
+    padding: 0.5em 0.6em;
+    h1;
+
+    {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+        .btn;
+
+    {
+        padding: 0.5em;
+    }
+
+    }
+}
+
+
+.minitronHome {
+    padding: 0.5em 0.6em;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: #1F6128;
+    border: 1px solid #F8F8F8;
+    border-spacing:20px;
+    /* Coloring */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A6BFAA', endColorstr='#CAE8CE'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A6BFAA', endColorstr='#CAE8CE'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#A6BFAA), to(#CAE8CE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #A6BFAA, #CAE8CE); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #A6BFAA, #CAE8CE); /* for Opera */
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+
+    .minitronHome h1 {
+        font-size: 2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
+
+    .minitronHome p {
+        font-size: 1.1em;
+        color: #257D31;
+        margin-left: 15px;
+
+        }
+
+.container .minitronHome {
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+    .minitronHome {
+        padding-bottom: 5px;
+    }
+
+    .container .minitronHome {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .minitronHome h1 {
+        font-size: 55px;
+    }
 }

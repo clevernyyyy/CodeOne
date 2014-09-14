@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <asp:HiddenField ID="hfUserId" runat="server" />
-    <div id="dvChart">
+    <div id="_dvChart">
 
     </div>
     <div id="dvLegend">

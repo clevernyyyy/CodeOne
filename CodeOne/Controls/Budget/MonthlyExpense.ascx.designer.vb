@@ -11,52 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Transaction
+Partial Public Class MonthlyExpense
 
     '''<summary>
-    '''TransactionControl control.
+    '''hfBudgetID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TransactionControl As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents hfBudgetID As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''lblDate control.
+    '''hfID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblDate As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hfID As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''divAmount control.
+    '''hfType control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divAmount As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''lblAmount control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblAmount As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''divCategory control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divCategory As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents hfType As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
     '''lblCategory control.
@@ -68,20 +50,11 @@ Partial Public Class Transaction
     Protected WithEvents lblCategory As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''divDetail control.
+    '''txtAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents divDetail As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''lblDetail control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblDetail As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
 End Class

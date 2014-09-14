@@ -43,11 +43,13 @@ Public Class Transactions
         Dim dDate As Date = e.Item.DataItem.Item("dPostDt")
         Dim intAmount As Integer = e.Item.DataItem.Item("nTranAmt")
         Dim strDetail As String = e.Item.DataItem.Item("cTransDesc")
+        Dim strCat As String = e.Item.DataItem.Item("cCategory")
         If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
             Dim ctrl As Transaction = DirectCast(e.Item.FindControl("ctrlTransaction"), Transaction)
             ctrl.PostDate = dDate
             ctrl.Amount = intAmount
             ctrl.Detail = strDetail
+            ctrl.Category = strCat
         End If
     End Sub
 
