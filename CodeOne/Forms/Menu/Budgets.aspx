@@ -88,7 +88,7 @@
                                     <p>First, setup your known credits!</p>
                                     <span style="font-size: large;">INCOME:</span>
                                     <p>A common example of an income entry is a bi-weekly paycheck.  FinanceLogically can handle anything from an annuity payment to a simple check from grandma!</p>
-                                    <uctrl:IncomeExpense ID="ctrlIncome" runat="server" />
+                                    <uctrl:IncomeExpense ID="ctrlIncome" runat="server" EI="I" />
                                     <br />
                                     <!-- Step Two -->
                                     <span class="steps">Step Two</span>
@@ -97,7 +97,7 @@
                                     <p>Next, fill out your known expenses!</p>
                                     <span style="font-size: large;">EXPENSES:</span>
                                     <p>A good example of a common expense would be your weekly grocery budget.  Or perhaps your car insurance bill.</p>
-                                    <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" />
+                                    <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" EI="E" />
                                     <br />
                                     <!-- Step Three -->
                                     <span class="steps">Step Three</span>
