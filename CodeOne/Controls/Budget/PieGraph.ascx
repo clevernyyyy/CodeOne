@@ -5,7 +5,7 @@
 <asp:Repeater ID="rptGraphs" runat="server">
     <ItemTemplate>
         <div id="divGraph" style="display:inline-block;" runat="server">
-            <asp:hiddenField ID="hfAccountNum" runat="server" />
+            <asp:hiddenField ID="hfPieAccountNum" runat="server" />
             <asp:hiddenField ID="hfGraphCat" runat="server" />
             <asp:Label ID="lblAccountNum" runat="server" />
             <div id="dvChart" runat="server">

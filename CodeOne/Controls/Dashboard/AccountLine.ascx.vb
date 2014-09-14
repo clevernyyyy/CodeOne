@@ -102,7 +102,17 @@ Public Class AccountLine
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Dim collGraphs As System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer)) = Session("GraphData")
-            ctrlPie.SetUpGraphData(collGraphs)
+            Dim kvpGraph = From kvps As KeyValuePair(Of String, Integer) In collGraphs
+                           Where kvps.Value = hfAccountNum.Value And kvps.Key = "Account"
+                           Select kvps
+
+            If kvpGraph.Count > 0 Then
+                Dim coll As New System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer))
+                For Each kvp In kvpGraph.ToList
+                    coll.Add(kvp)
+                    ctrlPie.SetUpGraphData(coll)
+                Next
+            End If
         End If
     End Sub
 

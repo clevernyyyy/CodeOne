@@ -1,4 +1,9 @@
-﻿Public Class Dashboard
+﻿Imports System.Data
+Imports System.Text
+Imports System.Web.Services
+Imports System.Data.SqlClient
+Imports System.Configuration
+Public Class Dashboard
     Inherits System.Web.UI.Page
 
     Dim nUserID As Integer = 4
@@ -12,6 +17,7 @@
             FillRepeater(repInvestments, dt, "CD", "IRA")
             FillRepeater(repCredits, dt, "CREDIT CARD")
             FillRepeater(repLoans, dt, "Auto Loan", "Mortgage")
+            SendToGraphs()
         End If
     End Sub
 
@@ -44,7 +50,7 @@
             Dim dr As DataRow = oItem.DataItem
             Dim ctrlAccount As AccountLine = DirectCast(oItem.FindControl("uctrlAccount"), AccountLine)
             ctrlAccount.AccountName = dr.Item("cAccountName").ToString().Trim() & " - " & dr.Item("cAccountNum")
-            ctrlAccount.AccountNumber = dr.Item("cAccountNum")
+            ctrlAccount.AccountNumber = dr.Item("nAccountNum")
             ctrlAccount.CurrentBalance = dr.Item("nAccountBalance")
             ctrlAccount.PaymentDueAmount = dr.Item("nPaymentDue")
             ctrlAccount.PaymentDueDate = dr.Item("dPaymentDue")
@@ -68,6 +74,61 @@
             Dim drs() As DataRow = dtQL.Select("cAccountNum = '" & dr.Item("cAccountNum") & "'")
             ctrlAccount.SetUpTransactions(drs)
         End If
+    End Sub
+    <WebMethod()> _
+    Public Shared Function GetChart(nID As String, strType As String) As String
+        Dim cValueColumn As String, cTextColumn As String, cProcName As String
+        If strType = "Account" Then
+            cTextColumn = "cTransDesc"
+            cValueColumn = "nSpent"
+            cProcName = "Data.SpendingGraphs"
+        ElseIf strType = "User" Then
+            cTextColumn = "cDbCrCd"
+            cValueColumn = "nTotal"
+            cProcName = "Data.IncomeVersusExpenses"
+        End If
+        Dim dt As DataTable = FillDataTable(cProcName, (New Connection).NewCnn, IIf(strType = "User", "@nUserID", "@nAccountNum"), nID)
+        Dim sb As New StringBuilder
+        sb.Append("[")
+        For Each dr As DataRow In dt.Rows
+            sb.Append("{")
+            System.Threading.Thread.Sleep(50)
+            Dim color As String = String.Format("#{0:X6}", New Random().Next(&H1000000))
+            Dim cText As String, cValue As String
+            cText = dr.Item(cTextColumn)
+            If cText = "C" Then
+                cText = dr.Item("cSubProdCd") + " - Income"
+            ElseIf cText = "D" Then
+                cText = dr.Item("cSubProdCd") + " - Expenses"
+            End If
+            cValue = dr.Item(cValueColumn)
+            sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
+            sb.Append("},")
+        Next
+        If sb.Length > 1 Then
+            sb = sb.Remove(sb.Length - 1, 1)
+        End If
+        sb.Append("]")
+        Return sb.ToString
+    End Function
+
+    Private Sub SendToGraphs()
+        Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+        Dim accts = From dr As DataRow In dt.Rows
+                    Select dr.Item("cAccountNum")
+
+
+        Dim collKeys As New System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer))
+        collKeys.Add(New KeyValuePair(Of String, Integer)("User", nUserID))
+        For Each acct As String In accts.ToList()
+            Dim int As Integer
+            Integer.TryParse(acct, int)
+            If int > 0 Then
+                Dim kvp As New KeyValuePair(Of String, Integer)("Account", int)
+                collKeys.Add(kvp)
+            End If
+        Next
+        Session("GraphData") = collKeys
     End Sub
 #End Region
 

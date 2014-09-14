@@ -26,7 +26,7 @@
         Dim oItem As RepeaterItem = e.Item
         If oItem.ItemType = ListItemType.AlternatingItem Or oItem.ItemType = ListItemType.Item Then
             Dim kvp As KeyValuePair(Of String, Integer) = oItem.DataItem
-            Dim hfAccountNum As HiddenField = DirectCast(oItem.FindControl("hfAccountNum"), HiddenField)
+            Dim hfAccountNum As HiddenField = DirectCast(oItem.FindControl("hfPieAccountNum"), HiddenField)
             Dim hfGraphCat As HiddenField = oItem.FindControl("hfGraphCat")
             hfAccountNum.Value = kvp.Value
             hfGraphCat.Value = kvp.Key

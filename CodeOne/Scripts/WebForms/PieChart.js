@@ -1,5 +1,5 @@
 ﻿$(function () {
-    var hfs = $("[id*='_hfAccountNum']");
+    var hfs = $("[id*='_hfPieAccountNum']");
     var types = $("[id*='_hfGraphCat']");
     for (index = 0; index < hfs.length; ++index) {
         var hf = hfs[index];
@@ -17,7 +17,7 @@
 function LoadChart(nID, strType, index) {
     $.ajax({
         type: "POST",
-        url: "Pie.aspx/GetChart",
+        url: "Dashboard.aspx/GetChart",
         data: "{nID: '" + nID + "',strType: '" + strType + "'}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -27,8 +27,8 @@ function LoadChart(nID, strType, index) {
             var data = eval(r.d);
             var el = document.createElement('canvas');
             el.setAttribute("id", 'canvas' + index);
-            el.setAttribute("height", '450');
-            el.setAttribute("width", '450');
+            el.setAttribute("height", '150');
+            el.setAttribute("width", '150');
             $("[id*='_dvChart']")[index].appendChild(el);
 
             var ctx = el.getContext('2d');
