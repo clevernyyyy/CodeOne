@@ -62,7 +62,10 @@
                         Toggle nav</button>
                 </p>
                 <div>
-                    <h1 class="centered">Our Story</h1>
+                    <div style="display:inline-block; height:80px; background-color:white; margin-left:5px; padding:10px 30px 10px 30px;-moz-border-radius: 7px; border-radius: 7px;">                      
+                        <span class="centered h1">Be <img class="inline" height="35" width="35" src="../../Styles/config/img/One.png" /> With Your Budget.</span>
+                    </div>
+                    <span style="display:inline-block; position:absolute; margin-left:30px;">At First National Bank, we take your expenses seriously.  We are consistently rolling out innovative ideas to help our members stay on top of their finances and their goals.  With BudgetLogically, we're rolling out a brand new way to budget.  Just follow the steps in each section below!</span>
                     <hr />
 
                     <div class="panel-group" id="accordion">
