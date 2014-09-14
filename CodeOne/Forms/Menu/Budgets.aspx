@@ -35,7 +35,7 @@
 
     <!-- Controls -->
     <%@ Register Src="~/Controls/Budget/IncomeExpense.ascx" TagPrefix="uctrl" TagName="IncomeExpense" %>
-    
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
@@ -75,16 +75,16 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body accordion-smallerfont">
-                                    <span style="font-size:large; text-decoration:underline;">Step One:</span>
+                                    <span style="font-size: large; text-decoration: underline;">Step One:</span>
                                     <p>First, setup your known credits!</p>
 
-                                    <span style="font-size:large;">INCOME:</span>
+                                    <span style="font-size: large;">INCOME:</span>
                                     <p>A common example of an income entry is a bi-weekly paycheck.  FinanceLogically can handle anything from an annuity payment to a simple check from grandma!</p>
                                     <uctrl:IncomeExpense ID="ctrlIncome" runat="server" />
                                     <br />
-                                    <span style="font-size:large; text-decoration:underline;">Step Two:</span>
+                                    <span style="font-size: large; text-decoration: underline;">Step Two:</span>
                                     <p>Next, fill out your known expenses!</p>
-                                    <span style="font-size:large;">EXPENSES:</span>
+                                    <span style="font-size: large;">EXPENSES:</span>
                                     <p>A good example of a common expense would be your weekly grocery budget.  Or perhaps your car insurance bill.</p>
                                     <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" />
                                 </div>
@@ -104,58 +104,58 @@
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation US"/>Family Vacation (USA)
+                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation Int"/>Family Vacation (International)
+                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="College Savings"/>College Savings
+                                                        <input type="checkbox" value="College Savings" />College Savings
                                                     </label>
                                                 </div>
-                                            </div>                                        
+                                            </div>
                                         </div>
                                         <div class="form-horizontal col-md-4">
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation US"/>Family Vacation (USA)
+                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation Int"/>Family Vacation (International)
+                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="College Savings"/>College Savings
+                                                        <input type="checkbox" value="College Savings" />College Savings
                                                     </label>
                                                 </div>
-                                            </div>                                        
+                                            </div>
                                         </div>
                                         <div class="form-horizontal col-md-4">
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation US"/>Family Vacation (USA)
+                                                        <input type="checkbox" value="Family Vacation US" />Family Vacation (USA)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="Family Vacation Int"/>Family Vacation (International)
+                                                        <input type="checkbox" value="Family Vacation Int" />Family Vacation (International)
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="College Savings"/>College Savings
+                                                        <input type="checkbox" value="College Savings" />College Savings
                                                     </label>
                                                 </div>
-                                            </div>                                        
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
