@@ -144,8 +144,4 @@ Public Class Transactions
     End Sub
 #End Region
 
-    Protected Sub LogOut_Click(sender As Object, e As EventArgs)
-        Response.Redirect("~/Default.aspx")
-    End Sub
-
 End Class

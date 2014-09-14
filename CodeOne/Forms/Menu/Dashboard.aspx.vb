@@ -68,8 +68,5 @@
             ctrlAccount.SetUpTransactions(drs)
         End If
     End Sub
-    Protected Sub LogOut_Click(sender As Object, e As EventArgs)
-        Response.Redirect("~/Default.aspx")
-    End Sub
 
 End Class
