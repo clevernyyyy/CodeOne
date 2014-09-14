@@ -51,23 +51,40 @@
     End Sub
 
     Private Sub rptMonthlyExpenses_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptMonthlyExpenses.ItemDataBound
-        Dim cCategory As String = e.Item.DataItem.Item("Category")
-        Dim intAmount As Integer = e.Item.DataItem.Item("Amount")
+        Dim cCategory As String = e.Item.DataItem.Item("cCategory")
+        Dim intAmount As Integer = e.Item.DataItem.Item("nAmount")
         If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
             Dim ctrl As MonthlyExpense = DirectCast(e.Item.FindControl("ctrlMonthlyExpense"), MonthlyExpense)
             ctrl.Category = cCategory
             ctrl.Amount = intAmount
         End If
     End Sub
-
+    Private Sub SaveMonthlyExpense()
+        Dim dt As DataTable = Session("MonthlyExpense")
+        dt.Clear()
+        For Each ri As RepeaterItem In rptMonthlyExpenses.Items
+            If ri.ItemType = ListItemType.AlternatingItem Or ri.ItemType = ListItemType.Item Then
+                Dim ctrl As MonthlyExpense = ri.FindControl("ctrlMonthlyExpense")
+                If ctrl.Amount <> 0 Then
+                    Dim dr As DataRow = dt.NewRow
+                    dr.Item("nBudgetID") = BudgetID
+                    dr.Item("cCategory") = ctrl.Category
+                    dr.Item("nAmount") = ctrl.Amount
+                    dt.Rows.Add(dr)
+                End If
+            End If
+        Next
+        Dim cmd = SqlCommand("Budget.usp_BulkUpsert_MonthlyExpenses")
+        cmd.Parameters.AddWithValue("@nBudgetID", BudgetID)
+        Dim tvp As SqlClient.SqlParameter = cmd.Parameters.AddWithValue("@Expenses", dt)
+        tvp.SqlDbType = SqlDbType.Structured
+        tvp.TypeName = "Budget.MonthlyExpenses_Type"
+        ExecNonQuery(cmd)
+    End Sub
     Private Sub LoadMonthlyExpense()
-        Dim dt As New DataTable
-        LibraryFunctions.AddColumnsToDataTable(dt, "Category", "Amount")
-        LibraryFunctions.ObejctToDataTable(dt, MonthlyExpense)
-        rptMonthlyExpenses.DataSource = dt
-        rptMonthlyExpenses.DataBind()
-
-        Session("MonthlyExpense") = MonthlyExpense
+        Dim dt As DataTable = FillDataTable("Budget.usp_Get_MonthlyExpenses", (New Connection).NewCnn, "@nBudgetID", BudgetID.ToString, "MonthlyExpense")
+        Session(dt.TableName) = dt
+        SetRepeater(rptMonthlyExpenses, dt)
     End Sub
     Private Sub LoadIncomes()
         Dim dt As DataTable = FillDataTable("Budget.usp_Get_Income", (New Connection).NewCnn, "@nBudgetID", BudgetID.ToString, "dtIncomes")
