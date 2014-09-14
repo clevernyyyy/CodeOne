@@ -35,18 +35,18 @@
               <!-- Transactions Gridview -->
             <div id="Retrieve" class="centered">
                 <div id="Retrieve_GridViewContainer" class="gridViewContainer">
-                    <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
+                    <asp:GridView ID="dvgPack" runat="server" AllowDrop="True" CssClass="table table-hover table-striped table-bordered table-condensed" 
                         AutoGenerateColumns="false"
                         OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="6"
                         PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
                         <HeaderStyle ForeColor="Green" Font-Underline="false" BorderColor="Black"/>
                         <Columns >
                             <%--1--%><asp:BoundField DataField="TransDate" HeaderText="POST DATE" DataFormatString="{0:d}"
-                                SortExpression="TransDate" ItemStyle-Width="50"  HeaderStyle-CssClass="centered"  />
+                                SortExpression="TransDate" ItemStyle-Width="50" HeaderStyle-CssClass="centered"  />
                             <%--3--%><asp:BoundField DataField="TransDesc" HeaderText="TRANSACTION" 
-                                SortExpression="TransDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
-                            <%--5--%><asp:BoundField DataField="TransAmount" HeaderText="AMOUNT" 
-                                SortExpression="TransAmount" ItemStyle-Width="50"  HeaderStyle-CssClass="centered" />
+                                SortExpression="TransDesc" ItemStyle-Width="200" HeaderStyle-CssClass="centered" DataFormatString="{0}" />
+                            <%--5--%><asp:BoundField DataField="TransAmount" HeaderText="AMOUNT"
+                                SortExpression="TransAmount" ItemStyle-Width="50" HeaderStyle-CssClass="centered" DataFormatString="${0:C}" />
                         </Columns>
                         <PagerStyle CssClass="pager" />
                         <PagerTemplate>
