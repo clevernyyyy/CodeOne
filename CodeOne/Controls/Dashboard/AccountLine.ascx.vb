@@ -109,13 +109,19 @@
 #Region "Last 10 Transactions"
 #Region "Data Retrieval"
 
-    Private Sub LoadTransactions()
+    Private Sub LoadTransactions(Optional ByVal lSetFocusToTop = False)
         Dim dt As New DataTable
         LibraryFunctions.AddColumnsToDataTable(dt, "TransDesc", "TransDate", "TransAmount")
         LibraryFunctions.ObejctToDataTable(dt, Transactions)
         dvgPack.DataSource = dt
         dvgPack.DataBind()
 
+        If lSetFocusToTop Then
+            Dim pageList As DropDownList = CType(dvgPack.TopPagerRow.FindControl("dgvPackDDL"), DropDownList)
+            If Not pageList Is Nothing Then
+                ScriptManager.GetCurrent(Page).SetFocus(pageList.ClientID)
+            End If
+        End If
     End Sub
 
     'Private Sub LoadCategories()
@@ -154,6 +160,24 @@
         HttpContext.Current.Session("strSortedBy") = dv.Sort.ToString
         dvgPack.DataSource = dv
         dvgPack.DataBind()
+    End Sub
+    Protected Sub dgvPackDDL_SelectedIndexChanged(ByVal pageList As DropDownList, ByVal e As EventArgs)
+        ' Set the PageIndex property to display that page selected by the user.
+        dvgPack.PageIndex = pageList.SelectedIndex
+        LoadTransactions(True)
+    End Sub
+
+    Protected Sub dgvPackPrev_Click(ByVal sender As Object, ByVal e As EventArgs)
+        ' Set the PageIndex property to display that page selected by the user.
+        dvgPack.PageIndex -= 1
+        LoadTransactions(True)
+    End Sub
+
+    Protected Sub dgvPackNext_Click(ByVal sender As Object, ByVal e As EventArgs)
+        ' Set the PageIndex property to display that page selected by the user.
+
+        dvgPack.PageIndex += 1
+        LoadTransactions(True)
     End Sub
 #End Region
 #End Region
