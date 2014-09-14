@@ -36,31 +36,20 @@
         html, body, .container-fluid, .row {
             height: 100%;
         }
-
-        .sidebar {
-            background-color: #CCCCCC;
-                border-left:5px solid #216242;
-        }
-
-        @media (min-width: 992px) {
-            .sidebar {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1000;
-                display: block;
-                background-color: #CCCCCC;
-                border-left:5px solid #216242;
-            }
-        }
     </style>
     <body>
-        <div class="container-fluid mainbody">
+        <div class="">
             <div class="row">
-                <div class="col-md-9  content">
-                </div>
-            </div>
+                <div class="">
+                    <br />
+                    <div class="minitron">
+                        <h1>Welcome!
+                            <img src="../../Styles/config/img/logo.png" alt="logo" style="float: right" />
+                        </h1>
+                        <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
+                    </div>
+                    </div>
+                    </div>
 
             <hr>
 
