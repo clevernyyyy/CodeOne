@@ -53,7 +53,7 @@
         </div>
         <div class="col-md-1">
             </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <img src="\Styles\assets\site\img\personal\mainstage-mobile-postlaunch.jpg" class="img-thumbnail" alt="">
         </div>
         <div class="col-md-1">
