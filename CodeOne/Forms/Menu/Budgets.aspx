@@ -78,18 +78,31 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body accordion-smallerfont">
-                                    <span style="font-size: large; text-decoration: underline;">Step One:</span>
+                                    <!-- Step One -->
+                                    <span class="steps">Step One</span>
+                                    <br />
+                                    <br />
                                     <p>First, setup your known credits!</p>
-
                                     <span style="font-size: large;">INCOME:</span>
                                     <p>A common example of an income entry is a bi-weekly paycheck.  FinanceLogically can handle anything from an annuity payment to a simple check from grandma!</p>
                                     <uctrl:IncomeExpense ID="ctrlIncome" runat="server" />
                                     <br />
-                                    <span style="font-size: large; text-decoration: underline;">Step Two:</span>
+                                    <!-- Step Two -->
+                                    <span class="steps">Step Two</span>
+                                    <br />
+                                    <br />
                                     <p>Next, fill out your known expenses!</p>
                                     <span style="font-size: large;">EXPENSES:</span>
                                     <p>A good example of a common expense would be your weekly grocery budget.  Or perhaps your car insurance bill.</p>
                                     <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" />
+                                    <br />
+                                    <!-- Step Three -->
+                                    <span class="steps">Step Three</span>
+                                    <br />
+                                    <br />
+                                    <p>Budget for monthly expenses!</p>
+                                    <span style="font-size: large;">MONTHLY EXPENSES:</span>
+                                    <p>Simply choose a category from the dropdown and approximate how much you will spend this month on it.  If you're not sure how to estimate your budget, check out our BUDGET TARGETS section below!</p>
                                 </div>
                             </div>
                         </div>

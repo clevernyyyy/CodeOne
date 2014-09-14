@@ -375,7 +375,15 @@
     padding: 6px 15px !important;
 }
 
-
+.steps {
+    font-size: larger; 
+    font-weight:bolder; 
+    color:darkgreen; 
+    padding:5px 5px 5px 5px; 
+    border: 2px solid darkgreen;
+    -moz-border-radius: 7px; 
+    border-radius: 7px;
+}
 
 .shortGuy{
     width:90px;
