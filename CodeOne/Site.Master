@@ -97,32 +97,7 @@
     </asp:ContentPlaceHolder>
 
     
-</head>
-<%--<body data-spy="scroll" data-offset="0" data-target="#navbar-main" >  --%>
-    
-    <!-- style="background-color: #2b2b2b"> -->
-<%--    <div class="navbar navbar-inverse navbar-fixed-top" style="color:forestgreen" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-            <ul runat="server" id="mnuHome" class="nav navbar-nav">
-                <li><a class="navbar-brand" href="/Default.aspx">Home</a></li>
-            </ul>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul runat="server" id="mnuRight" class="nav navbar-nav navbar-right">
-            <li id="mnuDashboard" runat="server"><a href="/Forms/Menu/Dashboard.aspx">Account Dashboard</a></li>
-            <li id="mnuTransactions" runat="server"><a href="/Forms/Menu/Transactions.aspx">Transactions</a></li>
-            <li id="mnuOne" runat="server"><a href="">mnuOne</a></li>
-            <li id="mnuTwo" runat="server"><a href="">mnuTwo</a></li>
-            <li id="mnuChat" runat="server"><a href="/Home">Chat</a></li>
-            <li id="mnuLogout" runat="server"><a href="">LogOut</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>--%>
-
-    
-    
+</head>    
 <body id="bodyid" class="bodyclass">
 <div class="audience-switcher">
   <ul>
@@ -351,7 +326,7 @@
         </li>--%>
 
         <li class="category FinanceLogically">
-            <a href="/Forms/Menu/Dashboard.aspx">FinanceLogically</a>
+            <a href="/Forms/Menu/Dashboard.aspx">FinanceLogically<span style="vertical-align:super; font-size:x-small; ">&copy</span></a>
             <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
 				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
@@ -369,7 +344,7 @@
             </div>
         </li>
         <li class="category BudgetLogically">
-            <a href="/Forms/Menu/Budgets.aspx">BudgetLogically</a>
+            <a href="/Forms/Menu/Budgets.aspx">BudgetLogically<span style="vertical-align:super; font-size:x-small; ">&copy</span></a>
             <div class="submenu" style="display: none;  top:27px; left: 1px; height:auto;">
             <div class="background2">
 				<img src="/Styles/config/img/branded/mm-triangle.png" alt="" title="" class="triangle" /> <!-- drop-down indicator -->
