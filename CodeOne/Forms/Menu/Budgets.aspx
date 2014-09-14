@@ -135,16 +135,18 @@
                                     <span style="font-size: large;">MONTHLY EXPENSES:</span>
                                     <p>Simply choose a category from the dropdown and approximate how much you will spend this month on it.  If you're not sure how to estimate your budget, check out our BUDGET TARGETS section below!</p>
                                     <asp:DropDownList runat="server" ID="ddlCategories" AutoPostBack="true" ></asp:DropDownList>
-                                    <div id="headings" style="display:inline-block;">
-                                        <span style="margin-left:0;">Category</span>
-                                        <span style="margin-left:25px;">Amount</span>
+                                    <br />
+                                    <div id="headings">
+                                        <br />
+                                        <span style="font-size:larger; font-weight:bold; margin-left:10px;">Category</span>
+                                        <span style="font-size:larger; font-weight:bold; margin-left:100px;">Amount</span>
                                     </div>
                                     
                                      <asp:UpdatePanel ID="panelMonthlyExpense" runat="server" UpdateMode="Conditional">
                                         <ContentTemplate>
                                              <asp:Repeater ID="rptMonthlyExpenses" runat="server">
                                                 <ItemTemplate>
-                                                    <div id="divMonthlyExpenses" style="display:inline-block;" runat="server">
+                                                    <div id="divMonthlyExpenses" runat="server">
                                                         <uctrl:MonthlyExpense id="ctrlMonthlyExpense" runat="server"></uctrl:MonthlyExpense>
                                                     </div>
                                                 </ItemTemplate>

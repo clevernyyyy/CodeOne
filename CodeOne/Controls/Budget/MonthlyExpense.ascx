@@ -10,11 +10,14 @@
             <span style="margin-left:0;">Amount:</span>
         </div>--%>
         <br />
-        <div id="ctrls" style="display:inline-block;">
-            <asp:label ID="lblCategory" CssClass="shortGuy" runat="server" />
-            <span id="amount" style="margin-left:15px;">
-                <asp:TextBox ID="txtAmount" CssClass="shortGuy" runat="server" />
-            </span>
+        <div id="ctrls">
+            <div style="position:relative">
+                <asp:label ID="lblCategory" CssClass="longGuy col-lg-4" runat="server" />
+                <span id="amount" style="margin-left:15px;">
+                    <asp:TextBox ID="txtAmount" CssClass="shortGuy  col-lg-4" runat="server" />
+                </span>
+            <br />
+            </div>
         </div>
     </div>
 </form>
