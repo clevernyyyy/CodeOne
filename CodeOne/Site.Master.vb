@@ -53,6 +53,11 @@ Public Class SiteMaster
             Response.Redirect("~/Default.aspx")
         End If
 
+        If (Request.Url.AbsolutePath.Contains("Dashboard") OrElse Request.Url.AbsolutePath.Contains("Budgets")) AndAlso
+            HttpContext.Current.Session("User") Is Nothing Then
+            Response.Redirect("~/Default.aspx")
+        End If
+
         If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "SignOut") Then
             If HttpContext.Current.Session("User") IsNot Nothing Then
                 Session.Clear()
