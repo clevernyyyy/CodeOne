@@ -77,13 +77,22 @@ Partial Public Class IncomeExpense
     Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''dtpStart control.
+    '''dtpstart control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dtpStart As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents dtpstart As Global.System.Web.UI.HtmlControls.HtmlInputText
+
+    '''<summary>
+    '''hfStart control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfStart As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
     '''dtpEnd control.
@@ -92,5 +101,14 @@ Partial Public Class IncomeExpense
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dtpEnd As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents dtpEnd As Global.System.Web.UI.HtmlControls.HtmlInputText
+
+    '''<summary>
+    '''hfEnd control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfEnd As Global.System.Web.UI.WebControls.HiddenField
 End Class

@@ -59,6 +59,15 @@ Partial Public Class Budgets
     Protected WithEvents rptExpenses As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
+    '''btnAddExpense control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAddExpense As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''ctrlExpenses control.
     '''</summary>
     '''<remarks>

@@ -41,10 +41,12 @@
                 <asp:TextBox ID="txtAmount" runat="server" CssClass="shortGuy" />
             </span>        
             <span id="start" style="margin-left:25px;">
-                <input type="text" class="shortGuy" id="dtpstart">
+                <input type="text" class="shortGuy" id="dtpstart" runat="server">
+                <asp:HiddenField ID="hfStart" runat="server" />
             </span>
             <span id="end" style="margin-left:25px;">
-                <input type="text"  class="shortGuy" id="dtpEnd">
+                <input type="text"  class="shortGuy" id="dtpEnd" runat="server">
+                <asp:HiddenField ID="hfEnd" runat="server" />
             </span>
         </div>
     </div>

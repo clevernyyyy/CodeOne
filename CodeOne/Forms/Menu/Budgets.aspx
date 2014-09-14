@@ -119,16 +119,13 @@
                                                         <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" EI="E" />
                                                     </div>
                                                 </ItemTemplate>
-                                                 <FooterTemplate>
-                                                     <asp:Button ID="btnAddExpense" runat="server" />
-                                                 </FooterTemplate>
                                             </asp:Repeater>
+                                        <asp:Button ID="btnAddExpense" runat="server" text="Add Another"/>
                                         </ContentTemplate>
                                         <Triggers>
-                                            <asp:AsyncPostBackTrigger ControlID="ddlCategories" EventName="SelectedIndexChanged" />
+                                            <asp:AsyncPostBackTrigger ControlID="btnAddExpense" EventName="Click" />
                                         </Triggers>
                                     </asp:UpdatePanel>
-                                    <uctrl:IncomeExpense ID="ctrlExpenses" runat="server" EI="E" />
                                     <br />
                                     <!-- Step Three -->
                                     <span class="steps">Step Three</span>

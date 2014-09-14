@@ -12,9 +12,10 @@
     Dim MonthlyExpense As List(Of MonthlyExpenseQuickInfo)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        LoadBudgetID()
         If ddlCategories.SelectedIndex < 0 Then
-            LoadBudgetID()
             LoadIncomes()
+            LoadExpenses()
             LoadCategories()
         End If
     End Sub
@@ -71,7 +72,8 @@
     Private Sub LoadIncomes()
         Dim dt As DataTable = FillDataTable("Budget.usp_Get_Income", (New Connection).NewCnn, "@nBudgetID", BudgetID.ToString, "dtIncomes")
         Session(dt.TableName) = dt
-        AddNewIncome(Nothing, Nothing)
+        dt.Rows.Add(dt.NewRow)
+        SetRepeater(rptIncomes, dt)
     End Sub
     Private Sub AddNewIncome(sender As Object, e As System.EventArgs) Handles btnAddIncome.click
         Dim dtIncomes As DataTable = Session("dtIncomes")
@@ -80,6 +82,7 @@
             If ri.ItemType = ListItemType.AlternatingItem Or ri.ItemType = ListItemType.Item Then
                 Dim ctrlIncome As IncomeExpense = ri.FindControl("ctrlIncome")
                 Dim dr As DataRow = dtIncomes.NewRow
+                dr.Item("nBudgetId") = BudgetID
                 dr.Item("nIncomeID") = ctrlIncome.IEID
                 dr.Item("cIncomeType") = ctrlIncome.Type
                 dr.Item("cIncomeName") = ctrlIncome.Name
@@ -90,6 +93,7 @@
                 dtIncomes.Rows.Add(dr)
             End If
         Next
+        If dtIncomes.Rows.Count > 0 Then SaveIncomes()
         Dim drBlank As DataRow = dtIncomes.NewRow
         dtIncomes.Rows.Add(drBlank)
         SetRepeater(rptIncomes, dtIncomes)
@@ -111,10 +115,75 @@
             End If
         End If
     End Sub
+    Private Sub LoadExpenses()
+        Dim dt As DataTable = FillDataTable("Budget.usp_Get_Expenses", (New Connection).NewCnn, "@nBudgetID", BudgetID.ToString, "dtExpenses")
+        Session(dt.TableName) = dt
+        AddNewExpense(Nothing, Nothing)
+    End Sub
+    Private Sub AddNewExpense(sender As Object, e As System.EventArgs) Handles btnAddExpense.Click
+        Dim dtExpenses As DataTable = Session("dtExpenses")
+        dtExpenses.Clear()
+        For Each ri As RepeaterItem In rptExpenses.Items
+            If ri.ItemType = ListItemType.AlternatingItem Or ri.ItemType = ListItemType.Item Then
+                Dim ctrlExpense As IncomeExpense = ri.FindControl("ctrlExpense")
+                Dim dr As DataRow = dtExpenses.NewRow
+                dr.Item("nBudgetId") = BudgetID
+                dr.Item("nExpenseID") = ctrlExpense.IEID
+                dr.Item("cExpenseType") = ctrlExpense.Type
+                dr.Item("cExpenseName") = ctrlExpense.Name
+                dr.Item("nExpenseFrequency") = ctrlExpense.Frequency
+                dr.Item("nExpenseAmount") = ctrlExpense.Amount
+                dr.Item("dExpenseStart") = ctrlExpense.dStart
+                dr.Item("dExpenseEnd") = ctrlExpense.dEnd
+                dtExpenses.Rows.Add(dr)
+            End If
+        Next
+        If dtExpenses.Rows.Count > 0 Then SaveExpenses()
+        Dim drBlank As DataRow = dtExpenses.NewRow
+        dtExpenses.Rows.Add(drBlank)
+        SetRepeater(rptExpenses, dtExpenses)
+    End Sub
+    Private Sub rptExpenses_ItemDataBound(sender As Object, e As RepeaterItemEventArgs) Handles rptExpenses.ItemDataBound
+        Dim oItem As RepeaterItem = e.Item
+        If oItem.ItemType = ListItemType.AlternatingItem Or oItem.ItemType = ListItemType.Item Then
+            Dim dr As DataRowView = oItem.DataItem
+            If Not IsDBNull(dr.Item("nBudgetID")) Then
+                Dim ctrlExpense As IncomeExpense = oItem.FindControl("ctrlExpense")
+                ctrlExpense.BudgetID = BudgetID
+                ctrlExpense.IEID = dr.Item("nExpenseID")
+                ctrlExpense.Type = dr.Item("cExpenseType")
+                ctrlExpense.Name = dr.Item("cExpenseName")
+                ctrlExpense.Frequency = dr.Item("nExpenseFrequency")
+                ctrlExpense.Amount = dr.Item("nExpenseAmount")
+                ctrlExpense.dStart = dr.Item("dExpenseStart")
+                ctrlExpense.dEnd = dr.Item("dExpenseEnd")
+            End If
+        End If
+    End Sub
     Private Sub SetRepeater(rpt As Repeater, dsSource As DataTable)
         Session(dsSource.TableName) = dsSource
         rpt.DataSource = Nothing
         rpt.DataSource = dsSource
         rpt.DataBind()
+    End Sub
+    Private Sub SaveIncomes()
+        Dim dt As DataTable = Session("dtIncomes")
+        Dim cmd = SqlCommand("Budget.usp_BulkUpsert_Income")
+        cmd.Parameters.AddWithValue("@nBudgetID", BudgetID)
+        Dim tvp As SqlClient.SqlParameter = cmd.Parameters.AddWithValue("@Incomes", dt)
+        tvp.SqlDbType = SqlDbType.Structured
+        tvp.TypeName = "Budget.Incomes_Type"
+        ExecNonQuery(cmd)
+    End Sub
+    Private Sub SaveExpenses()
+        Dim dt As DataTable = Session("dtExpenses")
+        Dim cmd = SqlCommand("Budget.usp_BulkUpsert_Expense")
+        cmd.Parameters.AddWithValue("@nBudgetID", BudgetID)
+        Dim tvp As SqlClient.SqlParameter = cmd.Parameters.AddWithValue("@Expenses", dt)
+        tvp.SqlDbType = SqlDbType.Structured
+        tvp.TypeName = "Budget.Expenses_Type"
+
+        cmd.ExecuteNonQuery()
+
     End Sub
 End Class

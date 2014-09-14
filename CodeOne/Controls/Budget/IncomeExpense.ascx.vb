@@ -19,18 +19,24 @@
     End Property
     Public Property IEID As Nullable(Of Integer)
         Get
-            Return If(hfID.Value, 0)
+            Dim nIntReturn As Integer
+            Integer.TryParse(hfID.Value, nIntReturn)
+            Return nIntReturn
         End Get
         Set(value As Nullable(Of Integer))
             hfID.Value = value
         End Set
     End Property
+    Dim _Type As String = ""
     Public Property Type As String
         Get
-            Return ddlType.SelectedValue
+            Return _Type
         End Get
         Set(value As String)
-            ddlType.SelectedValue = value
+            _Type = value
+            If ddlType.DataSource IsNot Nothing Then
+                ddlType.SelectedValue = value
+            End If
         End Set
     End Property
     Public Property Name As String
@@ -41,12 +47,16 @@
             txtName.Text = value
         End Set
     End Property
+    Dim _Frequency As Integer
     Public Property Frequency As Integer
         Get
-            Return ddlFrequency.SelectedValue
+                Return _Frequency
         End Get
         Set(value As Integer)
-            ddlFrequency.SelectedValue = value
+            _Frequency = value
+            If ddlFrequency.DataSource IsNot Nothing Then
+                ddlFrequency.SelectedValue = value
+            End If
         End Set
     End Property
     Public Property Amount As Integer
@@ -59,18 +69,18 @@
     End Property
     Public Property dStart As Date
         Get
-            Return dtpStart.SelectedDate
+            Return dtpstart.Value
         End Get
         Set(value As Date)
-            dtpStart.SelectedDate = value
+            dtpstart.Value = value
         End Set
     End Property
     Public Property dEnd As Date
         Get
-            Return dtpEnd.SelectedDate
+            Return dtpEnd.Value
         End Get
         Set(value As Date)
-            dtpEnd.SelectedDate = value
+            dtpEnd.Value = value
         End Set
     End Property
 #End Region
@@ -88,12 +98,15 @@
                 ddlType.DataValueField = "nExpenseType"
             End If
             ddlType.DataBind()
+            If _Type <> "" Then ddlType.SelectedValue = _Type
+
 
             dtFrequency = FillDataTable("Budget.usp_GetFrequencies", (New Connection).NewCnn)
             ddlFrequency.DataSource = dtFrequency
             ddlFrequency.DataTextField = "cFrequency"
             ddlFrequency.DataValueField = "nFrequency"
             ddlFrequency.DataBind()
+            If _Frequency <> 0 Then ddlFrequency.SelectedValue = _Frequency
         End If
     End Sub
     Public Sub SaveToDataRow(ByRef dt As DataTable)
