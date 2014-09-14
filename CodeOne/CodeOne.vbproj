@@ -312,6 +312,8 @@
     <Content Include="Styles\assets\site\img\personal\promo-artsarben.jpg" />
     <Content Include="Styles\assets\site\img\personal\promo-huskersdebit.jpg" />
     <Content Include="Styles\Login\Login.css" />
+    <Content Include="Styles\site_css\custom.css" />
+    <Content Include="Styles\site_css\iCheck.css" />
     <Content Include="Styles\site_css\main.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

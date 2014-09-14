@@ -24,7 +24,10 @@
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
 
+    <!--Styles-->
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
+    <link href="../Styles/site_css/iCheck.css" rel="stylesheet">
+    <link href="../Styles/site_css/custom.css" rel="stylesheet">
 
 
     <!-- Controls -->
@@ -51,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-left:10px;">
+            <div style="margin-left: 10px;">
                 <p class="pull-right visible-xs">
                     <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
                         Toggle nav</button>
@@ -83,53 +86,175 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+                                    <div class="container">
+                                        <div class="well">
+                                            <h1>Mobile Friendly fancy check box and radio button twitter bootstrap 3.0</h1>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="row select-green well">
+                                                        <h4 class="text-center">Green</h4>
+                                                        <div class="col-md-6">
+
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <input tabindex="9" type="checkbox" id="square-checkbox-1" checked>
+                                                                    <label for="square-checkbox-1">PHP Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                                                    <label for="square-checkbox-2">CSS3 Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-3" checked>
+                                                                    <label for="square-checkbox-3">HTML5 Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-4" checked>
+                                                                    <label for="square-checkbox-4">MYSql Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-5" checked>
+                                                                    <label for="square-checkbox-5">Jquery Expert</label>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-1" name="square-radio">
+                                                                    <label for="square-radio-1">PHP Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="12" type="radio" id="square-radio-2" name="square-radio">
+                                                                    <label for="square-radio-2">CSS3 Expert</label>
+                                                                </li>
+
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-3" name="square-radio">
+                                                                    <label for="square-radio-3">Jquery Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="12" type="radio" id="square-radio-4" name="square-radio" checked>
+                                                                    <label for="square-radio-4">Ajax Expert</label>
+                                                                </li>
+
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-5" name="square-radio">
+                                                                    <label for="square-radio-5">Bootsrap Expert</label>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row select-blue well">
+                                                        <h4 class="text-center">Blue</h4>
+                                                        <div class="col-md-6">
+
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <input tabindex="9" type="checkbox" id="square-checkbox-1" checked>
+                                                                    <label for="square-checkbox-1">PHP Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                                                    <label for="square-checkbox-2">CSS3 Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-3" checked>
+                                                                    <label for="square-checkbox-3">HTML5 Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-4" checked>
+                                                                    <label for="square-checkbox-4">MYSql Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="10" type="checkbox" id="square-checkbox-5" checked>
+                                                                    <label for="square-checkbox-5">Jquery Expert</label>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-1" name="square-blue-radio">
+                                                                    <label for="square-radio-1">PHP Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="12" type="radio" id="square-radio-2" name="square-blue-radio">
+                                                                    <label for="square-radio-2">CSS3 Expert</label>
+                                                                </li>
+
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-3" name="square-blue-radio">
+                                                                    <label for="square-radio-3">Jquery Expert</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input tabindex="12" type="radio" id="square-radio-4" name="square-blue-radio" checked>
+                                                                    <label for="square-radio-4">Ajax Expert</label>
+                                                                </li>
+
+                                                                <li>
+                                                                    <input tabindex="11" type="radio" id="square-radio-5" name="square-blue-radio">
+                                                                    <label for="square-radio-5">Bootsrap Expert</label>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle">BUDGET TARGETS
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle">BUDGET TARGETS
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body accordion-smallerfont">
+                                        <p>TEST</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle">RETIREMENT PLANNING
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFour" class="panel-collapse collapse">
-                                <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle">RETIREMENT PLANNING
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body accordion-smallerfont">
+                                        <p>TEST</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <hr style="position: static; margin-top: 500px;" />
+
+                <footer class="footer">
+                    <p style="margin-left: 30px; font-weight: 500; font-family: 'Microsoft JhengHei'; margin-bottom: 0px; color: #216242;">&copy; Team ASL - 2014</p>
+                    <p style="margin-left: 30px; font-weight: 500; font-family: 'Microsoft JhengHei'; margin-top: 0px; margin-bottom: 0px; color: #216242;">CodeOne Hackathon - FNBO</p>
+                </footer>
+
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
-            <hr style="position: static; margin-top: 500px;" />
-
-            <footer class="footer">
-                <p style="margin-left: 30px; font-weight: 500; font-family: 'Microsoft JhengHei'; margin-bottom: 0px; color: #216242;">&copy; Team ASL - 2014</p>
-                <p style="margin-left: 30px; font-weight: 500; font-family: 'Microsoft JhengHei'; margin-top: 0px; margin-bottom: 0px; color: #216242;">CodeOne Hackathon - FNBO</p>
-            </footer>
-
-        </div>
         <!--/.container-->
 
         <!-- Bootstrap core JavaScript
