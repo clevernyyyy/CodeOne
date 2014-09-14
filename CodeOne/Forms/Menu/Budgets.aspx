@@ -151,6 +151,7 @@
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:Repeater>
+                                            <br />
                                             <asp:Button ID="btnSaveMonthly" runat="server" text="Save Monthly Expenses"/>
                                         </ContentTemplate>
                                         <Triggers>
