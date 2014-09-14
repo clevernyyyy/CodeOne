@@ -37,6 +37,30 @@
         End If
     End Sub
 
+    Private Sub SendToGraphs()
+        Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+        Dim accts = From dr As DataRow In dt.Rows
+                    Select dr.Item("cAccountNum")
+
+
+        Dim collKeys As New System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer))
+        collKeys.Add(New KeyValuePair(Of String, Integer)("User", nUserID))
+        For Each acct As String In accts.ToList()
+            Dim int As Integer
+            Integer.TryParse(acct, int)
+            If int > 0 Then
+                Dim kvp As New KeyValuePair(Of String, Integer)("Account", int)
+                collKeys.Add(kvp)
+            End If
+        Next
+        Session("GraphData") = collKeys
+        Response.Redirect("../Pie.aspx")
+    End Sub
+
+    Private Sub lnkGraphs_Click(sender As Object, e As EventArgs) Handles lnkGraphs.Click
+        SendToGraphs()
+    End Sub
+
     Private Sub repCredits_ItemDataBound(sender As Object, e As RepeaterItemEventArgs) Handles repCredits.ItemDataBound
         Dim oItem As RepeaterItem = e.Item
         If e.Item.ItemType = ListItemType.AlternatingItem Or e.Item.ItemType = ListItemType.Item Then

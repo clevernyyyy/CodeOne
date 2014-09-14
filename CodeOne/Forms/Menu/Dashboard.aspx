@@ -52,6 +52,9 @@
                     <div class="fullHeader">
                         Accounts
                     </div>
+                    <div class="fullHeader">
+                        <asp:linkButton id="lnkGraphs" runat="server" text="Graphs!"></asp:linkButton>
+                    </div>
                     <br />
                     <div id="headerDep" style="margin-bottom:10px;">
                         <span id="DepositAccounts" class="acctHeader">
