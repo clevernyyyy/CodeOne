@@ -111,15 +111,15 @@ Public Class Dashboard
             System.Threading.Thread.Sleep(50)
             Dim color As String = String.Format("#{0:X6}", New Random().Next(&H1000000))
             Dim cText As String, cValue As String
-                cText = dr.Item(cTextColumn)
-                If cText = "C" Then
-                    cText = dr.Item("cSubProdCd") + " - Income"
-                ElseIf cText = "D" Then
-                    cText = dr.Item("cSubProdCd") + " - Expenses"
-                End If
-                cValue = dr.Item(cValueColumn)
-                sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
-                sb.Append("},")
+            cText = dr.Item(cTextColumn)
+            If cText = "C" Then
+                cText = dr.Item("cSubProdCd") + " - Income"
+            ElseIf cText = "D" Then
+                cText = dr.Item("cSubProdCd") + " - Expenses"
+            End If
+            cValue = dr.Item(cValueColumn)
+            sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
+            sb.Append("},")
         Next
         If sb.Length > 1 Then
             sb = sb.Remove(sb.Length - 1, 1)

@@ -38,7 +38,7 @@
             rptGraphs.DataBind()
 
         End If
-        
+
     End Sub
 
     Private Sub AddJavaScript()

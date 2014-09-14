@@ -64,7 +64,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle">Set Budget
+                                    <a class="accordion-toggle">SET BUDGET
                                     </a>
                                 </h4>
                             </div>
@@ -77,7 +77,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle">Second
+                                    <a class="accordion-toggle">WISH LIST
                                     </a>
                                 </h4>
                             </div>
@@ -90,7 +90,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle">Third
+                                    <a class="accordion-toggle">BUDGET TARGETS
                                     </a>
                                 </h4>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle">Fourth
+                                    <a class="accordion-toggle">RETIREMENT PLANNING
                                     </a>
                                 </h4>
                             </div>
