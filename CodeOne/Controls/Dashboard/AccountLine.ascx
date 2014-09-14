@@ -26,7 +26,7 @@
         <asp:Label ID="lblLastPaymentDate" runat="server" CssClass="acctDeb" />
     </span>
     <div>
-        <a id="ancViewTen" class="greenLink pointer">Last 10 Transactions</a>
+        <a id="ancViewTen" class="greenLink pointer" runat="server">Last 10 Transactions</a>
         <a id="divider" class="greenLink" style="margin-left: 5px; text-decoration: none;" runat="server">|</a>
         <a id="ancViewPie" class="greenLink pointer" style="margin-left: 5px;" runat="server">Visualize Account Data</a>
         <div class="rowClassSpace">

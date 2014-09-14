@@ -113,6 +113,15 @@ Partial Public Class AccountLine
     Protected WithEvents lblLastPaymentDate As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''ancViewTen control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ancViewTen As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
     '''divider control.
     '''</summary>
     '''<remarks>

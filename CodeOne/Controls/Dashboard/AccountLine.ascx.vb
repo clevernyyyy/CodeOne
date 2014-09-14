@@ -17,7 +17,6 @@ Public Class AccountLine
     End Class
     Dim Transactions As List(Of TransactionQuickInfo)
     Dim dtTransactions As DataTable
-
 #Region "Properties"
     Public Property AccountName As String
         Get
@@ -142,6 +141,8 @@ Public Class AccountLine
 
     Private Sub LoadTransactions(Optional ByVal lSetFocusToTop = False)
         Dim dt As New DataTable
+        ancViewTen.ID &= hfAccountNum.Value
+        dvgPack.ID &= hfAccountNum.Value
         LibraryFunctions.AddColumnsToDataTable(dt, "TransDesc", "TransDate", "TransAmount")
         LibraryFunctions.ObejctToDataTable(dt, Transactions)
         dvgPack.DataSource = dt

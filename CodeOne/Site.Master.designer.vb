@@ -59,6 +59,15 @@ Partial Public Class SiteMaster
     Protected WithEvents txtPassword As Global.System.Web.UI.HtmlControls.HtmlInputPassword
 
     '''<summary>
+    '''lblWelcome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblWelcome As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''btnSignIn control.
     '''</summary>
     '''<remarks>
@@ -66,6 +75,15 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSignIn As Global.System.Web.UI.HtmlControls.HtmlButton
+
+    '''<summary>
+    '''btnSignOut control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSignOut As Global.System.Web.UI.HtmlControls.HtmlButton
 
     '''<summary>
     '''divUser control.

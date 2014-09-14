@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     $("[id*='ancViewTen']").click(function (e) {
-
         if ($(this).text() == "Hide Last 10 Transactions") {
             $(this).next().next().next().next().css("display", "none")
             $(this).text("Last 10 Transactions");

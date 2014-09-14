@@ -395,7 +395,13 @@
                         <div class="form-group">
                             <input id="txtPassword" type="password" placeholder="Password" class="form-control" runat="server" />
                         </div>
-                        <button id="btnSignIn" title="btnSignIn" type="submit" onclick="raisePostBack();" class="btn btn-success" runat="server">Sign In</button>
+                        <div class="form-group">
+                            <asp:label id="lblWelcome"  text="Welcome " class="form-control" runat="server" />
+                        </div>
+                        <button id="btnSignIn" title="btnSignIn" type="submit" class="btn btn-success" runat="server">Sign In</button>
+                        <button id="btnSignOut" title="btnSignOut" type="button" onclick="__doPostBack('btnSignOut','SignOut');" class="btn btn-success" runat="server">Sign Out</button>
+
+                       <%-- <asp:Button id="btnSignOut"  Text="SignOut" OnClick="SignOut_Click" class="btn btn-login" runat="server" />--%>
                     </form>
                 </div>
                 <div class="navbar-form navbar-right" style="margin-top: 0px; margin-bottom: 0px;" id="divUser" runat="server">
@@ -403,8 +409,6 @@
                         <div class="form-group">
                             <%--<asp:Button ID="btnLogOut" runat="server" Text="LogOut" OnClick="LogOut_Click" class="btn btn-login"/><br /><br /><br />--%>
                         </div>
-
-                        <%--<button id="btnSignOut" type="submit" class="btn" style="vertical-align:top;" runat="server" >Sign Out</button>--%>
                     </form>
                 </div>
                 <img src="\Styles\assets\site\img\personal\promo-huskersdebit.jpg" class="img-thumbnail" alt=""><br />
@@ -419,11 +423,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" >
-        raisePostBack = function () {
-            __doPostBack("<%=btnSignIn.ClientID%>", "Login");
-        }
-    </script>
 
     <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>

@@ -48,29 +48,46 @@ Public Class SiteMaster
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-            If Request.QueryString.Count = 2 Then
-                SignIn(Request.QueryString.Item(0), Request.QueryString.Item(1))
-            'Response.Redirect("~/Default.aspx")
-            Response.Redirect("~/Forms/Menu/Dashboard.aspx")
-                Response.Redirect(Request.Path)
-            End If
-            If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "LogIn") Then
-                If SignIn(txtUserName.Value, txtPassword.Value) Then
-                    Response.Redirect("~/Forms/Menu/Dashboard.aspx")
-                End If
-            End If
-    End Sub
-
-    Protected Sub Unnamed_LoggingOut(sender As Object, e As LoginCancelEventArgs)
-        Context.GetOwinContext().Authentication.SignOut()
-    End Sub
-
-    Protected Sub LogOut_Click(sender As Object, e As EventArgs)
-        If HttpContext.Current.Session("User") IsNot Nothing Then
-            Session.Clear()
+        If Request.QueryString.Count = 2 Then
+            SignIn(Request.QueryString.Item(0), Request.QueryString.Item(1))
+            Response.Redirect("~/Default.aspx")
+            'Response.Redirect("~/Forms/Menu/Dashboard.aspx")
+            Response.Redirect(Request.Path)
         End If
-        Response.Redirect("~/Default.aspx")
+
+        If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "SignOut") Then
+            If HttpContext.Current.Session("User") IsNot Nothing Then
+                Session.Clear()
+            End If
+            Response.Redirect("~/Default.aspx")
+        End If
+        
+        If HttpContext.Current.Session("User") IsNot Nothing Then
+            lblWelcome.Visible = True
+            lblWelcome.Text &= Session("User").FirstName & " " & Session("User").MiddleName & " " & Session("User").LastName
+            txtUserName.Visible = False
+            txtPassword.Visible = False
+            btnSignIn.Visible = False
+            btnSignOut.Visible = True
+        Else
+            lblWelcome.Visible = False
+            txtUserName.Visible = True
+            txtPassword.Visible = True
+            btnSignIn.Visible = True
+            btnSignOut.Visible = False
+        End If
     End Sub
+
+    'Protected Sub Unnamed_LoggingOut(sender As Object, e As LoginCancelEventArgs)
+    '    Context.GetOwinContext().Authentication.SignOut()
+    'End Sub
+
+    'Protected Sub SignOut_Click(sender As Object, e As EventArgs)
+    '    If HttpContext.Current.Session("User") IsNot Nothing Then
+    '        Session.Clear()
+    '    End If
+    '    Response.Redirect("~/Default.aspx")
+    'End Sub
 
     Public Function SignIn(userName As String, passWord As String) As Boolean
         Dim blnSuccess As Boolean = False
@@ -81,26 +98,4 @@ Public Class SiteMaster
         End If
         Return blnSuccess
     End Function
-
-    'Private Sub btnSignIn_ServerClick(sender As Object, e As System.EventArgs) Handles btnSignIn.ServerClick
-
-    '    SignIn()
-
-    'End Sub
-
-   Protected Sub RaisePostBackEvent(source As IPostBackEventHandler, eventArgument As String)
-	    'call the RaisePostBack event 
-	    'MyBase.RaisePostBackEvent(source, eventArgument)
-
-			  '  'do some logic
-	    If source = "" Then
-	    End If
-    End Sub
-
-
-    'Private Sub btnSubmit_ServerClick(sender As Object, e As EventArgs) Handles btnSubmit.ServerClick
-    '    SignIn()
-    'End Sub
-
-
 End Class
