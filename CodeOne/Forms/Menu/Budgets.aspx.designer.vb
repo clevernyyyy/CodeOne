@@ -14,13 +14,49 @@ Option Explicit On
 Partial Public Class Budgets
 
     '''<summary>
-    '''ctrlIncome control.
+    '''panelIncomes control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ctrlIncome As Global.CodeOne.IncomeExpense
+    Protected WithEvents panelIncomes As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''rptIncomes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rptIncomes As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''btnAddIncome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAddIncome As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''panelExpenses control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelExpenses As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''rptExpenses control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rptExpenses As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
     '''ctrlExpenses control.

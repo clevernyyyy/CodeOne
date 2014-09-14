@@ -19,7 +19,7 @@
     End Property
     Public Property IEID As Nullable(Of Integer)
         Get
-            Return hfID.Value
+            Return If(hfID.Value, 0)
         End Get
         Set(value As Nullable(Of Integer))
             hfID.Value = value

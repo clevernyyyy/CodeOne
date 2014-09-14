@@ -96,13 +96,11 @@
                                                         <uctrl:IncomeExpense ID="ctrlIncome" runat="server" EI="I" />
                                                     </div>
                                                 </ItemTemplate>
-                                                 <FooterTemplate>
-                                                     <asp:Button ID="btnAddIncome" runat="server" />
-                                                 </FooterTemplate>
                                             </asp:Repeater>
+                                        <asp:Button ID="btnAddIncome" runat="server" text="Add Another"/>
                                         </ContentTemplate>
                                         <Triggers>
-                                            <asp:AsyncPostBackTrigger ControlID="ddlCategories" EventName="SelectedIndexChanged" />
+                                            <asp:AsyncPostBackTrigger ControlID="btnAddIncome" EventName="Click" />
                                         </Triggers>
                                     </asp:UpdatePanel>
                                     <br />
