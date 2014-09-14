@@ -141,8 +141,9 @@ Public Class AccountLine
 
     Private Sub LoadTransactions(Optional ByVal lSetFocusToTop = False)
         Dim dt As New DataTable
-        ancViewTen.ID &= hfAccountNum.Value
-        dvgPack.ID &= hfAccountNum.Value
+        'ancViewTen.ID &= hfAccountNum.Value
+        ancViewTen.Attributes.Add("onClick", "ShowHideTransactions(this);")
+        ancViewPie.Attributes.Add("onClick", "ShowHideGraph(this);")
         LibraryFunctions.AddColumnsToDataTable(dt, "TransDesc", "TransDate", "TransAmount")
         LibraryFunctions.ObejctToDataTable(dt, Transactions)
         dvgPack.DataSource = dt

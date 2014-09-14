@@ -84,13 +84,4 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSignOut As Global.System.Web.UI.HtmlControls.HtmlButton
-
-    '''<summary>
-    '''divUser control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divUser As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 End Class
