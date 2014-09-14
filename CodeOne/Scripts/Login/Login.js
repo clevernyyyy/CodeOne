@@ -22,7 +22,7 @@ function OpenLoginDialog() {
 function OpenRegister() {
     $("#divRegisterControl").dialog({
         //autoOpen: true,
-        appendTo: "form",
+        appendTo: "body",
         //modal: true,
         width: 800,
         height: 450,

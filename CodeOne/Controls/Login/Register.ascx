@@ -6,10 +6,10 @@
 <!-- Scripts -->
 
 <h3>
-    <font face="Verdana" color="White">Registration Page</font>
+    <font face="Verdana" color="Black">Registration Page</font>
 </h3>
 <asp:Panel ID="pnlRegister" runat="server"
-    GroupingText="Account Information" ForeColor="White" Width="750px">
+    GroupingText="Account Information" ForeColor="Black" Width="750px">
     <div>
         <span style="text-align: right;">
             <asp:Label runat="server" Width="150px">Name:</asp:Label>

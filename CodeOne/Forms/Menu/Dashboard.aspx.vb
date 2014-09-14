@@ -12,6 +12,9 @@ Public Class Dashboard
         If HttpContext.Current.Session("User") IsNot Nothing Then
             Dim objUser As User = HttpContext.Current.Session("User")
             nUserID = objUser.UserID
+        Else
+            Dim objUser As New User("Peter", "Peter", "", "Peter", 0, 4)
+            nUserID = objUser.UserID
         End If
         If Not IsPostBack Then
             'This is for the gridview

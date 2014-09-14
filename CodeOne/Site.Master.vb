@@ -52,6 +52,9 @@
     End Sub
 
     Protected Sub LogOut_Click(sender As Object, e As EventArgs)
+        If HttpContext.Current.Session("User") IsNot Nothing Then
+            Session.Clear()
+        End If
         Response.Redirect("~/Default.aspx")
     End Sub
 
