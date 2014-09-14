@@ -80,6 +80,8 @@
         If Not IsPostBack Then
             dtTypes = FillDataTable("Budget.usp_GetTypes", (New Connection).NewCnn, "@cType", Type)
             ddlType.DataSource = dtTypes
+            ddlType.DataTextField = "nIncomeType"
+            ddlType.DataValueField = "cIncomeType"
             ddlType.DataBind()
             dtFrequency = FillDataTable("Budget.usp_GetFrequencies", (New Connection).NewCnn)
             ddlFrequency.DataSource = dtFrequency
