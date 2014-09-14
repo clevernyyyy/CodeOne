@@ -34,9 +34,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
-        html, body, .container-fluid, .row {
-            height: 100%;
-        }
+    html, body, .container-fluid, .row {
+    height: 100%;
+    }
     </style>
     <body>
         <div class="">
@@ -50,129 +50,98 @@
                         <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
                     </div>
                     <div class="panel-group collapsibleDiv" id="accordion">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h4 class="panel-title">
-                            <span class="accdrHeader">
-                                Accounts
-                            </span>
-                            <span class="accdrButton">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="visualize">
-                                  Visualize Accounts <span class="caret white-caret"></span>
-                                </a>
-                            </span>
-                          </h4>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="accdrHeader">Accounts</span>
+                                    <span class="accdrButton">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="visualize">
+                                            Visualize Accounts <span class="caret white-caret"></span>
+                                        </a>
+                                    </span>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    TEST
+                                </div>
+                            </div>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                          <div class="panel-body">
-                              <!-- Maybe all PIES ? -->
-                              TEST
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <br />
                     <div id="headerDep" style="margin-bottom:10px;">
-                        <span id="DepositAccounts" class="acctHeader">
-                            DEPOSIT ACCOUNTS
-                        </span>
-                        <span id="balDep" class="balHeader">
-                            BALANCE
-                        </span>
+                        <span id="DepositAccounts" class="acctHeader">DEPOSIT ACCOUNTS</span>
+                        <span id="balDep" class="balHeader">BALANCE</span>
                     </div>
                     <br />
                     <div id="divDeposits">
-                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                            <asp:Repeater ID="repDeposits" runat="server">
-                                <ItemTemplate>
-                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
+                        <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+                        <asp:Repeater ID="repDeposits" runat="server">
+                            <ItemTemplate>
+                                <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                     <div id="headerInv" style="margin-bottom:10px;">
-                        <span id="InvestmentAccounts" class="acctHeader">
-                            INVESTMENT ACCOUNTS
-                        </span>
-                        <span id="balInv" class="balHeader">
-                            BALANCE
-                        </span>
+                        <span id="InvestmentAccounts" class="acctHeader">INVESTMENT ACCOUNTS</span>
+                        <span id="balInv" class="balHeader">BALANCE</span>
                     </div>
                     <br />
                     <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                        <div id="divInvestments">
-                            <asp:Repeater ID="repInvestments" runat="server">
-                                <ItemTemplate>
-                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
+                    <div id="divInvestments">
+                        <asp:Repeater ID="repInvestments" runat="server">
+                            <ItemTemplate>
+                                <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="false"></uctrl:Account>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                     <div id="headerCred" style="margin-bottom:25px;">
-                        <span id="CreditAccounts" class="acctHeader">
-                            CREDIT ACCOUNTS
-                        </span>
-                        <span id="balCred" class="balHeader">
-                            BALANCE
-                        </span>
-                        <span id="PayDueCred" class="dateHeader">
-                            PAYMENT DUE
-                        </span>
-                        <span id="lastPayCred" class="dateHeader">
-                            LAST PAYMENT
-                        </span>
+                        <span id="CreditAccounts" class="acctHeader">CREDIT ACCOUNTS</span>
+                        <span id="balCred" class="balHeader">BALANCE</span>
+                        <span id="PayDueCred" class="dateHeader">PAYMENT DUE</span>
+                        <span id="lastPayCred" class="dateHeader">LAST PAYMENT</span>
                     </div>
                     <br />
                     <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-
-                        <div id="divCredits">
-                            <asp:Repeater ID="repCredits" runat="server">
-                                <ItemTemplate>
-                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="true" ShowLastPayment="true"></uctrl:Account>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
-                  
+                    <div id="divCredits">
+                        <asp:Repeater ID="repCredits" runat="server">
+                            <ItemTemplate>
+                                <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="true" ShowLastPayment="true"></uctrl:Account>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                     <div id="headerLoan" style="margin-bottom:25px;">
-                        <span id="LoanAccounts" class="acctHeader">
-                            LOAN ACCOUNTS
-                        </span>
-                        <span id="balLoan" class="balHeader">
-                            BALANCE
-                        </span>
-                        <%--<span id="PayDueLoan" class="dateHeader">
-                            PAYMENT DUE
-                        </span>--%>
-                        <span id="lastPayLoan" class="dateHeader">
-                            LAST PAYMENT
-                        </span>
+                        <span id="LoanAccounts" class="acctHeader">LOAN ACCOUNTS</span>
+                        <span id="balLoan" class="balHeader">BALANCE</span>
+                        <span id="lastPayLoan" class="dateHeader">LAST PAYMENT</span>
                     </div>
                     <br />
                     <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
-                        <div id="divLoans">
-                            <asp:Repeater ID="repLoans" runat="server">
-                                <ItemTemplate>
-                                    <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="true"></uctrl:Account>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
+                    <div id="divLoans">
+                        <asp:Repeater ID="repLoans" runat="server">
+                            <ItemTemplate>
+                                <uctrl:Account ID="uctrlAccount" runat="server" ShowPaymentDue="false" ShowLastPayment="true"></uctrl:Account>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
-                  </div>
                 </div>
-            <hr>
-
-            <footer class="footer">
-                <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-bottom:0px; color:#216242;">&copy; Team ASL - 2014</p>
-                <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-top:0px; margin-bottom:0px; color:#216242;">CodeOne Hackathon - FNBO</p>
-            </footer>
+            </div>
+        </div>
+        <hr />
+        <footer class="footer">
+            <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-bottom:0px; color:#216242;">&copy; Team ASL - 2014</p>
+            <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-top:0px; margin-bottom:0px; color:#216242;">CodeOne Hackathon - FNBO</p>
+        </footer>
 
         <!--/.container-->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/Scripts/site_scripts/ie10-viewport-bug-workaround.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/Scripts/site_scripts/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="/Scripts/site_scripts/offcanvas.js"></script>
+        <script src="/Scripts/site_scripts/offcanvas.js"></script>
     </body>
 </asp:Content>
