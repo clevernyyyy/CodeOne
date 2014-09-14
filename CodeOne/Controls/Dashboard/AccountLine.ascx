@@ -66,7 +66,7 @@
             </div>
           </div>
         <div id="pie" style="display:none; margin-left:15px;" class="row row-offcanvas row-offcanvas-right">
-            <div id="pieContent" style="background-color:lightblue; height:50px;">
+            <div id="pieContent">
                 <uctrl:Pie ID="ctrlPie" runat="server" style="float:left;"/>
             </div>
         </div>

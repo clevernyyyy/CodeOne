@@ -23,6 +23,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
+    <script src="../../Scripts/WebForms/PieChart.js" type="text/javascript" ></script>
 
     <!-- Styles -->
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">

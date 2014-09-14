@@ -38,8 +38,9 @@ function LoadChart(nID, strType, index) {
             //userStrengthsChart.resize();
             for (var i = 0; i < data.length; i++) {
                 var div = $("<div />");
-                div.css("margin-bottom", "10px");
-                div.html("<span style = 'display:inline-block;height:10px;width:10px;background-color:" + data[i].color + "'></span> " + data[i].text);
+                div.css("margin-bottom", "5px");
+                div.css("margin-left", "20px");
+                div.html("<span style = 'display:inline-block;height:8px;width:10px;background-color:" + data[i].color + "'></span> " + data[i].text);
                 $("[id*='_dvLegend_" + index + "']").append(div);
             }
         },
