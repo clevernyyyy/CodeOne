@@ -61,7 +61,7 @@
 
     <div class="container">
         <h1>Transactions</h1>
-        <div id="playground" style="border: 1px solid darkgreen; -moz-border-radius: 15px; border-radius: 15px;">
+        <%--<div id="playground" style="border: 1px solid darkgreen; -moz-border-radius: 15px; border-radius: 15px;">
             <div id="categories" style="display:block;">
                 <h3 class="cursor" style="margin-left:25px;">Categories <a id="expand" style="text-decoration:none; color:darkgreen;" href="#">+</a>
                 </h3>
@@ -86,10 +86,10 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
-        </div>
+        </div>--%>
 
 
-        <%-- <div class="row row-offcanvas row-offcanvas-right">
+         <div class="row row-offcanvas row-offcanvas-right">
               <!-- Transactions Gridview -->
             <div id="Retrieve" class="centered">
        
@@ -134,8 +134,6 @@
             </div>
             </div>
            </div>
-        </div>--%>
-    </div>
     <!--/.container-->
     <footer>
         <p>&copy; Team A/S/L - 2014</p>
