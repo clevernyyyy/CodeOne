@@ -49,13 +49,49 @@
                         </h1>
                         <p>We're excited to be help you FinanceLogically.<sup>&copy</sup></p>
                     </div>
-                    <div class="fullHeader">
-                        Accounts
-                    </div>
-                    <div class="fullHeader">
-                        <asp:linkButton id="lnkGraphs" runat="server" text="Graphs!"></asp:linkButton>
+                    <div class="panel-group collapsibleDiv" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <span class="accdrHeader">
+                                Accounts
+                            </span>
+                            <span class="accdrButton">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="visualize">
+                                  Visualize Accounts <span class="caret white-caret"></span>
+                                </a>
+                            </span>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                              TEST
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <br />
+<%--                    <div class="fullHeader">
+                        <span id="accts">
+                            Accounts
+                        </span>
+                        <span id="graphs" style="float:right; margin-right:15px;">
+                            <asp:linkButton id="lnkGraphs" runat="server" text="Visualize!" CssClass="visualize"></asp:linkButton>
+                              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                Visualize Accounts <span class="caret"></span>
+                              </button>
+                        </span>
+                    </div>
+                    <br />
+                    <div id="divPie">
+                        <div id="divPieCharts" class="divPie">
+                            Test
+                            <br />
+                            Test
+                        </div>
+                        <br />
+                    <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+                    </div>--%>
                     <div id="headerDep" style="margin-bottom:10px;">
                         <span id="DepositAccounts" class="acctHeader">
                             DEPOSIT ACCOUNTS

@@ -10,6 +10,19 @@
             $(this).text("Hide Last 10 Transactions");
         }
     });
+
+    $("[id*='ancViewPie']").click(function (e) {
+
+        if ($(this).text() == "Close Visualization") {
+            document.getElementById('pie').style.display = 'none';
+            $(this).text("Visualize Account Data");
+        }
+        else {
+            document.getElementById('pie').style.display = 'inline-block';
+            $(this).text("Close Visualization");
+        }
+    });
+
 });
 
 

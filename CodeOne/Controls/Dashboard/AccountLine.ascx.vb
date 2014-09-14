@@ -118,16 +118,16 @@
 
     End Sub
 
-    Private Sub LoadCategories()
-        Dim dt As DataTable = Nothing
+    'Private Sub LoadCategories()
+    '    Dim dt As DataTable = Nothing
 
-        Dim cmd = SqlCommand("Data.usp_Get_Categories")
+    '    Dim cmd = SqlCommand("Data.usp_Get_Categories")
 
-        dt = FillDataTable(cmd)
+    '    dt = FillDataTable(cmd)
 
-        'rptCategories.DataSource = dt
-        'rptCategories.DataBind()
-    End Sub
+    '    'rptCategories.DataSource = dt
+    '    'rptCategories.DataBind()
+    'End Sub
 #End Region
 #Region "Search Grid Stuff"
     Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound

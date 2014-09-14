@@ -20,6 +20,8 @@
     </span>
     <div>
         <a ID="ancViewTen"  class="greenLink pointer">Last 10 Transactions</a> 
+        <a id="divider" class="greenLink" style="margin-left:5px; text-decoration:none;">|</a>
+        <a ID="ancViewPie"  class="greenLink pointer" style="margin-left:5px;">Visualize Account Data</a> 
         <div class="rowClassSpace">
             &nbsp;</div>
     </div>
@@ -52,5 +54,10 @@
             </div>
         </div>
       </div>
+    <div id="pie" style="display:none; margin-left:15px;" class="row row-offcanvas row-offcanvas-right">
+        <div id="pieContent" style="background-color:lightblue; height:50px;">
+            TEST
+        </div>
+    </div>
 </div>
-      <hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
+<hr style="margin-bottom:0px; margin-top:0px; margin-left:30px; border-color:lightslategray;" />
