@@ -13,6 +13,7 @@ Public Class Dashboard
             'This is for the gridview
             Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
             dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+
             FillRepeater(repDeposits, dt, "Checking", "Savings")
             FillRepeater(repInvestments, dt, "CD", "IRA")
             FillRepeater(repCredits, dt, "CREDIT CARD")
@@ -95,15 +96,15 @@ Public Class Dashboard
             System.Threading.Thread.Sleep(50)
             Dim color As String = String.Format("#{0:X6}", New Random().Next(&H1000000))
             Dim cText As String, cValue As String
-            cText = dr.Item(cTextColumn)
-            If cText = "C" Then
-                cText = dr.Item("cSubProdCd") + " - Income"
-            ElseIf cText = "D" Then
-                cText = dr.Item("cSubProdCd") + " - Expenses"
-            End If
-            cValue = dr.Item(cValueColumn)
-            sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
-            sb.Append("},")
+                cText = dr.Item(cTextColumn)
+                If cText = "C" Then
+                    cText = dr.Item("cSubProdCd") + " - Income"
+                ElseIf cText = "D" Then
+                    cText = dr.Item("cSubProdCd") + " - Expenses"
+                End If
+                cValue = dr.Item(cValueColumn)
+                sb.Append(String.Format("text :'{0}', value:{1}, color: '{2}'", cText, cValue, color))
+                sb.Append("},")
         Next
         If sb.Length > 1 Then
             sb = sb.Remove(sb.Length - 1, 1)
@@ -115,7 +116,7 @@ Public Class Dashboard
     Private Sub SendToGraphs()
         Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
         Dim accts = From dr As DataRow In dt.Rows
-                    Select dr.Item("cAccountNum")
+                    Select dr.Item("nAccountNum")
 
 
         Dim collKeys As New System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer))

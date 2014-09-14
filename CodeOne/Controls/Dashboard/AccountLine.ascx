@@ -27,8 +27,8 @@
     </span>
     <div>
         <a ID="ancViewTen"  class="greenLink pointer">Last 10 Transactions</a> 
-        <a id="divider" class="greenLink" style="margin-left:5px; text-decoration:none;">|</a>
-        <a ID="ancViewPie"  class="greenLink pointer" style="margin-left:5px;">Visualize Account Data</a> 
+        <a id="divider" class="greenLink" style="margin-left:5px; text-decoration:none;" runat="server">|</a>
+        <a ID="ancViewPie"  class="greenLink pointer" style="margin-left:5px;" runat="server">Visualize Account Data</a> 
         <div class="rowClassSpace">
             &nbsp;</div>
           <div id="grid" style="display:none;" class="row row-offcanvas row-offcanvas-right">

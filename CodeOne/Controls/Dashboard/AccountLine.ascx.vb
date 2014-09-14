@@ -102,6 +102,7 @@ Public Class AccountLine
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Dim collGraphs As System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer)) = Session("GraphData")
+            Dim lShowViz As Boolean = False
             Dim kvpGraph = From kvps As KeyValuePair(Of String, Integer) In collGraphs
                            Where kvps.Value = hfAccountNum.Value And kvps.Key = "Account"
                            Select kvps
@@ -110,10 +111,16 @@ Public Class AccountLine
                 Dim coll As New System.Collections.ObjectModel.Collection(Of KeyValuePair(Of String, Integer))
                 For Each kvp In kvpGraph.ToList
                     coll.Add(kvp)
-                    ctrlPie.SetUpGraphData(coll)
                 Next
+                ctrlPie.SetUpGraphData(coll)
+                If ctrlPie.HasGraph Then lShowViz = True
+            End If
+            If lShowViz = False Then
+                divider.Visible = False
+                ancViewPie.Visible = False
             End If
         End If
+
     End Sub
 
     Private Sub lnkAccountName_Click(sender As Object, e As EventArgs) Handles lnkAccountName.Click
