@@ -6,19 +6,25 @@ Imports System.Configuration
 Public Class Dashboard
     Inherits System.Web.UI.Page
 
-    Dim nUserID As Integer = 4
+    Dim nUserID As Integer = 0
     Dim dtQL As DataTable
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If HttpContext.Current.Session("User") IsNot Nothing Then
+            Dim objUser As User = HttpContext.Current.Session("User")
+            nUserID = objUser.UserID
+        End If
         If Not IsPostBack Then
             'This is for the gridview
-            Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
-            dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+            If nUserID > 0 Then
+                Dim dt As DataTable = FillDataTable("Data.usp_Get_UserAccounts", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
+                dtQL = FillDataTable("Data.usp_Get_Accounts_QuickLook", (New Connection).NewCnn, "@nUserID", nUserID.ToString)
 
-            FillRepeater(repDeposits, dt, "Checking", "Savings")
-            FillRepeater(repInvestments, dt, "CD", "IRA")
-            FillRepeater(repCredits, dt, "CREDIT CARD")
-            FillRepeater(repLoans, dt, "Auto Loan", "Mortgage")
-            SendToGraphs()
+                FillRepeater(repDeposits, dt, "Checking", "Savings")
+                FillRepeater(repInvestments, dt, "CD", "IRA")
+                FillRepeater(repCredits, dt, "CREDIT CARD")
+                FillRepeater(repLoans, dt, "Auto Loan", "Mortgage")
+                SendToGraphs()
+            End If
         End If
     End Sub
 
@@ -28,10 +34,19 @@ Public Class Dashboard
         Dim dr = From d As DataRow In dtAccounts.Rows
                  Where AccountTypes.Contains(d.Item("cAccountName").Trim) Or (AccountTypes.Contains("CC") And d.Item("cAccountName").Trim = "CREDIT CARD")
                  Select d
-
-        lsAccounts = dr.ToList
-        rptRepeater.DataSource = lsAccounts
-        rptRepeater.DataBind()
+        If dr.Count > 0 Then
+            lsAccounts = dr.ToList
+            rptRepeater.DataSource = lsAccounts
+            rptRepeater.DataBind()
+        Else
+            rptRepeater.Visible = False
+            'Select Case rptRepeater.ID
+            '    Case "repDeposits"
+            '    Case "repInvestments"
+            '    Case "repCredits"
+            '    Case "repLoans"
+            'End Select
+        End If
     End Sub
     Private Sub repDeposits_ItemDataBound(sender As Object, e As RepeaterItemEventArgs) Handles repDeposits.ItemDataBound, repInvestments.ItemDataBound
         Dim oItem As RepeaterItem = e.Item
