@@ -16,6 +16,7 @@ function LoadLineChart(nID) {
             var data = r.d; //eval(r.d);
             //var json = JSON.parse(data);
             var json;
+            //JSON wouldn't parse the string that was returned correctly. So, it's hardcoded for now.
             if (nID == 4) {
                 json = {
                     labels: ["Restaurants/Bars", "Grocery", "Gas", "Recreation"],
