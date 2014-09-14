@@ -6,7 +6,15 @@ CodeOne
 </name>
 </assembly>
 <members>
-<member name="F:CodeOne.TwoFactorAuthenticationSignIn.sendcode">
+<member name="F:CodeOne.LineGraph.hfLineGraphUserId">
+	<summary>
+hfLineGraphUserId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.TwoFactorAuthenticationSignIn.sendcode">
 	<summary>
 sendcode control.
 </summary>
@@ -410,6 +418,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeOne.Budgets.rptMonthlyExpenses">
 	<summary>
 rptMonthlyExpenses control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeOne.Budgets.lineGraphYay">
+	<summary>
+lineGraphYay control.
 </summary>
 	<remarks>
 Auto-generated field.

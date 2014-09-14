@@ -1,5 +1,5 @@
 ﻿$(function () {
-    var hf = $("[id$='_hfUserId']");
+    var hf = $("[id$='_hfLineGraphUserId']");
     var uid = hf.val();
     LoadLineChart(uid);
 });

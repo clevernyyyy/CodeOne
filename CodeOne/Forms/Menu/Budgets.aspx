@@ -25,6 +25,7 @@
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="/Scripts/WebForms/Menu/Budgets.js"></script>
     <script type="text/javascript" src="../../Scripts/WebForms/Chart.js"></script>
+    <script type="text/javascript" src="../../Scripts/WebForms/LineGraph.js" ></script>
 
     <!--Styles-->
     <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
@@ -36,6 +37,7 @@
     <!-- Controls -->
     <%@ Register Src="~/Controls/Budget/IncomeExpense.ascx" TagPrefix="uctrl" TagName="IncomeExpense" %>
     <%@ Register Src="~/Controls/Budget/MonthlyExpense.ascx" TagPrefix="uctrl" TagName="MonthlyExpense" %>
+    <%@ Register Src="~/Controls/Budget/LineGraph.ascx" TagPrefix="uctrl" TagName="LineGraph" %>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -207,7 +209,7 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body accordion-smallerfont">
-                                    <p>TEST</p>
+                                    <uctrl:LineGraph id="lineGraphYay" runat="server" />
                                 </div>
                             </div>
                         </div>
