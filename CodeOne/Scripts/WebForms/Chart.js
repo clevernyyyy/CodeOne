@@ -2666,7 +2666,7 @@
         draw: function (ease) {
             var easingDecimal = ease || 1;
             this.clear();
-
+            //this.buildScale(this.d);
             var ctx = this.chart.ctx;
 
             // Some helper methods for getting the next/prev points

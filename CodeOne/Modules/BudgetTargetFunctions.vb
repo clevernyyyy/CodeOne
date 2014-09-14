@@ -4,6 +4,8 @@ Module BudgetTargetFunctions
         Dim ds As New DataSet
         Dim dtTargets As DataTable = FillDataTable("Budget.usp_Get_TargetData", (New Connection).NewCnn, "TargetData")
         ds.Tables.Add(dtTargets)
+        Dim dtFamily As DataTable = FillDataTable("Budget.usp_Get_FamilyData", (New Connection).NewCnn, "@nUserID", nUserID.ToString, "FamilyInfo")
+        ds.Tables.Add(dtFamily)
         Dim strCategories() As String = {"Restaurants/Bars", "Grocery", "Gas", "Recreation"}
         For Each StrCat In strCategories
             Dim cmd As New SqlClient.SqlCommand("Data.usp_Get_UserExpenses_ByCategory", (New Connection).NewCnn)
@@ -21,16 +23,16 @@ Module BudgetTargetFunctions
         Dim nChildren As Decimal = dtFamilyInfo.Rows(0).Item("nChildren")
         dsBudgetData.Tables.Remove("TargetData")
         dsBudgetData.Tables.Remove("FamilyInfo")
-        Dim dtTargetGraph As New DataTable
+        Dim dtTargetGraph As New DataTable("Target Spending")
         dtTargetGraph.Columns.Add("cCategory")
         dtTargetGraph.Columns.Add("nExpenses")
-        Dim dtUserGraph As New DataTable
+        Dim dtUserGraph As New DataTable("Actual Spending")
         dtUserGraph.Columns.Add("cCategory")
         dtUserGraph.Columns.Add("nExpenses")
 
         For Each dt As DataTable In dsBudgetData.Tables
 
-            Dim drTarget As DataRow = dtTarget.NewRow()
+            Dim drTarget As DataRow = dtTargetGraph.NewRow()
             drTarget.Item("cCategory") = dt.TableName
             Dim drUser As DataRow = dtUserGraph.NewRow()
             Dim total As Decimal = (From drs In dt.Rows Select CDec(drs.Item("nExpenses"))).Sum()
@@ -53,6 +55,7 @@ Module BudgetTargetFunctions
                     drTarget.Item("nExpenses") = (drRecreation.Item("nExpenses") * nAdults) + (drRecreation.Item("nExpenses") * nChildren / 2)
             End Select
             dtTargetGraph.Rows.Add(drTarget)
+            dtUserGraph.Rows.Add(drUser)
         Next
         Dim ds As New DataSet
         ds.Tables.Add(dtTargetGraph)

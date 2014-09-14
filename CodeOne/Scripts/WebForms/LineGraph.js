@@ -1,30 +1,107 @@
 ﻿$(function () {
     var hf = $("[id$='_hfUserId']");
-    var acn = hf.val();
-    LoadChart(acn);
+    var uid = hf.val();
+    LoadLineChart(uid);
 });
-function LoadChart(nID) {
+function LoadLineChart(nID) {
     $.ajax({
         type: "POST",
         url: "BudgetTargets.aspx/GetChart",
-        data: "{nUserID: '" + nID + "'}",
+        data: "{nUserId: '" + nID + "'}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
-            $("[id*='_dvChart']").html("");
-            //$("[id*='_dvLegend_" + nID + "']").html("");
-            var data = eval(r.d);
+            $("#dvChart").html("");
+            $("#dvLegend").html("");
+            var data = r.d; //eval(r.d);
+            //var json = JSON.parse(data);
+            var json;
+            if (nID == 4) {
+                json = {
+                    labels: ["Restaurants/Bars", "Grocery", "Gas", "Recreation"],
+                    datasets: [
+                        {
+                            label: "Target Spending",
+                            fillColor: "rgba(146,146,146,0.2)",
+                            strokeColor: "rgba(146,146,146,1)",
+                            pointColor: "rgba(146,146,146,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(146,146,146,1)",
+                            data: [1000, 2000, 1500, 3000]
+                        },
+                        {
+                            label: "Actual Spending",
+                            fillColor: "rgba(32,32,32,0.2)",
+                            strokeColor: "rgba(32,32,32,1)",
+                            pointColor: "rgba(32,32,32,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(32,32,32,1)",
+                            data: [3521.01, 12346.24, 1139.07, 467.45]
+                        }
+                    ]
+                };
+            } else if (nID == 5) {
+                json = {
+                    labels: ["Restaurants/Bars", "Grocery", "Gas", "Recreation"],
+                    datasets: [
+                        {
+                            label: "Target Spending",
+                            fillColor: "rgba(146,146,146,0.2)",
+                            strokeColor: "rgba(146,146,146,1)",
+                            pointColor: "rgba(146,146,146,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(146,146,146,1)",
+                            data: [2700, 5400, 3000, 9000]
+                        },
+                        {
+                            label: "Actual Spending",
+                            fillColor: "rgba(32,32,32,0.2)",
+                            strokeColor: "rgba(32,32,32,1)",
+                            pointColor: "rgba(32,32,32,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(32,32,32,1)",
+                            data: [3639.92, 5856.91, 1201.11, 1344.10]
+                        }
+                    ]
+                };
+            } else if (nID == 6) {
+                json = {
+                    labels: ["Restaurants/Bars", "Grocery", "Gas", "Recreation"],
+                    datasets: [
+                        {
+                            label: "Target Spending",
+                            fillColor: "rgba(146,146,146,0.2)",
+                            strokeColor: "rgba(146,146,146,1)",
+                            pointColor: "rgba(146,146,146,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(146,146,146,1)",
+                            data: [2000, 4000, 3000, 6000]
+                        },
+                        {
+                            label: "Actual Spending",
+                            fillColor: "rgba(32,32,32,0.2)",
+                            strokeColor: "rgba(32,32,32,1)",
+                            pointColor: "rgba(32,32,32,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(32,32,32,1)",
+                            data: [49.48, 0, 0, 0]
+                        }
+                    ]
+                };
+            }
             var el = document.createElement('canvas');
-            el.setAttribute("id", 'canvas' + index);
             el.setAttribute("height", '300');
             el.setAttribute("width", '450');
-            $("[id*='_dvChart']")[index].appendChild(el);
+            $("#dvChart")[0].appendChild(el);
 
             var ctx = el.getContext('2d');
-            var userStrengthsChart = new Chart(ctx).Line(data);
-            //userStrengthsChart.setAttribute("width", "400");
-            //userStrengthsChart.setAttribute("height", "400");
-            //userStrengthsChart.resize();
+            var budgetChart = new Chart(ctx).Line(json);
             //for (var i = 0; i < data.length; i++) {
             //    var div = $("<div />");
             //    div.css("margin-bottom", "5px");

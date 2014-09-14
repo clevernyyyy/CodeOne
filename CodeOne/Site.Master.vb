@@ -59,7 +59,7 @@ Public Class SiteMaster
             End If
             Response.Redirect("~/Default.aspx")
         End If
-        
+
         If HttpContext.Current.Session("User") IsNot Nothing Then
             lblWelcome.Visible = True
             lblWelcome.Text &= Session("User").FirstName & " " & Session("User").MiddleName & " " & Session("User").LastName
