@@ -1,11 +1,15 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Standard.aspx.vb" Inherits="CodeOne.Standard" %>
+
+<%@ Register Src="~/Controls/Transactions/Transaction.ascx" TagPrefix="uctrl" TagName="Transaction" %>
+<%@ Register Src="~/Controls/Transactions/Category.ascx" TagPrefix="uctrl" TagName="Category" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeOne Test Site">
     <meta name="author" content="Team A/S/L">
     <link rel="shortcut icon" href="">
-    <title>Acct Dashboard</title>
+    <title>Transactions</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/bootstrap.min.css" />
@@ -20,15 +24,32 @@
         type='text/css' />
 
     <!-- Scripts -->
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-draggable.min.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-ui-draggable.min.js"></script>
+
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2-droppable.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery-ui-droppable.js"></script>
+
     <script type="text/javascript" src="/Scripts/site_scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="/Scripts/WebForms/Menu/Transactions.js"></script>
 
-    <link href="../Styles/site_css/bootstrap.css" rel="stylesheet">
+    <script>
+        $(init);
 
+        function init() {
+            $('#divRepCategory').find("div").draggable({
+                cursor: 'move'
+            });
 
-    <!-- Controls -->
-    <%@ Register Src="~/Controls/Dashboard/AccountLine.ascx" TagPrefix="uctrl" TagName="Account" %>
-
+            $('#Retrieve_GridViewContainer').find("td.left").draggable({ cursor: "move", snap: true });
+            $('#Retrieve_GridViewContainer').find("td.left").droppable({
+                drop: function (event, ui) {
+                    $(this).html($(ui.draggable).html());
+                }
+            });
+        }
+    </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -36,41 +57,43 @@
         html, body, .container-fluid, .row {
             height: 100%;
         }
-
-        .sidebar {
-            background-color: #CCCCCC;
-                border-left:5px solid #216242;
-        }
-
-        @media (min-width: 992px) {
-            .sidebar {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1000;
-                display: block;
-                background-color: #CCCCCC;
-                border-left:5px solid #216242;
-            }
-        }
     </style>
     <body>
-        <div class="container-fluid mainbody">
-            <div class="row">
-                <div class="col-md-9  content">
+
+    <div class="container">
+        <h1>Transactions</h1>
+        <div id="playground" style="border: 1px solid darkgreen; -moz-border-radius: 15px; border-radius: 15px;">
+            <div id="categories" style="display:block;">
+                <h3 class="cursor" style="margin-left:25px;">Categories <a id="expand" style="text-decoration:none; color:darkgreen;" href="#">+</a>
+                </h3>
+                <div id="divHideCategory" runat="server">
+                    <div id="divRepCategory" style="display: none">
+                        <asp:Repeater runat="server" ID="rptCategories">
+                            <ItemTemplate>
+                                <uctrl:Category ID="ctrlCategory" runat="server"></uctrl:Category>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                 </div>
             </div>
-
-            <hr>
-
-            <footer class="footer">
-                <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-bottom:0px; color:#216242;">&copy; Team ASL - 2014</p>
-                <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-top:0px; margin-bottom:0px; color:#216242;">CodeOne Hackathon - FNBO</p>
-            </footer>
-
+            <br />
+            <div id="transactions" style="margin-top:50px;">
+                <br />
+                <asp:Repeater ID="rptTrans" runat="server">
+                    <ItemTemplate>
+                        <div id="divTransactions" runat="server">
+                            <uctrl:Transaction ID="ctrlTransaction" runat="server"></uctrl:Transaction>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
         </div>
-        <!--/.container-->
+
+      </div>
+    <!--/.container-->
+    <footer>
+        <p>&copy; Team A/S/L - 2014</p>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -82,3 +105,4 @@
     <script src="/Scripts/site_scripts/offcanvas.js"></script>
     </body>
 </asp:Content>
+
