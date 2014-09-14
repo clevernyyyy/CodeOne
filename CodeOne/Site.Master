@@ -22,7 +22,7 @@
     <link href="/Styles/config/css/content-homepage-sitebrand.css" rel="stylesheet" />
 
     <!-- favicon -->
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" />
 
 
     <!-- start of FNBO stuff -->
@@ -397,7 +397,8 @@
                         </div>
                         <div style="margin-bottom:20px;">
                             <asp:label id="lblWelcome" CssClass="steps" text="Welcome " runat="server" />
-                        </div>
+                        </div>                        
+                        <!-- No need for fancy, secure login control.  FNBO already has one. -->
                         <button id="btnSignIn" title="btnSignIn" type="submit" class="btn btn-success" runat="server">Sign In</button>
                         <button id="btnSignOut" title="btnSignOut" type="button" onclick="__doPostBack('btnSignOut','SignOut');" class="btn btn-success" runat="server">Sign Out</button>
                     </form>

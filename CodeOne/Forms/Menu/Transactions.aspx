@@ -59,35 +59,8 @@
         }
     </style>
 
-    <div class="container">
-        <h1>Transactions</h1>
-        <%--<div id="playground" style="border: 1px solid darkgreen; -moz-border-radius: 15px; border-radius: 15px;">
-            <div id="categories" style="display:block;">
-                <h3 class="cursor" style="margin-left:25px;">Categories <a id="expand" style="text-decoration:none; color:darkgreen;" href="#">+</a>
-                </h3>
-                <div id="divHideCategory" runat="server">
-                    <div id="divRepCategory" style="display: none">
-                        <asp:Repeater runat="server" ID="rptCategories">
-                            <ItemTemplate>
-                                <uctrl:Category ID="ctrlCategory" runat="server"></uctrl:Category>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </div>
-                </div>
-            </div>
-            <br />
-            <div id="transactions" style="margin-top:50px;">
-                <br />
-                <asp:Repeater ID="rptTrans" runat="server">
-                    <ItemTemplate>
-                        <div id="divTransactions" runat="server">
-                            <uctrl:Transaction ID="ctrlTransaction" runat="server"></uctrl:Transaction>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </div>
-        </div>--%>
-
+    <div class="container" style="margin-left:40px;">
+        <h1 style="margin-top:10px; color:darkgreen;">Transactions</h1>
 
          <div class="row row-offcanvas row-offcanvas-right">
               <!-- Transactions Gridview -->
@@ -97,7 +70,7 @@
                 &nbsp;</div>
                 <asp:ScriptManager runat="server"></asp:ScriptManager>
                 <div id="Retrieve_GridViewContainer" class="gridViewContainer">
-                    <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered table-condensed" 
+                    <asp:GridView ID="dvgPack" runat="server" AllowDrop = True CssClass="table table-hover table-striped table-bordered tabBoard" 
                         AutoGenerateColumns="false"
                         OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="6"
                         PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
@@ -135,9 +108,11 @@
             </div>
            </div>
     <!--/.container-->
-    <footer>
-        <p>&copy; Team A/S/L - 2014</p>
-    </footer>
+        <footer class="footer">
+            <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-bottom:0px; color:#216242;">&copy; Team ASL - 2014</p>
+            <p style="margin-left:30px; font-weight:500; font-family:'Microsoft JhengHei'; margin-top:0px; margin-bottom:0px; color:#216242;">CodeOne Hackathon - FNBO</p>
+        </footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
