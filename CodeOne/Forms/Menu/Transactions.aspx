@@ -80,8 +80,7 @@
                                 ItemStyle-Width="50" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
                             <asp:BoundField DataField="dPostDt" HeaderText="POST DATE" DataFormatString="{0:d}"
                                 SortExpression="dPostDt" ItemStyle-Width="50"  HeaderStyle-CssClass="centered"  />
-                            <asp:BoundField DataField="
-                                ebitCredit" HeaderText="DEBIT & CREDIT" 
+                            <asp:BoundField DataField="cdebitCredit" HeaderText="DEBIT & CREDIT" 
                                 SortExpression="cDebitCredit" ItemStyle-Width="25"  HeaderStyle-CssClass="centered"/>
                             <asp:BoundField DataField="cTransDesc" HeaderText="TRANSACTION" 
                                 SortExpression="cTransDesc" ItemStyle-Width="200"  HeaderStyle-CssClass="centered" />
